@@ -21,53 +21,12 @@ export default function App() {
   ]);
 
   const [driveStatus, setDriveStatus] = useState<DriveStatus>({
-    connected: true,
-    userEmail: "roa@escuela2702emal.edu.ar",
-    folderName: "Google Drive - Escuela N° 2702 EMAL (Materiales Pedagógicos)",
-    fileCount: 15,
+    connected: false,
+    userEmail: "",
+    folderName: "Google Drive - Escuela N° 2702 EMAL",
+    fileCount: 0,
     lastSync: new Date().toISOString(),
-    files: [
-      {
-        id: "drive-doc-01",
-        name: "Circular_Inscripciones_2026_EMAL.docx",
-        mimeType: "application/vnd.google-apps.document",
-        folderCategory: "Área Institucional",
-        modifiedTime: new Date().toISOString(),
-        synced: true
-      },
-      {
-        id: "drive-doc-02",
-        name: "Guia_Ejercicios_Matematicas_Modulo2.pdf",
-        mimeType: "application/pdf",
-        folderCategory: "Matemáticas",
-        modifiedTime: new Date().toISOString(),
-        synced: true
-      },
-      {
-        id: "drive-doc-03",
-        name: "Apunte_NTICx_Hardware_y_Software.gdoc",
-        mimeType: "application/vnd.google-apps.document",
-        folderCategory: "Nuevas Tecnologías",
-        modifiedTime: new Date().toISOString(),
-        synced: true
-      },
-      {
-        id: "drive-doc-04",
-        name: "Cartilla_Educacion_Fisica_y_Salud.pdf",
-        mimeType: "application/pdf",
-        folderCategory: "Educación Física y Salud",
-        modifiedTime: new Date().toISOString(),
-        synced: true
-      },
-      {
-        id: "drive-doc-05",
-        name: "Proyecto_Pedagogico_Modulo2_IA_y_Chatbots.docx",
-        mimeType: "application/vnd.google-apps.document",
-        folderCategory: "EDI: Plataformas Digitales",
-        modifiedTime: new Date().toISOString(),
-        synced: true
-      }
-    ]
+    files: []
   });
 
   const fetchDriveStatus = async () => {
