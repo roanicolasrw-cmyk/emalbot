@@ -1,0 +1,6 @@
+{
+  "name": "EMALBOT",
+  "description": "Asistente conversacional de IA para información institucional y acompañamiento educativo de Escuela N° 2702 EMAL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
