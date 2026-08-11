@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({
                   EMALBOT
                 </h1>
                 <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-sky-500/20 text-sky-300 border border-sky-400/30">
-                  v2.5 IA
+                  v2.5
                 </span>
               </div>
               <p className="text-xs text-slate-400 flex items-center gap-1.5 font-medium">
@@ -103,7 +103,7 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-              <span>Módulo 2: Lab IA</span>
+              <span>Módulo 2: Tecnologías Digitales</span>
             </button>
           </div>
 

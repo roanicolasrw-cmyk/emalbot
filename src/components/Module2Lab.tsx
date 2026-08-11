@@ -23,11 +23,11 @@ export const Module2Lab: React.FC = () => {
       example: '"18:30" (dato) ➔ "18:30 hs es el horario de ingreso a clases del turno vespertino en la EMAL N° 2702" (información).'
     },
     {
-      title: '3. Modelo de IA Conversacional',
+      title: '3. Modelo de Acompañamiento Digital',
       icon: Cpu,
       color: 'from-purple-500 to-indigo-500',
       definition: 'Sistema computacional entrenado para reconocer patrones en el lenguaje humano y generar respuestas coherentes.',
-      example: 'EMALBOT utiliza el modelo Gemini 3.6 de Google para razonar y redactar explicaciones adaptadas a adultos.'
+      example: 'EMALBOT utiliza modelos avanzados de procesamiento de lenguaje para razonar y redactar explicaciones adaptadas a adultos.'
     },
     {
       title: '4. Base de Conocimiento (RAG)',
@@ -78,7 +78,7 @@ Para inscribirte en una escuela generalmente necesitás documento de identidad y
             Laboratorio del Módulo 2: ¿Cómo funciona EMALBOT?
           </h2>
           <p className="text-xs text-slate-400">
-            Espacio pedagógico para explorar los conceptos de Inteligencia Artificial, Algoritmos, Datos y Automatización en la educación de adultos.
+            Espacio pedagógico para explorar los conceptos de Procesamiento de Lenguaje, Algoritmos, Datos y Automatización en la educación de adultos.
           </p>
         </div>
       </div>
@@ -134,7 +134,7 @@ Para inscribirte en una escuela generalmente necesitás documento de identidad y
 
           <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
             <span className="text-[10px] font-bold text-amber-400 uppercase block mb-1">Paso 3</span>
-            <strong className="text-white block">Modelo IA Gemini 3.6</strong>
+            <strong className="text-white block">Modelo de Respuesta</strong>
             <span className="text-[10px] text-slate-400">Genera la respuesta contextualizada</span>
           </div>
 
@@ -150,7 +150,7 @@ Para inscribirte en una escuela generalmente necesitás documento de identidad y
           </h3>
         </div>
         <p className="text-xs text-indigo-300/80 mb-4">
-          Comprobá la diferencia entre realizarle una consulta a la IA con o sin la base de conocimientos oficial de la Escuela N° 2702 EMAL.
+          Comprobá la diferencia entre realizarle una consulta al asistente con o sin la base de conocimientos oficial de la Escuela N° 2702 EMAL.
         </p>
 
         <div className="space-y-3">

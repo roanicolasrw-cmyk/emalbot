@@ -1,20 +1,44 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# EMALBOT - Asistente Virtual Educativo
 
-# Run and deploy your AI Studio app
+**EMALBOT** es la plataforma oficial de asistencia virtual de la **Escuela N° 2702 EMAL** (Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos). Diseñada específicamente para acompañar a nuestra comunidad educativa, EMALBOT integra inteligencia avanzada con los documentos y normativas oficiales de la institución.
 
-This contains everything you need to run your app locally.
+## 🚀 Propósito
 
-View your app in AI Studio: https://ai.studio/apps/66c2c4fc-a799-478a-ad67-3eaf95707726
+El objetivo de EMALBOT es facilitar el acceso a la información institucional y brindar apoyo pedagógico a los estudiantes en sus trayectorias escolares.
 
-## Run Locally
+- **Área Institucional:** Consultas sobre requisitos de inscripción, trámites de secretaría, horarios de atención y documentación necesaria.
+- **Área Educativa:** Acompañamiento en contenidos curriculares (Matemáticas, NTICx, Ciencias Sociales, etc.), explicación de conceptos y generación de ejercicios de práctica.
 
-**Prerequisites:**  Node.js
+## 🛠️ Tecnología y Eficiencia (RAG)
 
+Para optimizar recursos y garantizar la veracidad de la información, EMALBOT utiliza una arquitectura de **Generación Aumentada por Recuperación (RAG)**. 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+En lugar de depender exclusivamente de una IA externa, el sistema consulta primero la base de conocimientos propia de la escuela y las carpetas de materiales en **Google Drive**. Esto permite:
+1.  **Precisión:** Las respuestas se basan en documentos reales de la Escuela 2702.
+2.  **Ahorro:** Se reduce drásticamente el uso de tokens al enviar solo la información relevante al modelo.
+3.  **Privacidad:** Los datos sensibles permanecen en el ecosistema institucional.
+
+## 💻 Desarrollo Local
+
+**Requisitos:** Node.js (v18+)
+
+1.  Instalar dependencias:
+    ```bash
+    npm install
+    ```
+2.  Configurar variables de entorno:
+    Crea un archivo `.env` basado en `.env.example` con tu `GEMINI_API_KEY`.
+3.  Iniciar en modo desarrollo:
+    ```bash
+    npm run dev
+    ```
+
+## 🌐 Despliegue en Vercel
+
+Este proyecto está preparado para ser desplegado en Vercel. Al conectar el repositorio, asegúrate de:
+- Configurar el **Build Command:** `npm run build`
+- Configurar el **Output Directory:** `dist`
+- Añadir la variable de entorno `GEMINI_API_KEY`.
+
+---
+*Gestión Educativa - Escuela N° 2702 EMAL*

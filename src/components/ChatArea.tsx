@@ -206,7 +206,7 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
                 }}
                 className="p-3 rounded-xl bg-slate-950/70 border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900 transition-all text-xs text-indigo-200 flex items-center justify-between"
               >
-                <span>🤖 Laboratorio Módulo 2 IA</span>
+                <span>Explorar Módulo 2: Tecnologías</span>
                 <CornerDownLeft className="w-3.5 h-3.5 text-indigo-400" />
               </button>
             </div>
