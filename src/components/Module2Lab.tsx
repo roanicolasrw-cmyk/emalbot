@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Cpu, Database, Binary, Sparkles, Workflow, Play, Lightbulb, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Cpu, Database, Binary, Sparkles, Workflow, Play, Lightbulb, ArrowRight } from 'lucide-react';
 
 export const Module2Lab: React.FC = () => {
-  const [testPrompt, setTestPrompt] = useState('¿Quién es el profesor de Nuevas Tecnologías y del proyecto EMALBOT?');
+  const [testPrompt, setTestPrompt] = useState('¿Qué necesito para inscribirme en la Matrícula 2027?');
   const [includeDriveContext, setIncludeDriveContext] = useState(true);
   const [simulatedResult, setSimulatedResult] = useState<string | null>(null);
   const [isSimulating, setIsSimulating] = useState(false);
@@ -13,28 +13,28 @@ export const Module2Lab: React.FC = () => {
       icon: Binary,
       color: 'from-blue-500 to-cyan-500',
       definition: 'Conjunto ordenado de instrucciones finitas para resolver un problema o completar una tarea.',
-      example: 'Como los pasos para resolver una ecuación del Prof. SEBASTIAN ZANETA o una guía de trabajo práctico.'
+      example: 'Como las reglas de un trámite o los pasos ordenados para resolver una ecuación de primer grado.'
     },
     {
       title: '2. Dato vs Información',
       icon: Database,
       color: 'from-emerald-500 to-teal-500',
       definition: 'El dato es un elemento crudo sin significado por sí solo (ej: "19:15"). La información es el dato procesado con significado dentro de un contexto.',
-      example: '"19:15" (dato) ➔ "19:15 hs es el horario de inicio de clases del turno vespertino/noche en la EMAL N° 2702" (información).'
+      example: '"19:15" (dato) -> "19:15 a 22:15 hs es el horario de Secretaría de lunes a viernes en EMAL N° 2702" (información).'
     },
     {
-      title: '3. Modelo de Acompañamiento Digital',
+      title: '3. Modelo de IA Conversacional',
       icon: Cpu,
       color: 'from-purple-500 to-indigo-500',
       definition: 'Sistema computacional entrenado para reconocer patrones en el lenguaje humano y generar respuestas coherentes.',
-      example: 'EMALBOT es desarrollado por estudiantes del Módulo 2 bajo la guía del Prof. ROA NICOLAS para acompañar a la comunidad.'
+      example: 'EMALBOT utiliza IA conectada a los materiales docentes de Prof. Roa Nicolás, Prof. Zaneta Sebastián, Prof. Evans Erika y Prof. Mundaca Yamila.'
     },
     {
       title: '4. Base de Conocimiento (RAG)',
       icon: Workflow,
       color: 'from-amber-500 to-orange-500',
       definition: 'Retrieval-Augmented Generation: Técnica que busca información real en carpetas de Google Drive antes de responder.',
-      example: 'En lugar de adivinar, EMALBOT lee la guía cargada por el Prof. ROA NICOLAS, Prof. SEBASTIAN ZANETA, Prof. ERIKA EVANS o Prof. YAMILA MUNDACA.'
+      example: 'En lugar de adivinar, EMALBOT lee la circular de Matrícula 2027 o los apuntes de Matemáticas.'
     }
   ];
 
@@ -47,44 +47,38 @@ export const Module2Lab: React.FC = () => {
       if (includeDriveContext) {
         setSimulatedResult(`[PROMPT CONTEXTUALIZADO CON DRIVE CONTEXT]
 Sistema: EMALBOT (Escuela N° 2702 EMAL)
-Documento leído: Drive/NuevasTecnologias/Guia_NTICx_Modulo2.docx
+Documento leído: Drive/SECRETARIA/Circular_Matricula_2027_Inscripciones_EMAL.docx
 
-Respuesta simulada:
-El profesor de Nuevas Tecnologías (NTICx) y del Espacio EDI del Módulo 2 es el Prof. ROA NICOLAS.
-Este proyecto fue desarrollado por los estudiantes del Módulo 2 para la muestra escolar.
-
-Equipo docente institucional de Formación Básica:
-- Nuevas Tecnologías (Módulo 2): Prof. ROA NICOLAS
-- Matemáticas: Prof. SEBASTIAN ZANETA
-- Lengua y Literatura: Prof. ERIKA EVANS
-- Ciencias Naturales: Prof. YAMILA MUNDACA`);
+Respuesta contextualizada:
+MATRÍCULA 2027 - INSCRIPCIONES ABIERTAS en la Escuela N° 2702 EMAL:
+1. Preinscripción online en Google Forms (enlace oficial).
+2. Presentar de manera presencial: DNI (original y fotocopia), Certificado de Primaria completa (o Analítico Parcial), Partida de nacimiento y 2 fotos carnet 4x4.
+Lugar y horario para llevar documentación: Güemes 710, Lunes a Viernes de 19:15 a 22:00 hs.
+(Nota: La vacante definitiva es confirmada por Secretaría).`);
       } else {
         setSimulatedResult(`[PROMPT SIN CONTEXTO DE DRIVE]
 Respuesta simulada genérica:
 Para inscribirte en una escuela generalmente necesitás documento de identidad y certificados de estudios anteriores. Consulta en la secretaría local los horarios específicos.`);
       }
-    }, 800);
+    }, 600);
   };
 
   return (
     <div className="max-w-6xl mx-auto p-4 sm:p-6 bg-slate-900/90 rounded-2xl border border-slate-800 text-white shadow-xl mb-8">
-      
-      {/* Title Header */}
       <div className="flex items-center space-x-3.5 pb-6 border-b border-slate-800">
-        <div className="w-14 h-14 rounded-2xl bg-slate-950 p-1.5 flex items-center justify-center shadow-lg shadow-indigo-500/20 border border-indigo-500/30 shrink-0">
-          <img src="/logo.png" alt="EMALBOT Logo" className="w-full h-full object-contain" />
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-600 to-fuchsia-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
+          <Sparkles className="w-6 h-6 text-amber-300" />
         </div>
         <div>
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             Laboratorio del Módulo 2: ¿Cómo funciona EMALBOT?
           </h2>
           <p className="text-xs text-slate-400">
-            Espacio pedagógico para explorar los conceptos de Procesamiento de Lenguaje, Algoritmos, Datos y Automatización en la educación de adultos.
+            Espacio pedagógico para explorar los conceptos de Inteligencia Artificial, Algoritmos, Datos y Automatización en la educación de adultos.
           </p>
         </div>
       </div>
 
-      {/* Concept Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-6">
         {concepts.map((c, idx) => {
           const Icon = c.icon;
@@ -104,69 +98,41 @@ Para inscribirte en una escuela generalmente necesitás documento de identidad y
         })}
       </div>
 
-      {/* Interactive Architecture Flow Diagram */}
       <div className="p-5 rounded-xl bg-slate-950/80 border border-slate-800 my-6">
         <h3 className="text-sm font-bold text-slate-200 mb-3 flex items-center gap-2">
           <Workflow className="w-4 h-4 text-indigo-400" />
-          Flujo Oficial del Sistema para la Muestra (5 Pasos RAG)
+          Flujo de Procesamiento de EMALBOT
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-3 text-left text-xs">
-          
-          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-bold text-emerald-400 uppercase block mb-1">Paso 1</span>
-              <strong className="text-white text-xs block mb-1">Carga Formulario / Drive</strong>
-              <span className="text-[11px] text-slate-400 leading-normal">
-                Docentes cargan apuntes o novedades en Formulario de Google ➔ sincroniza en Google Drive REG EMAL 2702.
-              </span>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-2 text-center text-xs">
+          <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
+            <span className="text-[10px] font-bold text-sky-400 uppercase block mb-1">Paso 1</span>
+            <strong className="text-white block">Consulta del Estudiante</strong>
+            <span className="text-[10px] text-slate-400">Plantea la duda vía chat</span>
           </div>
 
-          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-bold text-sky-400 uppercase block mb-1">Paso 2</span>
-              <strong className="text-white text-xs block mb-1">Consulta del Estudiante</strong>
-              <span className="text-[11px] text-slate-400 leading-normal">
-                El estudiante consulta por texto o voz (ej: "¿Quién es el profesor de NTICx?").
-              </span>
-            </div>
+          <div className="hidden md:flex items-center justify-center text-slate-600">
+            <ArrowRight className="w-4 h-4" />
           </div>
 
-          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-bold text-amber-400 uppercase block mb-1">Paso 3</span>
-              <strong className="text-white text-xs block mb-1">Motor RAG</strong>
-              <span className="text-[11px] text-slate-400 leading-normal">
-                Escanea las carpetas institucionales, extrae palabras clave y calcula el puntaje de relevancia.
-              </span>
-            </div>
+          <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
+            <span className="text-[10px] font-bold text-emerald-400 uppercase block mb-1">Paso 2</span>
+            <strong className="text-white block">Búsqueda en Google Drive</strong>
+            <span className="text-[10px] text-slate-400">Lee apuntes docentes y circulares</span>
           </div>
 
-          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-bold text-purple-400 uppercase block mb-1">Paso 4</span>
-              <strong className="text-white text-xs block mb-1">Generación IA (Gemini / Local)</strong>
-              <span className="text-[11px] text-slate-400 leading-normal">
-                Procesa los fragmentos con Gemini IA o sintetizador RAG local con reglas pedagógicas para adultos.
-              </span>
-            </div>
+          <div className="hidden md:flex items-center justify-center text-slate-600">
+            <ArrowRight className="w-4 h-4" />
           </div>
 
-          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-bold text-teal-400 uppercase block mb-1">Paso 5</span>
-              <strong className="text-white text-xs block mb-1">Respuesta y Accesibilidad</strong>
-              <span className="text-[11px] text-slate-400 leading-normal">
-                El alumno recibe la respuesta con la fuente de Drive, opción de simplificar, ejercitar y lectura en voz alta.
-              </span>
-            </div>
+          <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
+            <span className="text-[10px] font-bold text-amber-400 uppercase block mb-1">Paso 3</span>
+            <strong className="text-white block">Motor RAG + IA</strong>
+            <span className="text-[10px] text-slate-400">Genera la respuesta contextualizada</span>
           </div>
-
         </div>
       </div>
 
-      {/* Interactive Sandbox for Prompt Engineering */}
       <div className="p-5 rounded-xl bg-indigo-950/30 border border-indigo-900/50">
         <div className="flex items-center space-x-2 mb-3">
           <Lightbulb className="w-5 h-5 text-amber-300" />
@@ -175,7 +141,7 @@ Para inscribirte en una escuela generalmente necesitás documento de identidad y
           </h3>
         </div>
         <p className="text-xs text-indigo-300/80 mb-4">
-          Comprobá la diferencia entre realizarle una consulta al asistente con o sin la base de conocimientos oficial de la Escuela N° 2702 EMAL.
+          Comprobá la diferencia entre realizarle una consulta a la IA con o sin la base de conocimientos oficial de la Escuela N° 2702 EMAL.
         </p>
 
         <div className="space-y-3">
@@ -201,6 +167,7 @@ Para inscribirte en una escuela generalmente necesitás documento de identidad y
             </label>
 
             <button
+              type="button"
               onClick={handleSimulate}
               disabled={isSimulating}
               className="ml-auto px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold flex items-center space-x-2 transition-all"
@@ -217,7 +184,6 @@ Para inscribirte en una escuela generalmente necesitás documento de identidad y
           )}
         </div>
       </div>
-
     </div>
   );
 };

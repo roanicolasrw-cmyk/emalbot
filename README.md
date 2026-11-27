@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/logo.png" alt="EMALBOT Logo" width="180"/>
+  <img src="public/assets/aistudio/Logo_educativo_azul_EMALBOT_b5d3d995.png" alt="EMALBOT Logo" width="180"/>
 </p>
 
 # PROYECTO: EMALBOT — Asistente Educativo e Institucional con IA y Arquitectura RAG
@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Resumen del Sistema para Presentación / Stand
+## 📋 Resumen del Sistema para Presentación / Stand
 
 ### 1. Objetivo del Proyecto
 EMALBOT es un asistente conversacional diseñado para acompañar a estudiantes jóvenes y adultos del turno vespertino/noche (19:15 a 22:15 hs). Se divide en dos grandes áreas:
@@ -34,10 +34,18 @@ En lugar de responder de memoria o inventar datos, el sistema activa el motor RA
 
 #### **PASO 4 — Generación Aumentada con Inteligencia Artificial:**
 - El sistema envía la pregunta junto con los fragmentos recuperados del Google Drive al modelo de lenguaje (Gemini IA) con reglas pedagógicas para educación de adultos (lenguaje claro, empático y estructurado).
-- Si no hay conectividad externa con la nube, un sintetizador RAG local construye la respuesta directamente a partir de los documentos recuperados.
+- Si no hay conectividad externa con la nube, un sintetizador RAG local construye la respuesta directamente a partir de los documentos recuperados mostrando la traza de fuentes.
 
 #### **PASO 5 — Respuesta Verificada, Fuentes y Accesibilidad:**
 - El estudiante recibe la respuesta clara, ve exactamente qué archivo de Google Drive fue consultado como fuente, puede pedir **"Explicar más simple"**, generar un **"Ejercicio de práctica"** o **escuchar la explicación en voz alta**.
+
+---
+
+## 📱 Demostración en Android Studio (Kotlin + Jetpack Compose)
+
+En la carpeta [`public/`](file:///C:/Users/Admin/AndroidStudioProjects/emalbot/public) se incluye el archivo [`EMALBOT_Android_Studio_Demo.kt`](file:///C:/Users/Admin/AndroidStudioProjects/emalbot/public/EMALBOT_Android_Studio_Demo.kt), preparado para crear una app móvil nativa para el stand con:
+1. **Modo RAG Nativo Offline:** Motor de búsqueda local, trazas de recuperación y síntesis de voz (Text-to-Speech).
+2. **Modo App Web En Vivo:** Integración en WebView para navegar la plataforma completa.
 
 ---
 
@@ -56,12 +64,12 @@ En lugar de responder de memoria o inventar datos, el sistema activa el motor RA
    npm run dev
    ```
 
-## 🌐 Despliegue en Vercel
+## 🚀 Despliegue en Vercel
 
-Este proyecto está preparado para ser desplegado en Vercel. Al conectar el repositorio, asegúrate de:
-- Configurar el **Build Command:** `npm run build`
-- Configurar el **Output Directory:** `dist`
-- Añadir la variable de entorno `GEMINI_API_KEY`.
+Este proyecto está preparado para ser desplegado en Vercel:
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist`
+- **Variable de entorno:** `GEMINI_API_KEY`
 
 ---
 *Gestión Educativa - Escuela N° 2702 EMAL*

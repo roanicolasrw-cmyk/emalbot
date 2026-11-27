@@ -16,15 +16,15 @@ export const InstitutionalSection: React.FC<InstitutionalSectionProps> = ({
   const cards = [
     {
       id: 'inscripciones' as SubjectType,
-      title: 'Inscripciones y Requisitos',
+      title: 'Matrícula 2027 e Inscripciones',
       icon: UserCheck,
       color: 'from-blue-500 to-sky-600',
-      badge: 'Matrícula 2026',
-      description: 'Documentación necesaria, plazos de inscripción y condiciones de ingreso para adultos.',
+      badge: 'Matrícula 2027',
+      description: 'Completá la preinscripción online y luego llevá tu documentación presencialmente a Güemes 710 de 19:15 a 22:00 hs.',
       quickPrompts: [
-        '¿Cuáles son los requisitos de inscripción para mayores de 18 años?',
-        '¿Qué documentación debo presentar en mi legajo?',
-        '¿Cuándo abren las inscripciones para el próximo cuatrimestre?'
+        '¿Cuáles son los requisitos de inscripción para Matrícula 2027?',
+        '¿Dónde y en qué horario llevo la documentación presencial?',
+        '¿Cuál es el enlace del formulario de preinscripción?'
       ]
     },
     {
@@ -55,14 +55,14 @@ export const InstitutionalSection: React.FC<InstitutionalSectionProps> = ({
     },
     {
       id: 'horarios' as SubjectType,
-      title: 'Horarios de Atención y Clases',
+      title: 'Horarios de Secretaría y Clases',
       icon: Clock,
       color: 'from-teal-500 to-emerald-600',
       badge: 'Turno Noche',
-      description: 'Horarios de clases (18:30 a 22:15 hs) y atención presencial de Secretaría.',
+      description: 'Atención de Secretaría y Preceptoría de Lunes a Viernes de 19:15 a 22:15 hs.',
       quickPrompts: [
         '¿En qué horario atiende Secretaría y Preceptoría?',
-        '¿Cuáles son los horarios de cursada del turno vespertino?',
+        '¿Cuáles son los horarios de cursada del turno noche?',
         '¿Hay tolerancia horaria si salgo tarde de trabajar?'
       ]
     },
@@ -72,7 +72,7 @@ export const InstitutionalSection: React.FC<InstitutionalSectionProps> = ({
       icon: HelpCircle,
       color: 'from-purple-500 to-indigo-600',
       badge: 'Estudiantes',
-      description: 'Respuestas a dudas comunes de ingresantes y alumnos regulares.',
+      description: 'Respuestas a dudas comunes de ingresantes 2027 y alumnos regulares.',
       quickPrompts: [
         '¿Puedo cursar si trabajo por turnos rotativos?',
         '¿Cuánto dura el plan de estudios por módulos?',
@@ -83,13 +83,12 @@ export const InstitutionalSection: React.FC<InstitutionalSectionProps> = ({
 
   return (
     <div className="p-4 sm:p-6 bg-slate-900/60 rounded-2xl border border-slate-800 backdrop-blur-sm mb-6">
-      
       {/* Disclaimer Bar */}
       <div className="mb-6 p-3.5 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-start gap-3 text-amber-200 text-xs leading-relaxed">
         <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
         <div>
           <strong className="font-semibold text-amber-300">Aviso Institucional: </strong>
-          EMALBOT brinda orientación sobre requisitos y procedimientos generales. Las decisiones finales sobre vacantes, inscripciones y certificados corresponden a la Dirección y Secretaría de la Escuela N° 2702 EMAL.
+          EMALBOT brinda orientación sobre requisitos y procedimientos generales. Las decisiones finales sobre vacantes, Matrícula 2027 y certificados corresponden a la Dirección y Secretaría de la Escuela N° 2702 EMAL (Lunes a Viernes de 19:15 a 22:15 hs).
         </div>
       </div>
 
@@ -97,7 +96,7 @@ export const InstitutionalSection: React.FC<InstitutionalSectionProps> = ({
         <div>
           <h2 className="text-lg font-bold text-white flex items-center gap-2">
             <Building className="w-5 h-5 text-sky-400" />
-            Área Institucional - Consultas de Secretaría
+            Área Institucional - Secretaría (19:15 a 22:15 hs)
           </h2>
           <p className="text-xs text-slate-400">
             Seleccioná un tema o elegí una consulta frecuente para realizarle a EMALBOT.
@@ -125,43 +124,49 @@ export const InstitutionalSection: React.FC<InstitutionalSectionProps> = ({
                   <div className={`w-9 h-9 rounded-lg bg-gradient-to-tr ${card.color} flex items-center justify-center text-white shadow-sm`}>
                     <Icon className="w-5 h-5" />
                   </div>
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                  <span className="text-[11px] font-semibold text-slate-400">
                     {card.badge}
                   </span>
                 </div>
 
-                <h3 className="text-sm font-semibold text-white mb-1">
-                  {card.title}
-                </h3>
-                <p className="text-xs text-slate-400 leading-normal mb-3">
-                  {card.description}
-                </p>
+                <h3 className="text-sm font-semibold text-white mb-1">{card.title}</h3>
+                <p className="text-xs text-slate-400 leading-normal mb-3">{card.description}</p>
               </div>
 
               <div className="space-y-1.5 pt-2 border-t border-slate-800/80">
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500 block mb-1">
                   Consultas sugeridas:
                 </span>
+                {card.id === 'inscripciones' && (
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScIxCNeBE2veAN4dWndcrJONM8sUaOh7UMfgRuNc7j6NOUsgw/viewform?usp=sf_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full text-center text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 p-2 rounded transition-colors flex items-center justify-center gap-1.5 mb-2"
+                  >
+                    <span>Formulario de Preinscripción Online</span>
+                    <ChevronRight className="w-3.5 h-3.5 shrink-0" />
+                  </a>
+                )}
                 {card.quickPrompts.map((prompt, idx) => (
                   <button
                     key={idx}
+                    type="button"
                     onClick={() => {
                       setActiveSubject(card.id);
                       onSelectPrompt(prompt, card.id);
                     }}
                     className="w-full text-left text-xs text-sky-300 hover:text-white p-1.5 rounded bg-sky-950/30 hover:bg-sky-900/50 border border-sky-900/40 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate pr-2">• {prompt}</span>
+                    <span className="truncate pr-2">{prompt}</span>
                     <ChevronRight className="w-3 h-3 text-sky-400 group-hover:translate-x-0.5 transition-transform shrink-0" />
                   </button>
                 ))}
               </div>
-
             </div>
           );
         })}
       </div>
-
     </div>
   );
 };

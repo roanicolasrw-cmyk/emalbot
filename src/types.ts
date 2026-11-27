@@ -1,19 +1,40 @@
 export type AreaType = 'institucional' | 'educativa';
 
-export type SubjectType = 
+export type SubjectType =
   | 'inscripciones'
   | 'vacantes'
   | 'documentacion'
   | 'tramites'
   | 'horarios'
   | 'secretaria'
+  | 'docentes'
   | 'matematicas'
   | 'nuevas_tecnologias'
   | 'lengua'
+  | 'ingles'
   | 'educacion_fisica'
   | 'ciencias_sociales'
   | 'ciencias_naturales'
   | 'edi_plataformas';
+
+export interface RagMatchedDocTrace {
+  id: string;
+  title: string;
+  sourceType: 'google_form_drive' | 'drive' | 'knowledge_base';
+  category: string;
+  score: number;
+  matchedTerms: string[];
+  excerpt: string;
+}
+
+export interface RagTraceInfo {
+  keywords: string[];
+  totalDocsScanned: number;
+  driveDocsScanned: number;
+  matchedDocuments: RagMatchedDocTrace[];
+  generationMode: 'gemini-api' | 'rag-local-synthesizer';
+  processingMs: number;
+}
 
 export interface ChatMessage {
   id: string;
@@ -23,6 +44,7 @@ export interface ChatMessage {
   area: AreaType;
   subject?: SubjectType;
   sources?: string[];
+  ragTrace?: RagTraceInfo;
   exercise?: {
     question: string;
     hint: string;
@@ -37,6 +59,10 @@ export interface DriveFileItem {
   mimeType: string;
   modifiedTime?: string;
   folderCategory?: string;
+  authorName?: string;
+  moduleLevel?: string;
+  sourceType?: 'google_form' | 'drive_upload';
+  contentPreview?: string;
   size?: string;
   webViewLink?: string;
   synced: boolean;

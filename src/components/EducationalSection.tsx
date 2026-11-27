@@ -1,5 +1,16 @@
 import React from 'react';
-import { Calculator, Cpu, BookOpen, HeartPulse, Globe2, Leaf, Laptop, Sparkles, ChevronRight, HelpCircle } from 'lucide-react';
+import {
+  Calculator,
+  Cpu,
+  BookOpen,
+  HeartPulse,
+  Globe2,
+  Leaf,
+  Laptop,
+  Languages,
+  Sparkles,
+  ChevronRight
+} from 'lucide-react';
 import { SubjectType } from '../types';
 
 interface EducationalSectionProps {
@@ -15,136 +26,140 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
 }) => {
   const [selectedModule, setSelectedModule] = React.useState<string>('todos');
 
+  // Exact 8 visible subjects requested by Escuela N° 2702 EMAL
   const subjects = [
     {
-    {
-      id: 'matematicas' as SubjectType,
-      title: 'Matemáticas',
-      teacher: 'Prof. SEBASTIAN ZANETA',
-      icon: Calculator,
-      color: 'from-amber-500 to-orange-600',
-      badge: 'Formación Básica',
-      modules: ['Módulo 1', 'Módulo 2', 'Módulo 3', 'Módulo 4'],
-      description: 'Ecuaciones de 1er grado, porcentajes, regla de tres, problemas prácticos y economía familiar.',
+      id: 'nuevas_tecnologias' as SubjectType,
+      title: 'Nuevas Tecnologías',
+      teacher: 'Prof. Roa Nicolás',
+      icon: Cpu,
+      color: 'from-blue-500 to-cyan-600',
+      modules: ['Módulo 1', 'Módulo 2'],
+      description: 'Hardware, software, almacenamiento en Google Drive, seguridad digital y prevención de phishing.',
       quickPrompts: [
-        'Explicar el procedimiento para resolver ecuaciones de primer grado con un ejemplo',
-        '¿Cómo se calcula el porcentaje de descuento en una compra?',
-        'Generar un problema práctico de regla de tres aplicado al presupuesto del hogar'
+        '¿Cuál es la diferencia entre Hardware y Software con ejemplos?',
+        '¿Cómo protegerme del Phishing y usar contraseñas seguras?',
+        '¿Para qué sirve Google Drive y qué enseña el Prof. Roa Nicolás?'
       ]
     },
     {
-      id: 'nuevas_tecnologias' as SubjectType,
-      title: 'Nuevas Tecnologías (NTICx)',
-      teacher: 'Prof. ROA NICOLAS',
-      icon: Cpu,
-      color: 'from-blue-500 to-cyan-600',
-      badge: 'Módulo 2 Project Lead',
-      modules: ['Módulo 1', 'Módulo 2'],
-      description: 'Proyecto EMALBOT, hardware, software, seguridad en redes sociales, almacenamiento en Google Drive y ciudadanía digital.',
+      id: 'matematicas' as SubjectType,
+      title: 'Matemáticas',
+      teacher: 'Prof. Zaneta Sebastián',
+      icon: Calculator,
+      color: 'from-amber-500 to-orange-600',
+      modules: ['Módulo 1', 'Módulo 2', 'Módulo 3', 'Módulo 4'],
+      description: '1° y 2° año de secundaria: números enteros, fracciones, porcentajes, regla de tres, ecuaciones y geometría.',
       quickPrompts: [
-        '¿Cómo funciona el proyecto EMALBOT desarrollado por los alumnos del Módulo 2?',
-        '¿Cuál es la diferencia entre Hardware y Software con ejemplos cotidianos?',
-        '¿Cómo protegerme del Phishing y estafas virtuales en el celular?'
+        'Explicar números enteros, regla de signos y operaciones combinadas',
+        '¿Cómo resolver ecuaciones de primer grado con un ejemplo cotidiano?',
+        '¿Cómo calcular porcentajes, regla de tres, perímetro y área?'
       ]
     },
     {
       id: 'lengua' as SubjectType,
-      title: 'Lengua y Literatura',
-      teacher: 'Prof. ERIKA EVANS',
+      title: 'Lengua',
+      teacher: 'Prof. Evans Erika',
       icon: BookOpen,
       color: 'from-emerald-500 to-teal-600',
-      badge: 'Formación Básica',
       modules: ['Módulo 1', 'Módulo 2', 'Módulo 3', 'Módulo 4'],
-      description: 'Comprensión lectora, redacción de notas formales, conectores textuales y ortografía.',
+      description: '1° y 2° año de secundaria: comprensión lectora, tipos de texto, nota formal, conectores y acentuación.',
       quickPrompts: [
-        '¿Cómo es la estructura para redactar una nota formal a la escuela o mi trabajo?',
-        '¿Cuáles son los principales conectores para unir párrafos?',
-        'Estrategias para la comprensión lectora de textos explicativos'
+        'Estrategias de comprensión lectora y tipos de texto (expositivo y argumentativo)',
+        'Reglas de acentuación (agudas, graves y esdrújulas) con ejemplos',
+        '¿Cómo redactar una nota formal y usar conectores textuales?'
       ]
     },
     {
-      id: 'educacion_fisica' as SubjectType,
-      title: 'Educación Física y Salud',
-      teacher: 'Equipo Docente Ed. Física',
-      icon: HeartPulse,
-      color: 'from-rose-500 to-red-600',
-      badge: 'Formación Básica',
+      id: 'ingles' as SubjectType,
+      title: 'Inglés',
+      teacher: 'Equipo Docente EMAL',
+      icon: Languages,
+      color: 'from-sky-500 to-indigo-600',
       modules: ['Módulo 1', 'Módulo 2', 'Módulo 3', 'Módulo 4'],
-      description: 'Ergonomía postural, pausas activas para trabajadores, hábitos saludables e hidratación.',
+      description: 'Saludos, presentación personal, verbo To Be y vocabulario básico laboral y tecnológico.',
       quickPrompts: [
-        '¿Qué ejercicios de pausas activas puedo hacer si trabajo muchas horas sentado?',
-        '¿Cuál es la postura correcta para levantar objetos pesados sin dañar la espalda?',
-        'Beneficios de la actividad física moderada en personas adultas'
+        '¿Cómo se usa el verbo To Be (am, is, are) con ejemplos simples?',
+        'Vocabulario básico de inglés usado en tecnología y trabajo',
+        'Frases útiles para presentarse en inglés'
       ]
     },
     {
       id: 'ciencias_sociales' as SubjectType,
-      title: 'Ciencias Sociales',
-      teacher: 'Equipo Docente Cs. Sociales',
+      title: 'Cs. Sociales',
+      teacher: 'Equipo Docente EMAL',
       icon: Globe2,
       color: 'from-indigo-500 to-purple-600',
-      badge: 'Formación Básica',
       modules: ['Módulo 1', 'Módulo 2', 'Módulo 3', 'Módulo 4'],
-      description: 'Historia argentina contemporánea, Artículo 14 bis (derechos laborales) y Constitución Nacional.',
+      description: 'Constitución Nacional, derechos laborales (Art. 14 bis), historia argentina y participación ciudadana.',
       quickPrompts: [
-        '¿Qué derechos contempla el Artículo 14 bis de la Constitución Argentina?',
-        '¿Cómo influyen las instituciones comunitarias en la vida democrática?',
+        '¿Qué derechos contempla el Artículo 14 bis de la Constitución?',
+        '¿Cómo influyen las instituciones comunitarias en la democracia?',
         'Resumen de la evolución de los derechos de los trabajadores'
       ]
     },
     {
       id: 'ciencias_naturales' as SubjectType,
-      title: 'Ciencias Naturales',
-      teacher: 'Prof. YAMILA MUNDACA',
+      title: 'Cs. Naturales',
+      teacher: 'Prof. Mundaca Yamila',
       icon: Leaf,
       color: 'from-lime-500 to-green-600',
-      badge: 'Formación Básica',
       modules: ['Módulo 1', 'Módulo 2', 'Módulo 3', 'Módulo 4'],
-      description: 'Ecosistemas locales, cuidado del agua en la Patagonia, reciclaje y prevención de la salud.',
+      description: '1° y 2° año de secundaria: la célula, niveles de organización, ecosistemas, estados de la materia y salud.',
       quickPrompts: [
-        '¿Cuáles son los componentes bióticos y abióticos de un ecosistema?',
-        'Importancia del uso responsable del agua en nuestra región',
-        'Diferencia entre prevención primaria de la salud y tratamiento'
+        'Diferencia entre célula procariota y eucariota (animal y vegetal)',
+        '¿Qué son los factores bióticos, abióticos y las cadenas tróficas?',
+        'Estados de la materia, cambios de estado y mezclas homogéneas'
+      ]
+    },
+    {
+      id: 'educacion_fisica' as SubjectType,
+      title: 'Ed. Física y Salud',
+      teacher: 'Equipo Docente EMAL',
+      icon: HeartPulse,
+      color: 'from-rose-500 to-red-600',
+      modules: ['Módulo 1', 'Módulo 2', 'Módulo 3', 'Módulo 4'],
+      description: 'Ergonomía postural, pausas activas laborales, actividad física moderada e hidratación.',
+      quickPrompts: [
+        '¿Qué pausas activas hacer si trabajo muchas horas sentado?',
+        '¿Cuál es la postura correcta para levantar peso sin dañar la espalda?',
+        'Beneficios de la actividad física moderada en personas adultas'
       ]
     },
     {
       id: 'edi_plataformas' as SubjectType,
-      title: 'EDI: Plataformas Digitales',
-      teacher: 'Prof. ROA NICOLAS',
+      title: 'EDI',
+      teacher: 'Equipo Docente EMAL',
       icon: Laptop,
       color: 'from-violet-500 to-fuchsia-600',
-      badge: 'Formación Básica',
       modules: ['Módulo 1', 'Módulo 2'],
-      description: 'Entorno de Google Classroom, uso de EMALBOT, conceptos de datos, algoritmos e Inteligencia Artificial.',
+      description: 'Plataformas digitales, algoritmos, dato vs. información e Inteligencia Artificial aplicada a EMALBOT.',
       quickPrompts: [
-        '¿Qué es un algoritmo y cómo se aplica en un chatbot como EMALBOT?',
-        'Diferencia entre dato e información con un ejemplo de la escuela',
-        '¿Cómo consulta EMALBOT las carpetas de Google Drive de los docentes?'
+        '¿Qué es un algoritmo y cómo se aplica en EMALBOT?',
+        'Diferencia entre dato e información con un ejemplo escolar',
+        '¿Cómo busca EMALBOT información en Google Drive con RAG?'
       ]
     }
   ];
 
-  const filteredSubjects = selectedModule === 'todos'
-    ? subjects
-    : subjects.filter(s => s.modules.includes(selectedModule));
+  const filteredSubjects =
+    selectedModule === 'todos'
+      ? subjects
+      : subjects.filter(s => s.modules.includes(selectedModule));
 
   return (
     <div className="p-4 sm:p-6 bg-slate-900/60 rounded-2xl border border-slate-800 backdrop-blur-sm mb-6">
-      
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5 pb-4 border-b border-slate-800/80">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="px-2.5 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold uppercase tracking-wider">
-              Ciclo de Formación Básica
-            </span>
-            <span className="text-xs text-slate-400">• Módulos 1, 2, 3 y 4</span>
+          <div className="text-xs text-amber-300 font-semibold mb-1">
+            Ciclo de Formación Básica · Módulos 1, 2, 3 y 4
           </div>
           <h2 className="text-lg font-bold text-white flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-emerald-400" />
-            Materias de Formación Básica
+            Materias de la Escuela N° 2702 EMAL
           </h2>
           <p className="text-xs text-slate-400 mt-0.5">
-            Elegí una materia para consultar conceptos, resolver dudas del módulo o generar ejercicios de práctica.
+            Elegí una materia para repasar contenidos de 1° y 2° año de secundaria, consultar docentes o practicar ejercicios.
           </p>
         </div>
 
@@ -153,6 +168,7 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
           {['todos', 'Módulo 1', 'Módulo 2', 'Módulo 3', 'Módulo 4'].map((mod) => (
             <button
               key={mod}
+              type="button"
               onClick={() => setSelectedModule(mod)}
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
                 selectedModule === mod
@@ -166,8 +182,8 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
         </div>
       </div>
 
-      {/* Grid of Subjects */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {/* Grid of 8 Subjects */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {filteredSubjects.map((sub) => {
           const Icon = sub.icon;
           const isSelected = activeSubject === sub.id;
@@ -186,41 +202,23 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
                   <div className={`w-9 h-9 rounded-lg bg-gradient-to-tr ${sub.color} flex items-center justify-center text-white shadow-sm`}>
                     <Icon className="w-5 h-5" />
                   </div>
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-amber-300 border border-slate-700">
-                    {sub.badge}
+                  <span className="text-[11px] text-slate-400 font-medium">
+                    {sub.modules.length === 2 ? 'Mód. 1 y 2' : 'Mód. 1 a 4'}
                   </span>
                 </div>
 
-                <h3 className="text-sm font-semibold text-white mb-0.5">
-                  {sub.title}
-                </h3>
-
-                {sub.teacher && (
-                  <span className="text-[10px] font-bold text-sky-400 block mb-1.5">
-                    Docente: {sub.teacher}
-                  </span>
-                )}
-
-                {/* Modules tags */}
-                <div className="flex flex-wrap gap-1 mb-2">
-                  {sub.modules.map(m => (
-                    <span key={m} className="text-[9px] px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800 font-medium">
-                      {m}
-                    </span>
-                  ))}
-                </div>
-
-                <p className="text-xs text-slate-400 leading-normal mb-3">
-                  {sub.description}
-                </p>
+                <h3 className="text-sm font-bold text-white mb-0.5">{sub.title}</h3>
+                <p className="text-[11px] font-semibold text-sky-300 mb-2">{sub.teacher}</p>
+                <p className="text-xs text-slate-400 leading-normal mb-3">{sub.description}</p>
               </div>
 
               <div className="space-y-1.5 pt-2 border-t border-slate-800/80">
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
-                    Preguntas o ejercicios:
+                    Consultas de muestra:
                   </span>
                   <button
+                    type="button"
                     onClick={() => {
                       setActiveSubject(sub.id);
                       onSelectPrompt(`Por favor proponé un ejercicio práctico de ${sub.title} con pista y solución.`, sub.id);
@@ -235,23 +233,22 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
                 {sub.quickPrompts.map((prompt, idx) => (
                   <button
                     key={idx}
+                    type="button"
                     onClick={() => {
                       setActiveSubject(sub.id);
                       onSelectPrompt(prompt, sub.id);
                     }}
                     className="w-full text-left text-xs text-emerald-300 hover:text-white p-1.5 rounded bg-emerald-950/20 hover:bg-emerald-900/40 border border-emerald-900/30 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate pr-2">• {prompt}</span>
+                    <span className="truncate pr-2">{prompt}</span>
                     <ChevronRight className="w-3 h-3 text-emerald-400 group-hover:translate-x-0.5 transition-transform shrink-0" />
                   </button>
                 ))}
               </div>
-
             </div>
           );
         })}
       </div>
-
     </div>
   );
 };
