@@ -13,6 +13,13 @@ export default defineConfig(() => {
     },
     build: {
       chunkSizeWarningLimit: 1500,
+      rollupOptions: {
+        output: {
+          entryFileNames: 'assets/[name]-v102-[hash].js',
+          chunkFileNames: 'assets/[name]-v102-[hash].js',
+          assetFileNames: 'assets/[name]-v102-[hash].[ext]'
+        }
+      }
     },
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
