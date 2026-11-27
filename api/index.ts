@@ -463,7 +463,7 @@ app.post(['/api/chat', '/chat'], async (req, res) => {
       .join('\n\n');
 
     const systemInstruction = `
-Eres EMALBOT, el asistente conversacional oficial con Inteligencia Artificial de la Escuela N° 2702 EMAL ("Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos N° 2702").
+Eres EMALBOT, el asistente conversacional oficial con Inteligencia Artificial de la Escuela N° 2702 EMAL ("Escuela Municipal de Aprendizaje Laboral N° 2702").
 
 DATOS INSTITUCIONALES CLAVE:
 - Prioridad actual: MATRÍCULA 2027 - INSCRIPCIONES ABIERTAS (cierre de año lectivo).

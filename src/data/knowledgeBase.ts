@@ -2,7 +2,7 @@ import { KnowledgeDocument } from '../types';
 
 export const INSTITUTIONAL_INFO = {
   schoolName: 'Escuela N° 2702 EMAL',
-  fullTitle: 'Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos N° 2702',
+  fullTitle: 'Escuela Municipal de Aprendizaje Laboral N° 2702',
   shift: 'Turno Vespertino / Noche (19:15 hs a 22:15 hs)',
   secretariaHours: 'Lunes a Viernes de 19:15 hs a 22:15 hs',
   motto: 'Acompañamiento educativo y formación autónoma para adultos',

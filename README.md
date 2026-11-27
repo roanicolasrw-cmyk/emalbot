@@ -5,7 +5,7 @@
 # PROYECTO: EMALBOT — Asistente Educativo e Institucional con IA y Arquitectura RAG
 
 > **Plataforma Institucional y Asistente Virtual Inteligente**  
-> **Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos N° 2702 (EMAL)**  
+> **Escuela Municipal de Aprendizaje Laboral N° 2702 (EMAL)**  
 > Güemes 710 · Puerto Madryn, Chubut, Argentina  
 > Turno Vespertino: 19:15 a 22:15 hs
 
@@ -113,6 +113,6 @@ Este proyecto está optimizado para su despliegue continuo en **Vercel**:
 
 ## 📄 Licencia e Identidad Institucional
 
-© **Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos N° 2702 (EMAL)**  
+© **Escuela Municipal de Aprendizaje Laboral N° 2702 (EMAL)**  
 Desarrollado y administrado por el **Prof. Roa Nicolás** (Docente de *Nuevas Tecnologías*) vía cuenta institucional `@escuela2702emal.edu.ar`.  
 *Uso educativo e institucional reservado para la comunidad de la Escuela N° 2702 EMAL.*

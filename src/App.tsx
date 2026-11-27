@@ -407,7 +407,7 @@ export default function App() {
           <div className="flex items-center space-x-2">
             <GraduationCap className="w-4 h-4 text-sky-400" />
             <span className="font-semibold text-slate-300">
-              Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos N° 2702
+              Escuela Municipal de Aprendizaje Laboral N° 2702
             </span>
           </div>
           <p className="text-slate-500">
