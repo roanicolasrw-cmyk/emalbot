@@ -127,7 +127,7 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
     );
     setIsSubmittingForm(false);
     setFormSavedNotice(
-      `Guardado en Google Drive (/REG - Escuela N° 2702 EMAL/${formCategory}) e indexado en el motor RAG.`
+      `Guardado en Google Drive (Carpeta REG - Escuela N° 2702 EMAL - ${formCategory}) e indexado en el motor RAG.`
     );
   };
 
@@ -541,7 +541,7 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
                             </div>
                             <div className="text-[10px] text-slate-400 mt-0.5">
                               {m.sourceType === 'google_form_drive'
-                                ? 'Formulario Google -> Drive'
+                                ? 'Formulario Google a Drive'
                                 : m.sourceType === 'drive'
                                 ? 'Google Drive REG'
                                 : 'Base Institucional'}{' '}
