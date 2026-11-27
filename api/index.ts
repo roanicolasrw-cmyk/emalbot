@@ -139,13 +139,24 @@ function buildRelevantExcerpt(content: string, queryTerms: string[]): string {
 const app = express();
 app.use(express.json({ limit: '10mb' }));
 
-// Health Check
-app.get('/api/health', (req, res) => {
+// CORS middleware
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+  next();
+});
+
+// Health Check (supports both /api/health and /health)
+app.get(['/api/health', '/health'], (req, res) => {
   res.json({ status: 'ok', app: 'EMALBOT - Escuela N° 2702' });
 });
 
-// Drive Status
-app.get('/api/drive/status', (req, res) => {
+// Drive Status (supports both /api/drive/status and /drive/status)
+app.get(['/api/drive/status', '/drive/status'], (req, res) => {
   try {
     res.json({
       connected: true,
@@ -184,7 +195,7 @@ app.get('/api/drive/status', (req, res) => {
 });
 
 // Create REG Structure
-app.post('/api/drive/create-reg-structure', (req, res) => {
+app.post(['/api/drive/create-reg-structure', '/drive/create-reg-structure'], (req, res) => {
   try {
     res.json({
       success: true,
@@ -210,7 +221,7 @@ app.post('/api/drive/create-reg-structure', (req, res) => {
 });
 
 // Sync / Add Drive file
-app.post('/api/drive/sync', (req, res) => {
+app.post(['/api/drive/sync', '/drive/sync'], (req, res) => {
   try {
     const {
       customDocName,
@@ -248,20 +259,20 @@ app.post('/api/drive/sync', (req, res) => {
 });
 
 // Delete custom doc
-app.delete('/api/drive/docs/:id', (req, res) => {
+app.delete(['/api/drive/docs/:id', '/drive/docs/:id'], (req, res) => {
   const { id } = req.params;
   syncedDriveDocs = syncedDriveDocs.filter(d => d.id !== id);
   res.json({ success: true, totalDocs: syncedDriveDocs.length });
 });
 
 // Reset demo docs
-app.post('/api/drive/reset-demo', (req, res) => {
+app.post(['/api/drive/reset-demo', '/drive/reset-demo'], (req, res) => {
   syncedDriveDocs = [...DEFAULT_DRIVE_DOCS];
   res.json({ success: true, totalDocs: syncedDriveDocs.length });
 });
 
 // Main Chat Endpoint with RAG
-app.post('/api/chat', async (req, res) => {
+app.post(['/api/chat', '/chat'], async (req, res) => {
   const startTime = Date.now();
   try {
     const {
@@ -614,4 +625,8 @@ REGLAS DE FORMATO:
   }
 });
 
-export default app;
+export default function handler(req: any, res: any) {
+  return app(req, res);
+}
+
+export { app };
