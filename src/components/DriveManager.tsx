@@ -55,8 +55,8 @@ export const DriveManager: React.FC<DriveManagerProps> = ({
       {/* Header Banner */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
         <div className="flex items-center space-x-3.5">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-lg shadow-emerald-500/20">
-            <Cloud className="w-6 h-6" />
+          <div className="w-12 h-12 rounded-xl bg-slate-950 p-1 flex items-center justify-center shadow-lg shadow-emerald-500/20 border border-emerald-500/30 shrink-0">
+            <img src="/logo.png" alt="EMALBOT" className="w-full h-full object-contain" />
           </div>
           <div>
             <h2 className="text-xl font-bold text-white flex items-center gap-2">

@@ -25,8 +25,8 @@ export const Header: React.FC<HeaderProps> = ({
           
           {/* Logo & School Name */}
           <div className="flex items-center space-x-3">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-sky-500 via-blue-600 to-indigo-600 flex items-center justify-center shadow-md shadow-blue-500/20 text-white ring-2 ring-white/10">
-              <Bot className="w-6 h-6" />
+            <div className="w-12 h-12 rounded-xl bg-slate-950 p-1 flex items-center justify-center shadow-md shadow-sky-500/20 ring-2 ring-sky-500/30 overflow-hidden shrink-0">
+              <img src="/logo.png" alt="EMALBOT Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <div className="flex items-center space-x-2">

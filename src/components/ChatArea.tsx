@@ -161,8 +161,8 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
         
         {messages.length === 0 && (
           <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white mb-4 shadow-xl shadow-sky-500/20 ring-4 ring-sky-500/10">
-              <Bot className="w-8 h-8" />
+            <div className="w-20 h-20 rounded-2xl bg-slate-950 p-2 flex items-center justify-center mb-4 shadow-xl shadow-sky-500/20 ring-4 ring-sky-500/20">
+              <img src="/logo.png" alt="EMALBOT Logo" className="w-full h-full object-contain" />
             </div>
             <h3 className="text-lg font-bold text-white mb-1">
               ¡Hola! Soy EMALBOT
@@ -223,8 +223,8 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
               className={`flex items-start space-x-3 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {msg.role === 'model' && (
-                <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white shrink-0 shadow-md">
-                  <Bot className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-xl bg-slate-950 p-1 flex items-center justify-center shrink-0 shadow-md border border-sky-500/30">
+                  <img src="/logo.png" alt="EMALBOT" className="w-full h-full object-contain" />
                 </div>
               )}
 

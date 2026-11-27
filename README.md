@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/logo.png" alt="EMALBOT Logo" width="180"/>
+</p>
+
 # PROYECTO: EMALBOT — Asistente Educativo e Institucional con IA y Arquitectura RAG
 
 **INSTITUCIÓN:** Escuela N° 2702 EMAL (Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos N° 2702)

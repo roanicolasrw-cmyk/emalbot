@@ -70,8 +70,8 @@ Para inscribirte en una escuela generalmente necesitás documento de identidad y
       
       {/* Title Header */}
       <div className="flex items-center space-x-3.5 pb-6 border-b border-slate-800">
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-600 to-fuchsia-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
-          <Sparkles className="w-6 h-6 text-amber-300" />
+        <div className="w-14 h-14 rounded-2xl bg-slate-950 p-1.5 flex items-center justify-center shadow-lg shadow-indigo-500/20 border border-indigo-500/30 shrink-0">
+          <img src="/logo.png" alt="EMALBOT Logo" className="w-full h-full object-contain" />
         </div>
         <div>
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
