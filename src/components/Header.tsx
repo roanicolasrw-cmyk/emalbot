@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({
   const [logoError, setLogoError] = useState(false);
 
   return (
-    <header className="no-print bg-slate-900 border-b border-slate-800 text-white sticky top-0 z-40">
+    <header className="bg-slate-900 border-b border-slate-800 text-white sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex flex-wrap items-center justify-between gap-4">
           {/* Brand Zone with Official EMALBOT Logo */}
