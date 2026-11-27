@@ -32,7 +32,7 @@ export function generateLocalRagResponse(
 
   // Strict thematic classification to avoid any cross-contamination
   const isMath = subject === 'matematicas' || /matematica|ecuacion|porcentaje|regla de tres|fraccion|perimetro|area|geometria|signos|entero|zaneta/i.test(normQuery);
-  const isNticx = subject === 'nuevas_tecnologias' || /tecnolog|nticx|hardware|software|periferico|computadora|drive|nube|phishing|contraseñ|roa/i.test(normQuery);
+  const isNticx = subject === 'nuevas_tecnologias' || /tecnolog|nticx|hardware|software|periferico|computadora|drive|nube|phishing|contraseñ|roa|inteligencia artificial|\bia\b|ciudades inteligentes|smart cities|big data/i.test(normQuery);
   const isLengua = subject === 'lengua' || /lengua|literatura|lectura|comprension|acentuaci|aguda|grave|esdrujula|tilde|nota formal|conector|paratexto|evans/i.test(normQuery);
   const isCsNat = subject === 'ciencias_naturales' || /natural|biolog|celula|procariota|eucariota|ecosistema|biotico|abiotico|materia|estado|mezcla|mundaca/i.test(normQuery);
   const isCsSoc = subject === 'ciencias_sociales' || /social|constitucion|art 14|derecho laboral|democracia/i.test(normQuery);
@@ -64,8 +64,8 @@ export function generateLocalRagResponse(
       categoryLabel = 'Nuevas Tecnologías';
       sourceTitle = 'Prof. Roa Nicolás';
       responseText = `### ✏️ Ejercicio de Práctica: Nuevas Tecnologías\n\n` +
-        `**Enunciado:**\nIndicá si cada elemento es Hardware o Software:\n1. Memoria RAM\n2. Google Chrome\n3. Teclado\n\n` +
-        `**Solución:**\n1. **Memoria RAM**: Hardware (componente físico interno).\n2. **Google Chrome**: Software (aplicación/navegador web).\n3. **Teclado**: Hardware (periférico de entrada).`;
+        `**Enunciado:**\n¿Qué rol cumple la Inteligencia Artificial y el Big Data en una Ciudad Inteligente (Smart City)?\n\n` +
+        `**Solución:** Los sensores urbanos recopilan grandes volúmenes de datos (Big Data) y los modelos de Inteligencia Artificial los analizan en tiempo real para optimizar semáforos, transporte público, consumo energético y seguridad comunitaria.`;
     } else {
       categoryLabel = 'Ciencias Naturales';
       sourceTitle = 'Prof. Mundaca Yamila';
@@ -76,7 +76,7 @@ export function generateLocalRagResponse(
   } else if (/quien es el profesor de nuevas tecnologias|quien ensena nuevas tecnologias|profesor de nuevas tecnologias/i.test(normQuery)) {
     categoryLabel = 'Nuevas Tecnologías';
     sourceTitle = 'Prof. Roa Nicolás';
-    responseText = `El profesor de **Nuevas Tecnologías** (Módulos 1 y 2) es el **Prof. Roa Nicolás**.\n\n**Contenidos de la materia:**\n- Hardware y Software (periféricos de entrada y salida).\n- Uso de Google Drive para almacenamiento en la nube institucional.\n- Seguridad digital, contraseñas seguras y prevención de estafas por Phishing.`;
+    responseText = `El profesor de **Nuevas Tecnologías** (Módulos 1 y 2) es el **Prof. Roa Nicolás**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Alfabetización digital (Hardware/Software), ofimática (procesadores de texto, planillas de cálculo, presentaciones), Google Drive institucional y seguridad digital (Phishing).\n- **Módulo 2:** **Inteligencia Artificial (IA)** (desarrollo activo de los propios estudiantes en el proyecto EMALBOT), **Ciudades Inteligentes (Smart Cities)**, **Big Data**, comunicación en Internet y trabajo en redes.`;
   } else if (/quien es el profesor de matematicas|quien ensena matematicas|profesor de matematicas/i.test(normQuery)) {
     categoryLabel = 'Matemáticas';
     sourceTitle = 'Prof. Zaneta Sebastián';
@@ -120,15 +120,15 @@ export function generateLocalRagResponse(
     sourceTitle = 'Prof. Roa Nicolás (DC Modular EPJA Chubut)';
     responseText = `**Educación en Nuevas Tecnologías — Ciclo Básico (Prof. Roa Nicolás):**\n\n` +
       `- **Módulo 1 (Ciudadanía / Naturaleza y Desarrollo):**\n` +
-      `  * **Alfabetización Digital:** Hardware (CPU, memoria RAM, periféricos) y Software (sistemas operativos y apps).\n` +
-      `  * **Herramientas Ofimáticas:** Procesadores de texto (cartas, informes, tablas), Planillas de cálculo (fórmulas, funciones y gráficos) y Presentadores multimedia.\n` +
-      `  * **Nube Institucional:** Uso de Google Drive para gestionar apuntes y trabajos escolares desde el celular.\n` +
+      `  * **Alfabetización Digital:** Hardware (CPU, memoria RAM, periféricos) y Software (sistemas operativos y aplicaciones).\n` +
+      `  * **Software Utilitario de Oficina:** Procesadores de texto (cartas, informes, tablas), Planillas de cálculo (fórmulas, funciones y gráficos) y Presentadores multimedia.\n` +
+      `  * **Nube Institucional:** Uso de Google Drive para gestionar apuntes y trabajos escolares desde el celular sin saturar memoria.\n` +
       `  * **Seguridad Digital:** Contraseñas seguras y prevención activa de fraudes por Phishing.\n\n` +
       `- **Módulo 2 (Identidad / Diversidad y Salud):**\n` +
-      `  * **Comunicación en Internet:** Correo electrónico, foros, blogs y plataformas colaborativas.\n` +
-      `  * **Búsqueda y Recuperación:** Técnicas para seleccionar y validar fuentes de información en la web.\n` +
-      `  * **Producción y Redes:** Creación de materiales educativos y trabajo colaborativo con asistencia de las TIC.\n` +
-      `  * **Seguridad Informática:** Privacidad de datos e identidad digital en la red.`;
+      `  * **Inteligencia Artificial (IA):** Modelos conversacionales y **desarrollo activo por parte de los estudiantes** (participación en la creación, prueba y ajuste de asistentes como EMALBOT con arquitectura RAG).\n` +
+      `  * **Ciudades Inteligentes (Smart Cities):** Conectividad, sensores urbanos y aplicaciones tecnológicas para optimizar servicios comunitarios y transporte.\n` +
+      `  * **Big Data:** Procesamiento y análisis de grandes volúmenes de datos para identificar patrones y tomar decisiones.\n` +
+      `  * **Comunicación y Redes:** Correo electrónico, foros, blogs, técnicas de búsqueda y validación de fuentes en Internet, y seguridad informática.`;
   } else if (isLengua) {
     categoryLabel = 'Lengua';
     sourceTitle = 'Prof. Evans Erika (DC Modular EPJA Chubut)';

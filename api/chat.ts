@@ -96,7 +96,7 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
     title: 'Nuevas Tecnologías (Módulos 1 y 2) · Prof. Roa Nicolás',
     category: 'Nuevas Tecnologías',
     source: 'Diseño Curricular Modular EPJA Chubut (Anexo I)',
-    keywords: ['nuevas tecnologias', 'nticx', 'modulo 1', 'modulo 2', 'roa', 'hardware', 'software', 'drive', 'phishing', 'ofimatica', 'redes'],
+    keywords: ['nuevas tecnologias', 'nticx', 'modulo 1', 'modulo 2', 'roa', 'hardware', 'software', 'drive', 'phishing', 'ofimatica', 'redes', 'inteligencia artificial', 'ia', 'ciudades inteligentes', 'smart cities', 'big data'],
     content: `**Educación en Nuevas Tecnologías — Ciclo Básico (Prof. Roa Nicolás):**
 
 - **Módulo 1 (Ciudadanía / Naturaleza y Desarrollo):**
@@ -106,10 +106,10 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
   * **Seguridad Digital:** Contraseñas seguras y prevención activa de fraudes por Phishing.
 
 - **Módulo 2 (Identidad / Diversidad y Salud):**
-  * **Comunicación en Internet:** Correo electrónico, foros, blogs y plataformas colaborativas.
-  * **Búsqueda y Recuperación:** Técnicas para buscar, seleccionar y validar información confiable en la web.
-  * **Producción y Trabajo Colaborativo:** Creación de materiales educativos asistidos por TIC y redes comunicacionales.
-  * **Seguridad Informática:** Privacidad de datos personales e identidad digital.`
+  * **Inteligencia Artificial (IA):** Fundamentos y modelos conversacionales; **participación y desarrollo activo por parte de los estudiantes de la escuela** (creación, ajuste y validación de asistentes como EMALBOT con arquitectura RAG).
+  * **Ciudades Inteligentes (Smart Cities):** Conectividad, sensores urbanos y soluciones tecnológicas aplicadas a la movilidad, la sustentabilidad ambiental y la gestión comunitaria.
+  * **Big Data:** Recolección, almacenamiento y procesamiento de grandes volúmenes de datos para identificar patrones y tomar decisiones fundamentadas.
+  * **Comunicación y Redes:** Correo electrónico, foros, blogs, técnicas de búsqueda y validación de fuentes, y seguridad informática.`
   },
   {
     id: 'doc-lengua',
@@ -271,7 +271,7 @@ export default async function handler(req: any, res: any) {
 
   // Strict thematic classification to avoid any cross-contamination
   const isMath = subject === 'matematicas' || /matematica|ecuacion|porcentaje|regla de tres|fraccion|perimetro|area|geometria|signos|entero|zaneta/i.test(normQuery);
-  const isNticx = subject === 'nuevas_tecnologias' || /tecnolog|nticx|hardware|software|periferico|computadora|drive|nube|phishing|contraseñ|roa/i.test(normQuery);
+  const isNticx = subject === 'nuevas_tecnologias' || /tecnolog|nticx|hardware|software|periferico|computadora|drive|nube|phishing|contraseñ|roa|inteligencia artificial|\bia\b|ciudades inteligentes|smart cities|big data/i.test(normQuery);
   const isLengua = subject === 'lengua' || /lengua|literatura|lectura|comprension|acentuaci|aguda|grave|esdrujula|tilde|nota formal|conector|paratexto|evans/i.test(normQuery);
   const isCsNat = subject === 'ciencias_naturales' || /natural|biolog|celula|procariota|eucariota|ecosistema|biotico|abiotico|materia|estado|mezcla|mundaca/i.test(normQuery);
   const isCsSoc = subject === 'ciencias_sociales' || /social|constitucion|art 14|derecho laboral|democracia/i.test(normQuery);
@@ -411,7 +411,7 @@ ${selectedDoc.content}
     } else {
       // Direct, focused response — strictly the requested document without any complementary sections
       if (/quien es el profesor de nuevas tecnologias|quien ensena nuevas tecnologias|profesor de nuevas tecnologias/i.test(normQuery)) {
-        finalReply = `El profesor de **Nuevas Tecnologías** (Módulos 1 y 2) es el **Prof. Roa Nicolás**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Alfabetización digital (Hardware/Software), ofimática (procesador de textos, planilla de cálculos, presentaciones), Google Drive y seguridad digital (Phishing).\n- **Módulo 2:** Comunicación en Internet, técnicas de búsqueda y validación web, trabajo colaborativo en redes y seguridad informática.`;
+        finalReply = `El profesor de **Nuevas Tecnologías** (Módulos 1 y 2) es el **Prof. Roa Nicolás**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Alfabetización digital (Hardware/Software), ofimática (procesador de textos, planilla de cálculos, presentaciones), Google Drive institucional y seguridad digital (Phishing).\n- **Módulo 2:** **Inteligencia Artificial (IA)** (con desarrollo activo de los propios estudiantes en proyectos como EMALBOT), **Ciudades Inteligentes (Smart Cities)**, **Big Data**, comunicación en Internet y trabajo en redes.`;
       } else if (/quien es el profesor de matematicas|quien ensena matematicas|profesor de matematicas/i.test(normQuery)) {
         finalReply = `El profesor de **Matemáticas** (Módulos 1 a 4) es el **Prof. Zaneta Sebastián**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Números enteros, operaciones combinadas, números racionales (porcentajes cotidianos) y ecuaciones de 1er grado.\n- **Módulo 2:** Geometría en el plano y cuerpos del espacio, sistema sexagesimal, ejes cartesianos y estadística descriptiva.`;
       } else if (/quien es la profesora de lengua|profesora de lengua|quien ensena lengua/i.test(normQuery)) {

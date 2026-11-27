@@ -94,7 +94,7 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
   const [formModule, setFormModule] = useState('Módulo 1 y 2');
   const [formTitle, setFormTitle] = useState('Docente_Nuevas_Tecnologias_Roa_Nicolas.gdoc');
   const [formContent, setFormContent] = useState(
-    'El profesor de Nuevas Tecnologías (Módulos 1 y 2) es el Prof. Roa Nicolás. Contenidos: Hardware vs. Software, almacenamiento en la nube con Google Drive, contraseñas seguras y prevención de Phishing.'
+    'El profesor de Nuevas Tecnologías (Módulos 1 y 2) es el Prof. Roa Nicolás. Contenidos: Hardware y Software, Google Drive institucional, seguridad digital (Phishing), Inteligencia Artificial (desarrollada con participación activa de los estudiantes en proyectos como EMALBOT), Ciudades Inteligentes (Smart Cities) y Big Data.'
   );
   const [isSubmittingForm, setIsSubmittingForm] = useState(false);
   const [formSavedNotice, setFormSavedNotice] = useState<string | null>(null);
@@ -118,7 +118,7 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
       setFormModule('Módulo 1 y 2');
       setFormTitle('Docente_Nuevas_Tecnologias_Roa_Nicolas.gdoc');
       setFormContent(
-        'El profesor de Nuevas Tecnologías (Módulos 1 y 2) es el Prof. Roa Nicolás. Contenidos: Hardware vs. Software, almacenamiento en la nube con Google Drive, contraseñas seguras y prevención de Phishing.'
+        'El profesor de Nuevas Tecnologías (Módulos 1 y 2) es el Prof. Roa Nicolás. Contenidos: Hardware y Software, Google Drive institucional, seguridad digital (Phishing), Inteligencia Artificial (desarrollada con participación activa de los estudiantes en proyectos como EMALBOT), Ciudades Inteligentes (Smart Cities) y Big Data.'
       );
       setDemoQuery('¿Quién es el profesor de Nuevas Tecnologías?');
     } else if (preset === 'zaneta') {
