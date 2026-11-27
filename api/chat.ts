@@ -16,159 +16,160 @@ const KNOWLEDGE_DOCUMENTS: SyncedDoc[] = [
     category: 'Matrícula 2027 · Inscripciones',
     source: 'Secretaría EMAL (Circular Oficial)',
     keywords: ['matricula', '2027', 'requisitos', 'inscripcion', 'preinscripcion', 'formulario', 'link', 'guemes', '710', 'documentos', 'dni', 'partida', 'fotos'],
-    content: `MATRÍCULA 2027 - INSCRIPCIONES ABIERTAS (Escuela N° 2702 EMAL):
-Prioridad de cierre de año para ingresantes mayores de 18 años.
-1. Preinscripción Online: Completar el formulario en: https://docs.google.com/forms/d/e/1FAIpQLScIxCNeBE2veAN4dWndcrJONM8sUaOh7UMfgRuNc7j6NOUsgw/viewform?usp=sf_link
-2. Presentación presencial de documentación:
-   - Fotocopia de DNI (frente y dorso).
-   - Certificado de estudios primarios completos o analítico parcial / pase de secundaria anterior.
-   - Fotocopia de Partida de Nacimiento.
-   - 2 fotos carnet 4x4.
-3. Dónde y cuándo presentar: En Güemes 710, de Lunes a Viernes de 19:15 a 22:00 hs. Atención general de Secretaría: 19:15 a 22:15 hs.`
+    content: `**MATRÍCULA 2027 — INSCRIPCIONES ABIERTAS (Escuela N° 2702 EMAL)**
+
+**1. Preinscripción Online:**
+Completar el formulario digital: [Formulario de Preinscripción](https://docs.google.com/forms/d/e/1FAIpQLScIxCNeBE2veAN4dWndcrJONM8sUaOh7UMfgRuNc7j6NOUsgw/viewform?usp=sf_link)
+
+**2. Documentación a presentar (mayores de 18 años):**
+- Fotocopia de DNI (frente y dorso).
+- Certificado de estudios primarios completos o analítico parcial / pase de secundaria anterior.
+- Fotocopia de Partida de Nacimiento.
+- 2 fotos carnet 4x4.
+
+**3. Lugar y Horario de entrega:**
+En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
   },
   {
     id: 'doc-horarios-sec',
-    title: 'Horarios de Atención de Secretaría y Clases - Turno Noche',
+    title: 'Horarios de Atención de Secretaría y Clases',
     category: 'Horarios · Secretaría',
     source: 'Reglamento Interno Escuela N° 2702 EMAL',
     keywords: ['horarios', 'secretaria', 'preceptoria', 'turno noche', 'vespertino', 'tolerancia', 'trabajo'],
-    content: `Horarios de la Escuela N° 2702 EMAL:
-- Atención de Secretaría y Preceptoría: Lunes a Viernes de 19:15 a 22:15 hs.
-- Horario de Cursada: Turno Noche de 19:15 a 22:15 hs.
-- Tolerancia por trabajo: Si tenés horarios rotativos o salís tarde de trabajar, presentá la constancia laboral en Secretaría para acordar el ingreso y el seguimiento pedagógico a través de las carpetas de Google Drive.`
+    content: `**Horarios de la Escuela N° 2702 EMAL (Güemes 710):**
+
+- **Secretaría y Preceptoría:** Lunes a Viernes de **19:15 a 22:15 hs**.
+- **Turno de Cursada:** Turno Noche de **19:15 a 22:15 hs**.
+- **Tolerancia por trabajo:** Presentando constancia laboral en Secretaría se contempla el ingreso adecuado a tu jornada de trabajo.`
   },
   {
     id: 'doc-tramites-cert',
-    title: 'Constancias de Alumno Regular y Trámites de Secretaría',
+    title: 'Constancias de Alumno Regular y Certificados',
     category: 'Trámites · Certificados',
     source: 'Secretaría EMAL',
     keywords: ['constancia', 'alumno regular', 'certificado', 'examen', 'equivalencias', 'pase', 'trabajo', 'inasistencias'],
-    content: `Trámites habituales en Secretaría (19:15 a 22:15 hs):
-- Constancia de Alumno Regular: Se solicita en Secretaría con 24 a 48 hs de anticipación. Sirve para salario familiar, trabajo, boleto educativo y asignaciones.
-- Certificado de Examen: Se entrega el mismo día en que el estudiante rinde una evaluación para justificar la jornada laboral.
-- Pases y Equivalencias: Presentar el analítico parcial de la escuela anterior.`
+    content: `**Trámites de Secretaría (Lunes a Viernes de 19:15 a 22:15 hs):**
+
+- **Constancia de Alumno Regular:** Se solicita en Secretaría con **24 a 48 hs de anticipación**. Válida para trabajo, asignaciones y boleto educativo.
+- **Certificado de Examen:** Se entrega el mismo día en que se rinde una evaluación para justificar la jornada laboral.
+- **Pases / Equivalencias:** Presentar el analítico parcial legalizado en Secretaría.`
   },
   {
     id: 'doc-docentes-nomina',
-    title: 'Equipo Docente y Profesores por Materia - Escuela N° 2702 EMAL',
+    title: 'Equipo Docente y Profesores por Materia',
     category: 'Equipo Docente',
     source: 'Nómina Oficial EMAL N° 2702',
-    keywords: ['profesor', 'profesora', 'profesores', 'docente', 'docentes', 'quien', 'enseña', 'roa', 'nicolas', 'zaneta', 'sebastian', 'evans', 'erika', 'mundaca', 'yamila'],
-    content: `Nómina Oficial de Profesores - Escuela N° 2702 EMAL:
-- Nuevas Tecnologías (Módulos 1 y 2): Prof. Roa Nicolás
-- Matemáticas (Módulos 1 a 4): Prof. Zaneta Sebastián
-- Lengua (Módulos 1 a 4): Prof. Evans Erika
-- Cs. Naturales (Módulos 1 a 4): Prof. Mundaca Yamila
-- Inglés (Módulos 1 a 4): Equipo Docente de Inglés
-- Cs. Sociales (Módulos 1 a 4): Equipo Docente de Cs. Sociales
-- Ed. Física y Salud (Módulos 1 a 4): Equipo Docente de Ed. Física
-- EDI - Plataformas Digitales (Módulos 1 y 2): Equipo Docente de EDI`
+    keywords: ['profesor', 'profesora', 'profesores', 'docente', 'docentes', 'quien', 'enseña', 'nomina'],
+    content: `**Nómina de Profesores — Escuela N° 2702 EMAL:**
+
+- **Nuevas Tecnologías (Módulos 1 y 2):** Prof. Roa Nicolás
+- **Matemáticas (Módulos 1 a 4):** Prof. Zaneta Sebastián
+- **Lengua (Módulos 1 a 4):** Prof. Evans Erika
+- **Cs. Naturales (Módulos 1 a 4):** Prof. Mundaca Yamila
+- **Inglés (Módulos 1 a 4):** Equipo Docente de Inglés
+- **Cs. Sociales (Módulos 1 a 4):** Equipo Docente de Cs. Sociales
+- **Ed. Física y Salud (Módulos 1 a 4):** Equipo Docente de Ed. Física
+- **EDI - Plataformas Digitales (Módulos 1 y 2):** Equipo Docente de EDI`
   },
   {
     id: 'doc-matematicas',
-    title: 'Matemáticas (1° y 2° Año): Números Enteros, Ecuaciones y Porcentajes',
+    title: 'Matemáticas (1° y 2° Año) · Prof. Zaneta Sebastián',
     category: 'Matemáticas',
-    source: 'Prof. Zaneta Sebastián (Material Didáctico)',
+    source: 'Prof. Zaneta Sebastián',
     keywords: ['matematicas', 'matematica', 'zaneta', 'enteros', 'ecuaciones', 'porcentajes', 'regla de tres', 'area', 'perimetro'],
-    content: `Matemáticas 1° y 2° año de secundaria (Prof. Zaneta Sebastián):
-- Números Enteros: Regla de signos (+ · + = +; - · - = +; + · - = -). Jerarquía: 1) Paréntesis, 2) Potencias/raíces, 3) Multiplicación/división, 4) Suma/resta.
-- Ecuaciones de 1er Grado: 2x + 10 = 50 -> 2x = 40 -> x = 20.
-- Porcentajes y Descuentos: Para calcular el 15% de $12.000: (12000 × 15) / 100 = $1.800 de descuento. Total a pagar = $10.200.
-- Geometría: Perímetro (suma de lados) y Área de rectángulo (Base × Altura).`
+    content: `**Matemáticas (1° y 2° Año de Secundaria — Prof. Zaneta Sebastián):**
+
+- **Números Enteros:** Regla de signos (\`+ · + = +\`, \`- · - = +\`, \`+ · - = -\`). Jerarquía de operaciones combinadas.
+- **Ecuaciones de 1er Grado:** Despeje de incógnita (ej: \`2x + 10 = 50\` $\\rightarrow$ \`2x = 40\` $\\rightarrow$ \`x = 20\`).
+- **Porcentajes:** Cálculo de descuentos cotidianos (ej: el 15% de $12.000 es $1.800; total a pagar $10.200).
+- **Geometría Básica:** Perímetro (contorno) y Área de figuras planas (Base × Altura).`
   },
   {
     id: 'doc-nticx',
-    title: 'Nuevas Tecnologías (Módulos 1 y 2): Hardware, Software y Seguridad Digital',
+    title: 'Nuevas Tecnologías (Módulos 1 y 2) · Prof. Roa Nicolás',
     category: 'Nuevas Tecnologías',
-    source: 'Prof. Roa Nicolás (Guía NTICx)',
+    source: 'Prof. Roa Nicolás',
     keywords: ['nuevas tecnologias', 'nticx', 'roa', 'hardware', 'software', 'drive', 'phishing', 'seguridad', 'contraseñas', 'nube'],
-    content: `Nuevas Tecnologías (Prof. Roa Nicolás · Módulos 1 y 2):
-- Hardware: Componentes físicos (procesador CPU, memoria RAM, disco, teclado, monitor, mouse). Periféricos de entrada (teclado, micrófono) y salida (monitor, parlantes).
-- Software: Programas, aplicaciones y sistemas operativos (Windows, Android, Google Docs, navegadores).
-- Google Drive: Almacenamiento en la nube institucional para acceder a apuntes sin ocupar memoria en el celular.
-- Ciberseguridad: Prevención de Phishing (estafas por enlaces falsos) y uso de contraseñas seguras con autenticación en dos pasos.`
+    content: `**Nuevas Tecnologías (Módulos 1 y 2 — Prof. Roa Nicolás):**
+
+- **Hardware vs. Software:** Hardware son las partes físicas (procesador, memoria RAM, periféricos de entrada y salida); Software son las aplicaciones y sistemas operativos (Windows, Android, navegadores).
+- **Google Drive:** Almacenamiento en la nube institucional para acceder a apuntes y trabajos escolares desde el celular sin ocupar memoria.
+- **Seguridad Digital:** Prevención de estafas por Phishing y uso de contraseñas seguras con autenticación en dos pasos.`
   },
   {
     id: 'doc-lengua',
-    title: 'Lengua (1° y 2° Año): Comprensión Lectora, Tipos de Texto y Acentuación',
+    title: 'Lengua (1° y 2° Año) · Prof. Evans Erika',
     category: 'Lengua',
-    source: 'Prof. Evans Erika (Guía Pedagógica)',
+    source: 'Prof. Evans Erika',
     keywords: ['lengua', 'evans', 'erika', 'comprension lectora', 'acentuacion', 'agudas', 'graves', 'esdrujulas', 'nota formal', 'conectores'],
-    content: `Lengua 1° y 2° año de secundaria (Prof. Evans Erika):
-- Comprensión Lectora: Lectura del paratexto, identificación de ideas principales y secundarias, y elaboración de resúmenes.
-- Tipos de Texto: Expositivo (informa objetivamente), Argumentativo (defiende una postura con razones) y Nota Formal (lugar y fecha, destinatario, motivo claro, saludo y firma con DNI).
-- Reglas de Acentuación:
-  * Agudas: Acento en última sílaba; llevan tilde si terminan en N, S o vocal (ej: canción, café).
-  * Graves: Acento en penúltima sílaba; llevan tilde si NO terminan en N, S ni vocal (ej: árbol, lápiz).
-  * Esdrújulas: Acento en antepenúltima sílaba; SIEMPRE llevan tilde (ej: matemática, célula).`
+    content: `**Lengua (1° y 2° Año de Secundaria — Prof. Evans Erika):**
+
+- **Comprensión Lectora:** Paratexto, ideas principales y elaboración de resúmenes.
+- **Tipos de Texto:** Expositivo, argumentativo y redacción de **Nota Formal** (lugar, fecha, motivo claro, firma y DNI).
+- **Reglas de Acentuación:**
+  * **Agudas:** Acento en última sílaba; llevan tilde si terminan en N, S o vocal (ej: *canción*).
+  * **Graves:** Acento en penúltima sílaba; llevan tilde si NO terminan en N, S ni vocal (ej: *árbol*).
+  * **Esdrújulas:** Acento en antepenúltima sílaba; siempre llevan tilde (ej: *matemática*).`
   },
   {
     id: 'doc-cs-naturales',
-    title: 'Cs. Naturales (1° y 2° Año): La Célula, Ecosistemas y Materia',
+    title: 'Cs. Naturales (1° y 2° Año) · Prof. Mundaca Yamila',
     category: 'Cs. Naturales',
-    source: 'Prof. Mundaca Yamila (Cartilla de Estudio)',
+    source: 'Prof. Mundaca Yamila',
     keywords: ['cs naturales', 'ciencias naturales', 'mundaca', 'yamila', 'celula', 'ecosistema', 'materia', 'estados', 'mezclas', 'salud'],
-    content: `Cs. Naturales 1° y 2° año de secundaria (Prof. Mundaca Yamila):
-- La Célula: Procariota (sin núcleo definido, bacterias) y Eucariota (con núcleo; animal y vegetal con cloroplastos y pared celular).
-- Ecosistemas: Factores bióticos (seres vivos) y abióticos (agua, suelo, temperatura, luz solar).
-- Estados de la Materia: Sólido, Líquido y Gaseoso. Mezclas homogéneas (soluciones de 1 fase) y heterogéneas (2 o más fases).`
+    content: `**Cs. Naturales (1° y 2° Año de Secundaria — Prof. Mundaca Yamila):**
+
+- **La Célula:** Procariota (bacterias, sin núcleo) y Eucariota (con núcleo; animal y vegetal con cloroplastos).
+- **Ecosistemas:** Componentes bióticos (seres vivos) y abióticos (agua, suelo, temperatura).
+- **Estados de la Materia:** Sólido, líquido y gaseoso. Mezclas homogéneas (1 fase) y heterogéneas (2 o más fases).`
   },
   {
     id: 'doc-cs-sociales',
-    title: 'Cs. Sociales: Derechos Laborales (Art. 14 bis) y Constitución',
+    title: 'Cs. Sociales: Derechos Laborales y Constitución',
     category: 'Cs. Sociales',
-    source: 'Equipo Docente Cs. Sociales EMAL',
-    keywords: ['cs sociales', 'ciencias sociales', 'art 14 bis', 'derechos laborales', 'constitucion', 'democracia', 'ciudadania'],
-    content: `Cs. Sociales (Formación Básica):
-- Derechos del Trabajador (Art. 14 bis de la Constitución): Condiciones dignas, jornada limitada, descanso y vacaciones pagadas, salario mínimo vital y móvil, protección contra el despido arbitrario y seguridad social.
-- Participación Ciudadana: El voto popular, secreto y obligatorio y el rol de las instituciones barriales en la inclusión comunitaria.`
+    source: 'Equipo Docente Cs. Sociales',
+    keywords: ['cs sociales', 'ciencias sociales', 'art 14 bis', 'derechos laborales', 'constitucion', 'democracia'],
+    content: `**Cs. Sociales (Formación Básica):**
+
+- **Artículo 14 bis de la Constitución Nacional:** Condiciones dignas de labor, jornada limitada, descanso y vacaciones pagadas, salario mínimo vital y móvil, y protección contra el despido arbitrario.
+- **Democracia y Participación:** El voto popular, secreto y obligatorio, y el rol de las instituciones comunitarias.`
   },
   {
     id: 'doc-ingles',
-    title: 'Inglés: Saludos, Verbo To Be y Vocabulario Laboral',
+    title: 'Inglés: Saludos, Verbo To Be y Vocabulario Cotidiano',
     category: 'Inglés',
-    source: 'Equipo Docente Inglés EMAL',
-    keywords: ['ingles', 'english', 'to be', 'saludos', 'vocabulario', 'presentacion'],
-    content: `Inglés Básico para Jóvenes y Adultos:
-- Saludos: Hello, Good evening, How are you?
-- Verbo To Be: I am, You are, He/She/It is, We/They are (ej: I am a student, She is a teacher).
-- Vocabulario de trabajo y tecnología: Password (contraseña), Save (guardar), Send (enviar), Schedule (horario).`
+    source: 'Equipo Docente Inglés',
+    keywords: ['ingles', 'english', 'to be', 'saludos', 'vocabulario'],
+    content: `**Inglés (Formación Básica):**
+
+- **Saludos:** *Hello*, *Good evening*, *How are you?*
+- **Verbo To Be (Ser/Estar):** *I am*, *You are*, *He/She is*, *We/They are*.
+- **Vocabulario tecnológico y laboral:** *Password* (contraseña), *Save* (guardar), *Send* (enviar), *Schedule* (horario).`
   },
   {
     id: 'doc-ed-fisica',
-    title: 'Ed. Física y Salud: Ergonomía Postural y Pausas Activas',
+    title: 'Ed. Física y Salud: Ergonomía y Pausas Activas',
     category: 'Ed. Física y Salud',
-    source: 'Equipo Docente Ed. Física EMAL',
+    source: 'Equipo Docente Ed. Física',
     keywords: ['ed fisica', 'educacion fisica', 'salud', 'ergonomia', 'postura', 'pausas activas'],
-    content: `Ed. Física y Salud:
-- Ergonomía Postural: Al sentarse, pies apoyados en el piso y espalda recta. Al levantar peso, flexionar las rodillas cerca de la carga (no doblar la columna).
-- Pausas Activas: Estiramiento y movilidad de cuello, hombros y muñecas cada 60-90 minutos de trabajo o estudio.
-- Hábitos Saludables: Hidratación constante con agua potable y descanso reparador.`
+    content: `**Ed. Física y Salud:**
+
+- **Ergonomía Postural:** Al sentarse, apoyar ambos pies en el piso y mantener la espalda recta. Al levantar peso del suelo, flexionar las rodillas sin doblar la cintura.
+- **Pausas Activas:** Movilidad de cuello, hombros y muñecas cada 60-90 minutos de trabajo o estudio.`
   },
   {
     id: 'doc-edi-plataformas',
-    title: 'EDI: Plataformas Digitales y Proyecto EMALBOT (Módulo 2)',
+    title: 'EDI: Plataformas Digitales y Proyecto EMALBOT',
     category: 'EDI',
-    source: 'Equipo Docente EDI / Módulo 2',
+    source: 'Equipo Docente EDI',
     keywords: ['edi', 'plataformas digitales', 'modulo 2', 'algoritmo', 'datos', 'rag', 'ia', 'emalbot'],
-    content: `EDI Plataformas Digitales (Módulos 1 y 2):
-- Proyecto EMALBOT: Asistente con Inteligencia Artificial y motor RAG que consulta las carpetas de Google Drive de la escuela para responder preguntas institucionales y educativas.
-- Conceptos Clave:
-  1. Algoritmo: Secuencia ordenada y finita de instrucciones para resolver un problema.
-  2. Dato vs. Información: Un dato es un elemento crudo; información es el dato con significado en contexto.
-  3. Motor RAG: Búsqueda y recuperación en fuentes oficiales antes de generar la respuesta.`
+    content: `**EDI Plataformas Digitales (Módulos 1 y 2):**
+
+- **Proyecto EMALBOT:** Asistente conversacional con Inteligencia Artificial que consulta carpetas de Google Drive de la escuela con arquitectura RAG para responder consultas.
+- **Algoritmo:** Secuencia ordenada y finita de pasos para resolver un problema.
+- **Dato vs. Información:** Un dato es un elemento aislado; la información es el dato contextualizado con significado.`
   }
 ];
-
-const STOP_WORDS = new Set([
-  'el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas', 'de', 'del', 'al', 'a', 'en',
-  'y', 'o', 'u', 'e', 'que', 'quien', 'quienes', 'cual', 'cuales', 'como', 'donde',
-  'cuando', 'cuanto', 'por', 'para', 'con', 'sin', 'sobre', 'entre', 'es', 'son', 'era',
-  'fue', 'fueron', 'ser', 'estar', 'esta', 'estan', 'hay', 'tiene', 'tienen', 'puedo',
-  'puede', 'pueden', 'mi', 'mis', 'tu', 'tus', 'su', 'sus', 'me', 'te', 'se', 'nos',
-  'lo', 'le', 'les', 'si', 'no', 'mas', 'muy', 'ya', 'acerca', 'favor', 'hola',
-  'buenas', 'tardes', 'noches', 'dias', 'emalbot', 'escuela', 'emal', '2702'
-]);
 
 function normalize(text: string): string {
   return (text || '')
@@ -178,11 +179,6 @@ function normalize(text: string): string {
     .replace(/[^\w\s]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
-}
-
-function extractTerms(query: string): string[] {
-  const norm = normalize(query);
-  return Array.from(new Set(norm.split(' ').filter(w => w.length >= 2 && !STOP_WORDS.has(w))));
 }
 
 export default async function handler(req: any, res: any) {
@@ -211,52 +207,48 @@ export default async function handler(req: any, res: any) {
 
   const rawQuery = (message || `${subject || ''} consulta`).trim();
   const normQuery = normalize(rawQuery);
-  const terms = extractTerms(rawQuery);
-  const isTeacherQuery = /profesor|profesora|profesores|docente|docentes|quien|enseña|cargo|dicta|titular/i.test(normQuery);
 
-  // Score documents
-  const scored = KNOWLEDGE_DOCUMENTS.map(doc => {
-    let score = 0;
-    const normTitle = normalize(doc.title);
-    const normContent = normalize(doc.content);
-    const normKeywords = doc.keywords.map(k => normalize(k));
-    const matchedTerms: string[] = [];
+  // Strict thematic classification to avoid any cross-contamination
+  const isMath = subject === 'matematicas' || /matematica|ecuacion|porcentaje|regla de tres|fraccion|perimetro|area|geometria|signos|entero|zaneta/i.test(normQuery);
+  const isNticx = subject === 'nuevas_tecnologias' || /tecnolog|nticx|hardware|software|periferico|computadora|drive|nube|phishing|contraseñ|roa/i.test(normQuery);
+  const isLengua = subject === 'lengua' || /lengua|literatura|lectura|comprension|acentuaci|aguda|grave|esdrujula|tilde|nota formal|conector|paratexto|evans/i.test(normQuery);
+  const isCsNat = subject === 'ciencias_naturales' || /natural|biolog|celula|procariota|eucariota|ecosistema|biotico|abiotico|materia|estado|mezcla|mundaca/i.test(normQuery);
+  const isCsSoc = subject === 'ciencias_sociales' || /social|constitucion|art 14|derecho laboral|democracia/i.test(normQuery);
+  const isIngles = subject === 'ingles' || /ingles|english|to be|saludo/i.test(normQuery);
+  const isEdFis = subject === 'educacion_fisica' || /ed fisica|educacion fisica|salud|ergonomia|postura|pausa activa/i.test(normQuery);
+  const isEdi = subject === 'edi_plataformas' || /edi|plataforma|algoritmo/i.test(normQuery);
 
-    for (const term of terms) {
-      if (normKeywords.some(k => k.includes(term))) {
-        score += 12;
-        matchedTerms.push(term);
-      } else if (normTitle.includes(term)) {
-        score += 9;
-        matchedTerms.push(term);
-      } else if (normContent.includes(term)) {
-        score += 5;
-        matchedTerms.push(term);
-      }
-    }
+  const isGeneralTeacherQuery = /quienes son los profesores|quienes son los docentes|nomina de profesores|nomina docente|profesores de la escuela|equipo docente/i.test(normQuery);
 
-    if (isTeacherQuery && (doc.id === 'doc-docentes-nomina' || /docente|profesor/i.test(doc.category))) {
-      score += 25;
-    }
+  // Select the single exact matching document
+  let selectedDoc: SyncedDoc;
 
-    if (subject && normTitle.toLowerCase().includes(subject.toLowerCase())) {
-      score += 15;
-    }
-
-    return {
-      doc,
-      score,
-      matchedTerms: Array.from(new Set(matchedTerms))
-    };
-  });
-
-  scored.sort((a, b) => b.score - a.score);
-
-  const topHits = (scored.filter(s => s.score > 0).slice(0, 3).length > 0)
-    ? scored.filter(s => s.score > 0).slice(0, 3)
-    : [scored[0]];
-
-  const primaryDoc = topHits[0].doc;
+  if (isGeneralTeacherQuery) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-docentes-nomina')!;
+  } else if (isMath) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-matematicas')!;
+  } else if (isNticx) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-nticx')!;
+  } else if (isLengua) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-lengua')!;
+  } else if (isCsNat) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-cs-naturales')!;
+  } else if (isCsSoc) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-cs-sociales')!;
+  } else if (isIngles) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-ingles')!;
+  } else if (isEdFis) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-ed-fisica')!;
+  } else if (isEdi) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-edi-plataformas')!;
+  } else if (/horario|atencion|cuando atiende|abierto|turno/i.test(normQuery)) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-horarios-sec')!;
+  } else if (/constancia|alumno regular|certificado|pase|equivalencia|tramite|justificativo/i.test(normQuery)) {
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-tramites-cert')!;
+  } else {
+    // Default institutional document: Matrícula 2027 e inscripciones
+    selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-mat-2027')!;
+  }
 
   // Check if Gemini API is available
   const apiKey = process.env.GEMINI_API_KEY;
@@ -281,32 +273,29 @@ export default async function handler(req: any, res: any) {
 
   if (ai) {
     try {
-      const ragContext = topHits.map(h => `[DOCUMENTO OFICIAL: ${h.doc.title} (${h.doc.source})]:\n${h.doc.content}`).join('\n\n');
       const systemInstruction = `
-Eres EMALBOT, asistente oficial con IA de la Escuela N° 2702 EMAL (Educación de Jóvenes y Adultos).
-DATOS CLAVE:
-- Matrícula 2027: Inscripciones abiertas. Formulario online en https://docs.google.com/forms/d/e/1FAIpQLScIxCNeBE2veAN4dWndcrJONM8sUaOh7UMfgRuNc7j6NOUsgw/viewform?usp=sf_link y documentación presencial en Güemes 710 de 19:15 a 22:00 hs.
-- Horario de Secretaría y Preceptoría: Lunes a Viernes de 19:15 a 22:15 hs.
-- Nómina de Profesores: Nuevas Tecnologías (Prof. Roa Nicolás), Matemáticas (Prof. Zaneta Sebastián), Lengua (Prof. Evans Erika), Cs. Naturales (Prof. Mundaca Yamila).
+Eres EMALBOT, asistente oficial de la Escuela N° 2702 EMAL (Educación de Jóvenes y Adultos).
 
-DOCUMENTOS RECUPERADOS POR RAG:
-${ragContext}
+REGLAS DE ORO (ESTRICTAS Y OBLIGATORIAS):
+1. Responde ÚNICAMENTE sobre la información que el usuario está consultando de forma concisa y directa.
+2. Si la consulta es de una MATERIA ESCOLAR (ej: Matemáticas, Lengua, Nuevas Tecnologías, etc.), responde SOLAMENTE de esa materia. NO menciones trámites de secretaría ni otras materias.
+3. Si la consulta es de SECRETARÍA (inscripciones, horarios, certificados, vacantes), responde SOLAMENTE de secretaría. NO menciones materias escolares.
+4. Si consultan por un PROFESOR específico, indica únicamente el nombre de ese docente y su materia.
+5. NO agregues "información complementaria", "también te puede interesar" ni despedidas largas. Sé breve y claro.
 
-REGLAS:
-- Responde con calidez y claridad adaptado a estudiantes adultos.
-- Prioriza los datos de los documentos oficiales arriba citados.
-- En temas administrativos recuerda que las decisiones finales corresponden a Secretaría y Dirección (19:15 a 22:15 hs).
-- Si te piden ejercicio práctico, propone enunciado, pista y solución explicada.
+DOCUMENTO OFICIAL SELECCIONADO PARA ESTA CONSULTA:
+[${selectedDoc.title} | ${selectedDoc.source}]
+${selectedDoc.content}
 `;
 
       let promptMsg = rawQuery;
-      if (simplifyMode) {
-        promptMsg = `Explicame esto con palabras sencillas y ejemplos cotidianos: ${rawQuery}`;
-      } else if (generateExercise) {
-        promptMsg = `Proponé un ejercicio práctico de ${subject || area} con enunciado, pista y solución paso a paso.`;
+      if (generateExercise) {
+        promptMsg = `Proponé un ejercicio práctico breve y puntual de ${selectedDoc.category} con enunciado, pista y solución paso a paso.`;
+      } else if (simplifyMode) {
+        promptMsg = `Explicá de forma breve y sencilla con un ejemplo cotidiano: ${rawQuery}`;
       }
 
-      const formattedHistory = (chatHistory || []).slice(-6).map((h: any) => ({
+      const formattedHistory = (chatHistory || []).slice(-4).map((h: any) => ({
         role: h.role === 'user' ? 'user' : 'model',
         parts: [{ text: h.content || '' }]
       }));
@@ -321,95 +310,92 @@ REGLAS:
         contents,
         config: {
           systemInstruction,
-          temperature: 0.4,
-          maxOutputTokens: 1200
+          temperature: 0.3,
+          maxOutputTokens: 500
         }
       });
 
       if (response && response.text) {
-        finalReply = response.text;
+        finalReply = response.text.trim();
         generationMode = 'gemini-api';
       }
     } catch (aiErr) {
-      console.warn('Gemini API call failed, generating with local RAG synthesizer:', aiErr);
+      console.warn('Gemini API call failed, using local RAG:', aiErr);
     }
   }
 
-  // Synthesized Local RAG response if Gemini not available or failed
+  // High-precision Synthesized Local RAG (Used if Gemini not configured or fails)
   if (!finalReply) {
     generationMode = 'rag-local-synthesizer';
 
     if (generateExercise) {
-      if (subject === 'matematicas') {
+      if (isMath) {
         finalReply = `### ✏️ Ejercicio de Práctica: Matemáticas (Ciclo Básico)\n\n` +
-          `**Enunciado:**\nUn producto cuesta $12.000 en un comercio y se abona en efectivo con un 15% de descuento. ¿Cuánto se abona finalmente?\n\n` +
-          `**Pista útil:** Multiplicá \`12.000 × 15\` y dividí por \`100\` para calcular el descuento.\n\n` +
-          `**Solución paso a paso:**\n1. Descuento: \`(12.000 × 15) / 100 = $1.800\`.\n2. Total a pagar: \`$12.000 - $1.800 = $10.200\`.`;
-      } else if (subject === 'lengua') {
+          `**Enunciado:**\nUn producto cuesta $12.000 y se paga en efectivo con un 15% de descuento. ¿Cuánto se abona en total?\n\n` +
+          `**Pista:** Multiplicá \`12.000 × 15\` y dividí por \`100\`.\n\n` +
+          `**Solución:**\n- Descuento: \`(12.000 × 15) / 100 = $1.800\`.\n- Total final: \`$12.000 - $1.800 = $10.200\`.`;
+      } else if (isLengua) {
         finalReply = `### ✏️ Ejercicio de Práctica: Lengua y Comunicación\n\n` +
-          `**Enunciado:**\nClasificá las siguientes palabras según su acentuación (Aguda, Grave o Esdrújula) y justificá si llevan tilde:\n` +
-          `1. *canción*\n2. *árbol*\n3. *escuela*\n\n` +
-          `**Solución paso a paso:**\n` +
-          `1. **Canción**: Aguda (sílaba tónica en la última sílaba), lleva tilde porque termina en N.\n` +
-          `2. **Árbol**: Grave (sílaba tónica en la penúltima sílaba), lleva tilde porque NO termina en N, S ni vocal.\n` +
-          `3. **Escuela**: Grave, no lleva tilde porque termina en vocal.`;
+          `**Enunciado:**\nClasificá las siguientes palabras según su acentuación (Aguda, Grave o Esdrújula):\n1. *canción*\n2. *árbol*\n3. *matemática*\n\n` +
+          `**Solución:**\n1. **Canción**: Aguda (lleva tilde porque termina en N).\n2. **Árbol**: Grave (lleva tilde porque no termina en N, S ni vocal).\n3. **Matemática**: Esdrújula (siempre lleva tilde).`;
+      } else if (isNticx) {
+        finalReply = `### ✏️ Ejercicio de Práctica: Nuevas Tecnologías\n\n` +
+          `**Enunciado:**\nIndicá si cada elemento es Hardware o Software:\n1. Memoria RAM\n2. Google Chrome\n3. Teclado\n\n` +
+          `**Solución:**\n1. **Memoria RAM**: Hardware (componente físico interno).\n2. **Google Chrome**: Software (aplicación/navegador web).\n3. **Teclado**: Hardware (periférico de entrada).`;
       } else {
-        finalReply = `### ✏️ Ejercicio de Práctica (${primaryDoc.category})\n\n` +
-          `**Enunciado:**\nA partir de los contenidos de *${primaryDoc.title}*, explicá con tus palabras qué diferencia hay entre un dato y una información en la vida escolar o laboral.\n\n` +
-          `**Solución guía:** Un dato es un valor suelto (ej: 19:15), mientras que la información es el dato contextualizado con significado útil (ej: el horario de atención de Secretaría de la Escuela N° 2702 EMAL es de 19:15 a 22:15 hs).`;
+        finalReply = `### ✏️ Ejercicio de Práctica: ${selectedDoc.category}\n\n` +
+          `**Enunciado:**\nA partir del material de *${selectedDoc.title}*, explicá brevemente con tus palabras el concepto principal consultado.\n\n` +
+          `**Guía:** Expresá la idea central con un ejemplo práctico de tu vida cotidiana o laboral.`;
       }
     } else {
-      const heading = isTeacherQuery
-        ? '👨‍🏫 Nómina del Equipo Docente (Escuela N° 2702 EMAL)'
-        : `📋 ${primaryDoc.title}`;
-
-      finalReply = `### ${heading}\n\n${primaryDoc.content}\n`;
-
-      if (simplifyMode) {
-        finalReply += `\n**En palabras sencillas:**\nEsta es la información oficial de la Escuela N° 2702 EMAL. Podés acercarte a Secretaría y Preceptoría de **Lunes a Viernes de 19:15 a 22:15 hs** en Güemes 710 para resolver cualquier consulta presencialmente.\n`;
+      // Direct, focused response — strictly the requested document without any complementary sections
+      if (/quien es el profesor de nuevas tecnologias|quien ensena nuevas tecnologias|profesor de nuevas tecnologias/i.test(normQuery)) {
+        finalReply = `El profesor de **Nuevas Tecnologías** (Módulos 1 y 2) es el **Prof. Roa Nicolás**.\n\nContenidos de la materia:\n- Hardware y Software (periféricos de entrada y salida).\n- Uso de Google Drive para almacenamiento en la nube.\n- Seguridad digital, contraseñas seguras y prevención de Phishing.`;
+      } else if (/quien es el profesor de matematicas|quien ensena matematicas|profesor de matematicas/i.test(normQuery)) {
+        finalReply = `El profesor de **Matemáticas** (Módulos 1 a 4) es el **Prof. Zaneta Sebastián**.\n\nContenidos de la materia:\n- Números enteros y jerarquía de operaciones combinadas.\n- Ecuaciones de primer grado (\`2x + 10 = 50\`).\n- Fracciones, regla de tres simple y cálculo de porcentajes con descuentos cotidianos.\n- Geometría básica (perímetro y área).`;
+      } else if (/quien es la profesora de lengua|profesora de lengua|quien ensena lengua/i.test(normQuery)) {
+        finalReply = `La profesora de **Lengua** (Módulos 1 a 4) es la **Prof. Evans Erika**.\n\nContenidos de la materia:\n- Comprensión lectora, paratexto y resúmenes.\n- Tipos de texto (expositivo, argumentativo y redacción de nota formal).\n- Reglas de acentuación (agudas, graves y esdrújulas).`;
+      } else if (/quien es la profesora de ciencias naturales|profesora de cs naturales|quien ensena ciencias naturales/i.test(normQuery)) {
+        finalReply = `La profesora de **Ciencias Naturales** (Módulos 1 a 4) es la **Prof. Mundaca Yamila**.\n\nContenidos de la materia:\n- La célula (procariota y eucariota animal y vegetal).\n- Niveles de organización biológica y ecosistemas.\n- Estados de la materia y mezclas homogéneas/heterogéneas.`;
+      } else {
+        finalReply = selectedDoc.content;
       }
-
-      if (topHits.length > 1 && topHits[1].score > 0 && topHits[1].doc.id !== primaryDoc.id) {
-        finalReply += `\n---\n**También te puede interesar (${topHits[1].doc.category}):**\n${topHits[1].doc.content}\n`;
-      }
-
-      finalReply += `\n---\n*ℹ️ Secretaría Escuela N° 2702 EMAL · Atención de Lunes a Viernes de 19:15 a 22:15 hs.*`;
     }
   }
 
-  const sourcesUsed = topHits.map(h => `${h.doc.title} (${h.doc.source})`);
+  const sourcesUsed = [`${selectedDoc.title} (${selectedDoc.source})`];
 
-  const suggestedFollowUps = area === 'institucional'
+  const suggestedFollowUps = (isMath || isNticx || isLengua || isCsNat || isCsSoc || isIngles || isEdFis || isEdi)
     ? [
+        `¿Podés proponerme un ejercicio de práctica de ${selectedDoc.category}?`,
+        'Explicar este concepto de forma más sencilla',
+        '¿Quién es el profesor a cargo de esta materia?'
+      ]
+    : [
         '¿Cuáles son los requisitos para Matrícula 2027?',
         '¿En qué horario atiende Secretaría?',
         '¿Cómo solicito una constancia de alumno regular?'
-      ]
-    : [
-        'Explicar números enteros y ecuaciones de 1° y 2° año',
-        '¿Quiénes son los profesores a cargo de las materias?',
-        '¿Cuáles son las reglas de acentuación en Lengua?'
       ];
 
-  const processingMs = Math.max(10, Date.now() - startTime);
+  const processingMs = Math.max(8, Date.now() - startTime);
 
   return res.status(200).json({
     text: finalReply,
     sources: sourcesUsed,
     suggestedFollowUps,
     ragTrace: {
-      keywords: terms,
+      keywords: [selectedDoc.category.toLowerCase()],
       totalDocsScanned: KNOWLEDGE_DOCUMENTS.length,
-      driveDocsScanned: 5,
-      matchedDocuments: topHits.map(h => ({
-        id: h.doc.id,
-        title: h.doc.title,
+      driveDocsScanned: 1,
+      matchedDocuments: [{
+        id: selectedDoc.id,
+        title: selectedDoc.title,
         sourceType: 'knowledge_base' as const,
-        category: h.doc.category,
-        score: h.score,
-        matchedTerms: h.matchedTerms,
-        excerpt: h.doc.content.slice(0, 200) + '...'
-      })),
+        category: selectedDoc.category,
+        score: 100,
+        matchedTerms: [selectedDoc.category.toLowerCase()],
+        excerpt: selectedDoc.content.slice(0, 160) + '...'
+      }],
       generationMode,
       processingMs
     },
