@@ -4,10 +4,6 @@ import {
   FileSpreadsheet,
   FolderOpen,
   Search,
-  Printer,
-  Copy,
-  Check,
-  Download,
   Play,
   ArrowRight,
   Database,
@@ -19,8 +15,7 @@ import {
   VolumeX,
   RefreshCw,
   BookOpen,
-  Building2,
-  FileText
+  Building2
 } from 'lucide-react';
 import { DriveStatus, RagTraceInfo } from '../types';
 import { generateLocalRagResponse } from '../utils/localRag';
@@ -44,50 +39,10 @@ interface LiveDemoResponse {
   ragTrace?: RagTraceInfo;
 }
 
-const SUMMARY_FOR_AI = `PROYECTO: EMALBOT — Asistente Educativo e Institucional con Inteligencia Artificial y Arquitectura RAG
-INSTITUCIÓN: Escuela N° 2702 EMAL (Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos N° 2702)
-
-RESUMEN DEL SISTEMA PARA PRESENTACIÓN / STAND (PASO A PASO):
-
-1. OBJETIVO DEL PROYECTO Y PRIORIDAD ACTUAL:
-EMALBOT acompaña a estudiantes jóvenes y adultos en el turno vespertino/noche.
-- PRIORIDAD ACTUAL: MATRÍCULA 2027 - INSCRIPCIONES ABIERTAS (cierre de año lectivo).
-- HORARIO DE SECRETARÍA: Lunes a Viernes de 19:15 a 22:15 hs.
-- ÁREA INSTITUCIONAL: Inscripciones Matrícula 2027, legajo, constancias, vacantes y horarios (Secretaría).
-- ÁREA EDUCATIVA (8 materias):
-  * Nuevas Tecnologías (Prof. Roa Nicolás · Módulos 1 y 2)
-  * Matemáticas (Prof. Zaneta Sebastián · Módulos 1 a 4)
-  * Lengua (Prof. Evans Erika · Módulos 1 a 4)
-  * Inglés (Módulos 1 a 4)
-  * Cs. Sociales (Módulos 1 a 4)
-  * Cs. Naturales (Prof. Mundaca Yamila · Módulos 1 a 4)
-  * Ed. Física y Salud (Módulos 1 a 4)
-  * EDI (Módulos 1 y 2)
-
-2. FLUJO DEL SISTEMA (PASO 1 A PASO 5):
-
-PASO 1 — CARGA DE DATOS EN GOOGLE DRIVE MEDIANTE FORMULARIO DE GOOGLE:
-- Los profesores (como Roa Nicolás, Zaneta Sebastián, Evans Erika, Mundaca Yamila) y el personal de Secretaría completan un Formulario de Google simple con el nombre del docente, materia, módulo, título y contenido o novedad.
-- La información se almacena automáticamente en la unidad compartida de Google Drive institucional ("REG - Escuela N° 2702 EMAL").
-
-PASO 2 — CONSULTA DEL ESTUDIANTE:
-- El estudiante escribe o dicta por voz una pregunta desde su celular o computadora (ej: "¿Quién es el profesor de Nuevas Tecnologías?" o "¿Qué documentos necesito para Matrícula 2027?").
-
-PASO 3 — RECUPERACIÓN INTELIGENTE CON MOTOR RAG (Retrieval-Augmented Generation):
-- El motor RAG normaliza la consulta, extrae palabras clave, escanea las carpetas de Google Drive de la escuela y calcula un puntaje de relevancia (priorizando las cargas recientes del Formulario de Google).
-
-PASO 4 — GENERACIÓN AUMENTADA CON IA:
-- El sistema envía los fragmentos recuperados del Drive al modelo de IA (Gemini) para redactar una respuesta clara para adultos. Si no hay conexión externa, un sintetizador RAG local construye la respuesta directamente desde los documentos oficiales recuperados.
-
-PASO 5 — RESPUESTA VERIFICADA Y ACCESIBILIDAD:
-- Muestra el archivo exacto de Drive consultado, permite ver el proceso RAG en vivo, simplificar explicaciones, generar ejercicios y escuchar la respuesta en voz alta.`;
-
 export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
   driveStatus,
   onAddCustomDoc
 }) => {
-  const [subTab, setSubTab] = useState<'demo' | 'a4' | 'summary'>('demo');
-
   // Google Form Simulator State (Paso 1) - Real teacher default (Prof. Roa Nicolás)
   const [formAuthor, setFormAuthor] = useState('Prof. Roa Nicolás');
   const [formCategory, setFormCategory] = useState('Nuevas Tecnologías');
@@ -104,9 +59,6 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
   const [isQuerying, setIsQuerying] = useState(false);
   const [demoResponse, setDemoResponse] = useState<LiveDemoResponse | null>(null);
   const [isSpeaking, setIsSpeaking] = useState(false);
-
-  // Copy summary state
-  const [copiedSummary, setCopiedSummary] = useState(false);
 
   const applyPreset = (
     preset: 'roa' | 'zaneta' | 'evans' | 'mundaca' | 'secretaria'
@@ -241,33 +193,9 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
     window.speechSynthesis.speak(u);
   };
 
-  const handlePrintA4 = () => {
-    window.print();
-  };
-
-  const handleCopySummary = async () => {
-    try {
-      await navigator.clipboard.writeText(SUMMARY_FOR_AI);
-      setCopiedSummary(true);
-      setTimeout(() => setCopiedSummary(false), 3000);
-    } catch {
-      // ignore clipboard errors
-    }
-  };
-
-  const handleDownloadTxt = () => {
-    const blob = new Blob([SUMMARY_FOR_AI], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'EMALBOT_Resumen_Sistema_Stand.txt';
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
   return (
     <div className="max-w-7xl mx-auto space-y-6">
-      {/* Top Banner + Sub-view Selector (Hidden on Print) */}
+      {/* Top Banner (Hidden on Print) */}
       <div className="no-print bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 rounded-2xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shrink-0">
@@ -283,56 +211,21 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
               Muestra y Stand en Vivo: EMALBOT
             </h2>
             <p className="text-xs text-slate-400 mt-0.5">
-              Carga real vía Formulario Google hacia Drive con los docentes de EMAL, búsqueda RAG en vivo, láminas A4 imprimibles y resumen para Android Studio u otra IA.
+              Carga real vía Formulario Google hacia Drive con los docentes de EMAL y búsqueda RAG en vivo.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-1.5 bg-slate-950 p-1.5 rounded-xl border border-slate-800 self-start lg:self-auto">
-          <button
-            type="button"
-            onClick={() => setSubTab('demo')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors whitespace-nowrap ${
-              subTab === 'demo'
-                ? 'bg-sky-600 text-white'
-                : 'text-slate-300 hover:text-white hover:bg-slate-800'
-            }`}
-          >
+        <div className="flex items-center gap-1.5 bg-slate-950 p-1.5 rounded-xl border border-slate-800 self-start lg:self-auto">
+          <div className="px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 bg-sky-600 text-white whitespace-nowrap">
             <Play className="w-3.5 h-3.5" />
-            <span>Demo en Vivo (Paso 1 y 2)</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setSubTab('a4')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors whitespace-nowrap ${
-              subTab === 'a4'
-                ? 'bg-emerald-600 text-white'
-                : 'text-slate-300 hover:text-white hover:bg-slate-800'
-            }`}
-          >
-            <Printer className="w-3.5 h-3.5" />
-            <span>Hojas A4 para Imprimir</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setSubTab('summary')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors whitespace-nowrap ${
-              subTab === 'summary'
-                ? 'bg-indigo-600 text-white'
-                : 'text-slate-300 hover:text-white hover:bg-slate-800'
-            }`}
-          >
-            <FileText className="w-3.5 h-3.5" />
-            <span>Resumen &amp; Android Studio</span>
-          </button>
+            <span>Demostración en Vivo</span>
+          </div>
         </div>
       </div>
 
-      {/* SUB-VIEW 1: REAL LIVE STAND DEMONSTRATION */}
-      {subTab === 'demo' && (
-        <div className="no-print space-y-6">
+      {/* REAL LIVE STAND DEMONSTRATION */}
+      <div className="no-print space-y-6">
           {/* Real Teacher Presets Bar */}
           <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col gap-3">
             <div className="text-xs text-slate-300">
@@ -692,336 +585,11 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
             </div>
           </div>
         </div>
-      )}
 
-      {/* SUB-VIEW 2: PRINTABLE A4 SHEETS */}
-      {subTab === 'a4' && (
-        <div className="space-y-6">
-          <div className="no-print bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <h3 className="text-sm font-bold text-white">
-                Láminas A4 Listas para Imprimir en la Muestra
-              </h3>
-              <p className="text-xs text-slate-400">
-                Incluyen Matrícula 2027, horario de Secretaría (19:15 a 22:15 hs de lunes a viernes) y las materias con sus docentes.
-              </p>
-            </div>
-            <button
-              type="button"
-              onClick={handlePrintA4}
-              className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2 shrink-0"
-            >
-              <Printer className="w-4 h-4" />
-              <span>Imprimir Hojas A4 / Guardar PDF</span>
-            </button>
-          </div>
+    </div>
+  );
+};
 
-          <div className="a4-print-container space-y-8 max-w-[210mm] mx-auto">
-            {/* ==================== HOJA A4 N° 1 ==================== */}
-            <section className="a4-sheet bg-white text-slate-900 rounded-xl border border-slate-300 p-8 sm:p-10 shadow-xl">
-              <div className="flex items-center justify-between pb-6 mb-6 border-b-2 border-sky-700">
-                <div className="flex items-center gap-4">
-                  <img
-                    src="/assets/aistudio/Logo_educativo_azul_EMALBOT_b5d3d995.png"
-                    alt="Logo EMALBOT"
-                    referrerPolicy="no-referrer"
-                    className="w-20 h-20 object-contain"
-                  />
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-sky-700">
-                      Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos
-                    </p>
-                    <h1 className="text-2xl font-extrabold text-slate-900 leading-tight">
-                      EMALBOT — Asistente Educativo con IA
-                    </h1>
-                    <p className="text-sm font-semibold text-slate-600">
-                      Escuela N° 2702 EMAL · Matrícula 2027 · Lunes a Viernes de 19:15 a 22:15 hs
-                    </p>
-                  </div>
-                </div>
-                <div className="text-right text-xs font-mono text-slate-500 shrink-0">
-                  Lámina 1 de 3 · Hoja A4
-                </div>
-              </div>
-
-              <div className="space-y-6 text-sm leading-relaxed text-slate-800">
-                <div className="p-5 rounded-xl bg-sky-50 border border-sky-200">
-                  <h2 className="text-base font-bold text-sky-900 mb-2">
-                    ¿Qué es EMALBOT y por qué lo creamos?
-                  </h2>
-                  <p>
-                    Muchos estudiantes jóvenes y adultos trabajan, tienen responsabilidades familiares o cursan en horarios rotativos. EMALBOT es un <strong>asistente conversacional inteligente disponible las 24 horas</strong> desde el celular o la computadora para acompañar la <strong>Matrícula 2027 (Inscripciones)</strong> y las materias escolares sin reemplazar el rol humano del docente ni de Secretaría.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <div className="p-5 rounded-xl border border-slate-300 bg-slate-50">
-                    <div className="flex items-center gap-2 text-sky-800 font-bold text-base mb-2">
-                      <Building2 className="w-5 h-5" />
-                      <span>1. Área Institucional (Secretaría)</span>
-                    </div>
-                    <ul className="list-disc pl-5 space-y-1.5 text-xs text-slate-700">
-                      <li><strong>Matrícula 2027 (Preinscripción Online + Presencial):</strong> Completar el Formulario de Google de preinscripción y luego llevar presencialmente: DNI, certificado primario o pase, partida de nacimiento y 2 fotos 4x4.</li>
-                      <li><strong>Entrega de Documentación:</strong> En <strong>Güemes 710</strong> de <strong>19:15 a 22:00 hs</strong> (Lunes a Viernes).</li>
-                      <li><strong>Certificados y Trámites:</strong> Constancia de alumno regular, certificado de examen y justificaciones laborales (Secretaría 19:15 a 22:15 hs).</li>
-                      <li><strong>Límite Institucional:</strong> Orienta sobre pasos y requisitos; la adjudicación final de vacantes corresponde a Secretaría y Dirección.</li>
-                    </ul>
-                  </div>
-
-                  <div className="p-5 rounded-xl border border-slate-300 bg-slate-50">
-                    <div className="flex items-center gap-2 text-emerald-800 font-bold text-base mb-2">
-                      <BookOpen className="w-5 h-5" />
-                      <span>2. Área Educativa (8 Materias)</span>
-                    </div>
-                    <ul className="list-disc pl-5 space-y-1 text-xs text-slate-700">
-                      <li><strong>Nuevas Tecnologías:</strong> Prof. Roa Nicolás (Módulos 1 y 2)</li>
-                      <li><strong>Matemáticas:</strong> Prof. Zaneta Sebastián (Módulos 1 a 4)</li>
-                      <li><strong>Lengua:</strong> Prof. Evans Erika (Módulos 1 a 4)</li>
-                      <li><strong>Cs. Naturales:</strong> Prof. Mundaca Yamila (Módulos 1 a 4)</li>
-                      <li><strong>Inglés · Cs. Sociales · Ed. Física y Salud</strong> (Módulos 1 a 4)</li>
-                      <li><strong>EDI</strong> (Módulos 1 y 2)</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="p-5 rounded-xl border border-slate-300 bg-white">
-                  <h3 className="text-sm font-bold text-slate-900 mb-2">
-                    Principio Pedagógico Central
-                  </h3>
-                  <p className="text-xs text-slate-700">
-                    EMALBOT <strong>no inventa respuestas</strong> ni reemplaza las clases presenciales. Toda la información que responde surge exclusivamente de los documentos oficiales cargados por los docentes y Secretaría en Google Drive.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* ==================== HOJA A4 N° 2 ==================== */}
-            <section className="a4-sheet bg-white text-slate-900 rounded-xl border border-slate-300 p-8 sm:p-10 shadow-xl">
-              <div className="flex items-center justify-between pb-5 mb-6 border-b-2 border-sky-700">
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/assets/aistudio/Logo_educativo_azul_EMALBOT_b5d3d995.png"
-                    alt="Logo EMALBOT"
-                    referrerPolicy="no-referrer"
-                    className="w-14 h-14 object-contain"
-                  />
-                  <div>
-                    <h2 className="text-xl font-extrabold text-slate-900">
-                      ¿Cómo Funciona el Sistema Paso a Paso? (Google Forms + Drive + RAG)
-                    </h2>
-                    <p className="text-xs font-semibold text-slate-600">
-                      Arquitectura del flujo de información · Escuela N° 2702 EMAL
-                    </p>
-                  </div>
-                </div>
-                <div className="text-right text-xs font-mono text-slate-500 shrink-0">
-                  Lámina 2 de 3 · Hoja A4
-                </div>
-              </div>
-
-              <div className="space-y-4 text-xs leading-relaxed">
-                <div className="p-4 rounded-xl border border-violet-300 bg-violet-50/70">
-                  <div className="flex items-center gap-2 font-bold text-violet-900 text-sm mb-1">
-                    <FileSpreadsheet className="w-4 h-4" />
-                    <span>PASO 1 · Carga de Datos en Google Drive mediante Formulario de Google</span>
-                  </div>
-                  <p className="text-slate-800">
-                    Los docentes de cada materia (Roa Nicolás, Zaneta Sebastián, Evans Erika, Mundaca Yamila) y Secretaría completan un <strong>Formulario de Google</strong> simple con contenidos de 1° y 2° año, docentes, o avisos de Matrícula 2027. Esa información se guarda automáticamente dentro de las carpetas de Google Drive (<strong>REG - Escuela N° 2702 EMAL</strong>).
-                  </p>
-                </div>
-
-                <div className="flex justify-center text-slate-400">
-                  <ArrowRight className="w-5 h-5 rotate-90" />
-                </div>
-
-                <div className="p-4 rounded-xl border border-sky-300 bg-sky-50/70">
-                  <div className="flex items-center gap-2 font-bold text-sky-900 text-sm mb-1">
-                    <MessageSquare className="w-4 h-4" />
-                    <span>PASO 2 · Consulta del Estudiante (Texto o Voz)</span>
-                  </div>
-                  <p className="text-slate-800">
-                    El estudiante ingresa a EMALBOT y realiza una pregunta en lenguaje natural, por ejemplo: <em>"¿Quién es el profesor de Nuevas Tecnologías?"</em>, <em>"¿En qué horario atiende Secretaría?"</em> o <em>"Explicame ecuaciones de Matemáticas"</em>.
-                  </p>
-                </div>
-
-                <div className="flex justify-center text-slate-400">
-                  <ArrowRight className="w-5 h-5 rotate-90" />
-                </div>
-
-                <div className="p-4 rounded-xl border border-emerald-300 bg-emerald-50/70">
-                  <div className="flex items-center gap-2 font-bold text-emerald-900 text-sm mb-1">
-                    <Database className="w-4 h-4" />
-                    <span>PASO 3 · Búsqueda y Recuperación con Motor RAG</span>
-                  </div>
-                  <p className="text-slate-800">
-                    El sistema ejecuta <strong>RAG (Generación Aumentada por Recuperación)</strong>: extrae las palabras clave de la pregunta, recorre las carpetas de Google Drive de la escuela, calcula un puntaje de relevancia priorizando los archivos recientes del Formulario de Google y recupera los fragmentos exactos.
-                  </p>
-                </div>
-
-                <div className="flex justify-center text-slate-400">
-                  <ArrowRight className="w-5 h-5 rotate-90" />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="p-4 rounded-xl border border-indigo-300 bg-indigo-50/70">
-                    <div className="flex items-center gap-2 font-bold text-indigo-900 text-sm mb-1">
-                      <Cpu className="w-4 h-4" />
-                      <span>PASO 4 · Síntesis con IA Contextual</span>
-                    </div>
-                    <p className="text-slate-800">
-                      La Inteligencia Artificial redacta una respuesta clara y empática usando únicamente los fragmentos recuperados del Drive. Si no hay conexión externa, el sintetizador RAG local responde igualmente con la información oficial.
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-xl border border-slate-300 bg-slate-50">
-                    <div className="flex items-center gap-2 font-bold text-slate-900 text-sm mb-1">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-700" />
-                      <span>PASO 5 · Respuesta Verificada y Voz</span>
-                    </div>
-                    <p className="text-slate-800">
-                      EMALBOT muestra la respuesta citando la fuente de Google Drive, permite inspeccionar el proceso RAG en vivo y ofrece lectura en voz alta y ejercicios de práctica.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* ==================== HOJA A4 N° 3 ==================== */}
-            <section className="a4-sheet bg-white text-slate-900 rounded-xl border border-slate-300 p-8 sm:p-10 shadow-xl">
-              <div className="flex items-center justify-between pb-5 mb-6 border-b-2 border-sky-700">
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/assets/aistudio/Logo_educativo_azul_EMALBOT_b5d3d995.png"
-                    alt="Logo EMALBOT"
-                    referrerPolicy="no-referrer"
-                    className="w-14 h-14 object-contain"
-                  />
-                  <div>
-                    <h2 className="text-xl font-extrabold text-slate-900">
-                      Guión de Demostración en el Stand y Ficha Técnica
-                    </h2>
-                    <p className="text-xs font-semibold text-slate-600">
-                      Guía práctica para expositores · Muestra Escuela N° 2702 EMAL
-                    </p>
-                  </div>
-                </div>
-                <div className="text-right text-xs font-mono text-slate-500 shrink-0">
-                  Lámina 3 de 3 · Hoja A4
-                </div>
-              </div>
-
-              <div className="space-y-5 text-xs leading-relaxed">
-                <div className="p-5 rounded-xl border border-slate-300 bg-slate-50">
-                  <h3 className="text-sm font-bold text-slate-900 mb-3">
-                    Cómo realizar la demostración en vivo en 3 minutos
-                  </h3>
-                  <ol className="list-decimal pl-5 space-y-2.5 text-slate-800">
-                    <li>
-                      <strong>Presentar Matrícula 2027 (30 seg):</strong> Mostrar el cartel inicial de <em>MATRÍCULA 2027 - INSCRIPCIONES ABIERTAS</em> y el horario de Secretaría (Lunes a Viernes de 19:15 a 22:15 hs).
-                    </li>
-                    <li>
-                      <strong>Mostrar el Paso 1 en vivo (1 min):</strong> Entrar a <em>"Muestra Stand &amp; A4"</em>, elegir un docente real (ej. Prof. Roa Nicolás, Prof. Zaneta Sebastián, Prof. Evans Erika o Prof. Mundaca Yamila) y enviar el formulario para guardarlo en Google Drive.
-                    </li>
-                    <li>
-                      <strong>Mostrar el Paso 2 y el Motor RAG (1 min):</strong> Presionar <em>"Consultar RAG"</em> y mostrar cómo extrae palabras clave, recupera el archivo cargado y responde al instante citando la fuente.
-                    </li>
-                    <li>
-                      <strong>Mostrar Accesibilidad (30 seg):</strong> Presionar <em>"Escuchar"</em> para oír la respuesta en voz alta.
-                    </li>
-                  </ol>
-                </div>
-
-                <div className="p-5 rounded-xl border border-sky-200 bg-sky-50/60">
-                  <h3 className="text-sm font-bold text-sky-900 mb-2">
-                    Preguntas recomendadas para que pruebe el público
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-1 text-slate-800">
-                    <li>"¿Cuáles son los requisitos para Matrícula 2027 y en qué horario atiende Secretaría?"</li>
-                    <li>"¿Quién es el profesor de Nuevas Tecnologías?" (Prof. Roa Nicolás)</li>
-                    <li>"Explicame números enteros y ecuaciones de Matemáticas 1° y 2° año" (Prof. Zaneta Sebastián)</li>
-                    <li>"¿Qué temas se ven en Lengua (Prof. Evans Erika) y Cs. Naturales (Prof. Mundaca Yamila)?"</li>
-                  </ul>
-                </div>
-
-                <div className="p-5 rounded-xl border border-slate-300 bg-white">
-                  <h3 className="text-sm font-bold text-slate-900 mb-2">
-                    Ficha Técnica del Proyecto
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3 text-slate-700">
-                    <div>
-                      <strong>Interfaz Web:</strong> React + TypeScript + Tailwind CSS
-                    </div>
-                    <div>
-                      <strong>Servidor Backend:</strong> Node.js + Express + API REST
-                    </div>
-                    <div>
-                      <strong>Fuente de Datos:</strong> Google Forms + Google Drive (REG)
-                    </div>
-                    <div>
-                      <strong>Inteligencia Artificial:</strong> Motor RAG + Gemini IA + Voz Web
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      )}
-
-      {/* SUB-VIEW 3: SUMMARY TO PASTE INTO ANOTHER AI + ANDROID STUDIO DOWNLOAD */}
-      {subTab === 'summary' && (
-        <div className="no-print bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
-            <div>
-              <h3 className="text-base font-bold text-white">
-                Resumen Estructurado para Otra IA y Archivo Android Studio
-              </h3>
-              <p className="text-xs text-slate-400 mt-0.5">
-                Descargá el archivo listo para Android Studio (.kt) o copiá el resumen para otra IA.
-              </p>
-            </div>
-            <div className="flex flex-wrap items-center gap-2 shrink-0">
-              <a
-                href="/EMALBOT_Android_Studio_Demo.kt"
-                download="EMALBOT_Android_Studio_Demo.kt"
-                className="px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-xs font-bold text-white flex items-center gap-1.5"
-              >
-                <Download className="w-3.5 h-3.5" />
-                <span>Descargar Android Studio (.kt)</span>
-              </a>
-              <button
-                type="button"
-                onClick={handleDownloadTxt}
-                className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5"
-              >
-                <Download className="w-3.5 h-3.5" />
-                <span>Descargar .TXT</span>
-              </button>
-              <button
-                type="button"
-                onClick={handleCopySummary}
-                className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold flex items-center gap-1.5"
-              >
-                {copiedSummary ? (
-                  <>
-                    <Check className="w-3.5 h-3.5" />
-                    <span>¡Copiado!</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3.5 h-3.5" />
-                    <span>Copiar Resumen</span>
-                  </>
-                )}
-              </button>
-            </div>
-          </div>
-
-          <pre className="p-5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 font-mono whitespace-pre-wrap leading-relaxed overflow-x-auto">
-            {SUMMARY_FOR_AI}
-          </pre>
-        </div>
-      )}
     </div>
   );
 };

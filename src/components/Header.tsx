@@ -113,7 +113,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </nav>
 
-          {/* Primary Action: Stand Demo & A4 Printable Sheets */}
+          {/* Primary Action: Stand Demo */}
           <div className="flex items-center shrink-0">
             <button
               type="button"
@@ -125,7 +125,7 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               <Presentation className="w-4 h-4" />
-              <span>Muestra Stand &amp; A4</span>
+              <span>Muestra y Stand</span>
             </button>
           </div>
         </div>
