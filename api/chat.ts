@@ -73,101 +73,155 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
   },
   {
     id: 'doc-matematicas',
-    title: 'Matemáticas (1° y 2° Año) · Prof. Zaneta Sebastián',
+    title: 'Matemáticas (Módulos 1 y 2) · Prof. Zaneta Sebastián',
     category: 'Matemáticas',
-    source: 'Prof. Zaneta Sebastián',
-    keywords: ['matematicas', 'matematica', 'zaneta', 'enteros', 'ecuaciones', 'porcentajes', 'regla de tres', 'area', 'perimetro'],
-    content: `**Matemáticas (1° y 2° Año de Secundaria — Prof. Zaneta Sebastián):**
+    source: 'Diseño Curricular Modular EPJA Chubut (Anexo I)',
+    keywords: ['matematicas', 'matematica', 'modulo 1', 'modulo 2', 'zaneta', 'enteros', 'ecuaciones', 'porcentajes', 'fracciones', 'geometria', 'estadistica'],
+    content: `**Matemáticas — Ciclo de Formación Básica (Prof. Zaneta Sebastián):**
 
-- **Números Enteros:** Regla de signos (\`+ · + = +\`, \`- · - = +\`, \`+ · - = -\`). Jerarquía de operaciones combinadas.
-- **Ecuaciones de 1er Grado:** Despeje de incógnita (ej: \`2x + 10 = 50\` $\\rightarrow$ \`2x = 40\` $\\rightarrow$ \`x = 20\`).
-- **Porcentajes:** Cálculo de descuentos cotidianos (ej: el 15% de $12.000 es $1.800; total a pagar $10.200).
-- **Geometría Básica:** Perímetro (contorno) y Área de figuras planas (Base × Altura).`
+- **Módulo 1 (Ciudadanía / Naturaleza y Desarrollo):**
+  * **Números Enteros:** Operaciones y propiedades, regla de signos (\`+ · + = +\`, \`- · - = +\`, \`+ · - = -\`) y jerarquía de operaciones combinadas.
+  * **Números Racionales:** Fracciones, expresiones decimales, notación científica y porcentajes aplicados a situaciones cotidianas.
+  * **Álgebra y Ecuaciones:** Expresiones algebraicas sencillas y ecuaciones de 1er grado con una incógnita (\`2x + 10 = 50\`).
+  * **Geometría y Proporcionalidad:** Perímetro y área de figuras planas; razones, proporciones y ejes cartesianos.
+
+- **Módulo 2 (Identidad / Diversidad y Salud):**
+  * **Geometría y Cuerpos:** Figuras planas (triángulos, cuadriláteros, círculos) y cuerpos (prismas, pirámides, cilindros, conos, esferas).
+  * **Sistema Sexagesimal:** Unidades de medida angular y temporal en resolución de problemas.
+  * **Ejes Cartesianos y Funciones:** Ubicación de puntos en el plano y análisis de relaciones aplicadas a salud y condiciones de vida.
+  * **Estadística Descriptiva:** Recolección y organización de datos; lectura y elaboración de tablas y gráficos (barras, circulares, líneas, pictogramas).`
   },
   {
     id: 'doc-nticx',
     title: 'Nuevas Tecnologías (Módulos 1 y 2) · Prof. Roa Nicolás',
     category: 'Nuevas Tecnologías',
-    source: 'Prof. Roa Nicolás',
-    keywords: ['nuevas tecnologias', 'nticx', 'roa', 'hardware', 'software', 'drive', 'phishing', 'seguridad', 'contraseñas', 'nube'],
-    content: `**Nuevas Tecnologías (Módulos 1 y 2 — Prof. Roa Nicolás):**
+    source: 'Diseño Curricular Modular EPJA Chubut (Anexo I)',
+    keywords: ['nuevas tecnologias', 'nticx', 'modulo 1', 'modulo 2', 'roa', 'hardware', 'software', 'drive', 'phishing', 'ofimatica', 'redes'],
+    content: `**Educación en Nuevas Tecnologías — Ciclo Básico (Prof. Roa Nicolás):**
 
-- **Hardware vs. Software:** Hardware son las partes físicas (procesador, memoria RAM, periféricos de entrada y salida); Software son las aplicaciones y sistemas operativos (Windows, Android, navegadores).
-- **Google Drive:** Almacenamiento en la nube institucional para acceder a apuntes y trabajos escolares desde el celular sin ocupar memoria.
-- **Seguridad Digital:** Prevención de estafas por Phishing y uso de contraseñas seguras con autenticación en dos pasos.`
+- **Módulo 1 (Ciudadanía / Naturaleza y Desarrollo):**
+  * **Alfabetización Digital:** Hardware (CPU, memoria RAM, periféricos de entrada y salida) y Software (sistemas operativos y aplicaciones).
+  * **Software Utilitario de Oficina:** Procesadores de texto (cartas, notas, informes, tablas), Planillas de cálculo (fórmulas, funciones y gráficos) y Presentadores multimedia.
+  * **Almacenamiento en la Nube:** Uso de Google Drive institucional para gestionar apuntes y trabajos desde el celular sin saturar memoria.
+  * **Seguridad Digital:** Contraseñas seguras y prevención activa de fraudes por Phishing.
+
+- **Módulo 2 (Identidad / Diversidad y Salud):**
+  * **Comunicación en Internet:** Correo electrónico, foros, blogs y plataformas colaborativas.
+  * **Búsqueda y Recuperación:** Técnicas para buscar, seleccionar y validar información confiable en la web.
+  * **Producción y Trabajo Colaborativo:** Creación de materiales educativos asistidos por TIC y redes comunicacionales.
+  * **Seguridad Informática:** Privacidad de datos personales e identidad digital.`
   },
   {
     id: 'doc-lengua',
-    title: 'Lengua (1° y 2° Año) · Prof. Evans Erika',
+    title: 'Lengua y Literatura (Módulos 1 y 2) · Prof. Evans Erika',
     category: 'Lengua',
-    source: 'Prof. Evans Erika',
-    keywords: ['lengua', 'evans', 'erika', 'comprension lectora', 'acentuacion', 'agudas', 'graves', 'esdrujulas', 'nota formal', 'conectores'],
-    content: `**Lengua (1° y 2° Año de Secundaria — Prof. Evans Erika):**
+    source: 'Diseño Curricular Modular EPJA Chubut (Anexo I)',
+    keywords: ['lengua', 'literatura', 'modulo 1', 'modulo 2', 'evans', 'acentuacion', 'agudas', 'graves', 'esdrujulas', 'nota formal', 'mapuche'],
+    content: `**Lengua y Literatura — Ciclo de Formación Básica (Prof. Evans Erika):**
 
-- **Comprensión Lectora:** Paratexto, ideas principales y elaboración de resúmenes.
-- **Tipos de Texto:** Expositivo, argumentativo y redacción de **Nota Formal** (lugar, fecha, motivo claro, firma y DNI).
-- **Reglas de Acentuación:**
-  * **Agudas:** Acento en última sílaba; llevan tilde si terminan en N, S o vocal (ej: *canción*).
-  * **Graves:** Acento en penúltima sílaba; llevan tilde si NO terminan en N, S ni vocal (ej: *árbol*).
-  * **Esdrújulas:** Acento en antepenúltima sílaba; siempre llevan tilde (ej: *matemática*).`
+- **Módulo 1 (Ciudadanía / Emancipación):**
+  * **La Palabra y la Ciudadanía:** La lengua como instrumento de participación ciudadana y ejercicio de derechos; diversidad lingüística y cultural.
+  * **Tipos de Texto:** Narrativo, explicativo, argumentativo e informativo.
+  * **Redacción Formal:** Estructura de la **Nota Formal** (lugar, fecha, destinatario, motivo claro, saludo y firma con DNI).
+  * **Normativa y Acentuación:** Reglas ortográficas (agudas con tilde en N/S/vocal; graves sin N/S/vocal; esdrújulas siempre con tilde).
+  * **Literatura Latinoamericana:** Lectura crítica de textos y autores vinculados a problemáticas sociales.
+
+- **Módulo 2 (Identidad / Diversidad y Género):**
+  * **Lengua y Relaciones de Poder:** Análisis crítico del discurso; detección de lenguaje discriminatorio en medios y publicidad.
+  * **Identidad Cultural:** La lengua como factor de identidad; aproximación a los saberes de la cultura mapuche y sus rasgos regionales.
+  * **Comprensión y Debate:** Textos orales y espacios de debate con foco en diversidad, perspectiva de género y derechos.`
   },
   {
     id: 'doc-cs-naturales',
-    title: 'Cs. Naturales (1° y 2° Año) · Prof. Mundaca Yamila',
+    title: 'Ciencias Naturales (Módulos 1 y 2) · Prof. Mundaca Yamila',
     category: 'Cs. Naturales',
-    source: 'Prof. Mundaca Yamila',
-    keywords: ['cs naturales', 'ciencias naturales', 'mundaca', 'yamila', 'celula', 'ecosistema', 'materia', 'estados', 'mezclas', 'salud'],
-    content: `**Cs. Naturales (1° y 2° Año de Secundaria — Prof. Mundaca Yamila):**
+    source: 'Diseño Curricular Modular EPJA Chubut (Anexo I)',
+    keywords: ['cs naturales', 'ciencias naturales', 'modulo 1', 'modulo 2', 'mundaca', 'celula', 'ecosistema', 'materia', 'salud sexual', 'esi', 'nutricion'],
+    content: `**Ciencias Naturales — Ciclo de Formación Básica (Prof. Mundaca Yamila):**
 
-- **La Célula:** Procariota (bacterias, sin núcleo) y Eucariota (con núcleo; animal y vegetal con cloroplastos).
-- **Ecosistemas:** Componentes bióticos (seres vivos) y abióticos (agua, suelo, temperatura).
-- **Estados de la Materia:** Sólido, líquido y gaseoso. Mezclas homogéneas (1 fase) y heterogéneas (2 o más fases).`
+- **Módulo 1 (Ciudadanía / Naturaleza y Desarrollo):**
+  * **Seres Vivos:** Características distintivas y niveles de organización biológica.
+  * **Materia y Energía en Ecosistemas:** Cadenas y redes tróficas; organismos autótrofos y heterótrofos; ciclos de la materia y flujos de energía.
+  * **Subsistemas Terrestres:** Hidrósfera, atmósfera, geósfera y biósfera; impacto humano en los ecosistemas de la región patagónica.
+  * **Materia y Mezclas:** Estados de la materia (sólido, líquido, gaseoso) y mezclas homogéneas y heterogéneas.
+
+- **Módulo 2 (Identidad / Salud e Inequidad):**
+  * **Desarrollo Humano:** Procesos de crecimiento, desarrollo y maduración biológica.
+  * **Salud Sexual y Reproductiva (ESI):** Prevención de infecciones de transmisión sexual (ITS), métodos anticonceptivos y marcos legales de salud.
+  * **Prevención de Adicciones:** Identificación de situaciones de riesgo y consumos problemáticos.
+  * **Nutrición y Salud:** Nutrientes esenciales, equilibrio alimentario y recursos alimentarios regionales.`
   },
   {
     id: 'doc-cs-sociales',
-    title: 'Cs. Sociales: Derechos Laborales y Constitución',
+    title: 'Ciencias Sociales (Módulos 1 y 2)',
     category: 'Cs. Sociales',
-    source: 'Equipo Docente Cs. Sociales',
-    keywords: ['cs sociales', 'ciencias sociales', 'art 14 bis', 'derechos laborales', 'constitucion', 'democracia'],
-    content: `**Cs. Sociales (Formación Básica):**
+    source: 'Diseño Curricular Modular EPJA Chubut (Anexo I)',
+    keywords: ['cs sociales', 'ciencias sociales', 'modulo 1', 'modulo 2', 'art 14 bis', 'estado', 'democracia', 'genero', 'trabajo'],
+    content: `**Ciencias Sociales — Ciclo de Formación Básica (Equipo Docente):**
 
-- **Artículo 14 bis de la Constitución Nacional:** Condiciones dignas de labor, jornada limitada, descanso y vacaciones pagadas, salario mínimo vital y móvil, y protección contra el despido arbitrario.
-- **Democracia y Participación:** El voto popular, secreto y obligatorio, y el rol de las instituciones comunitarias.`
+- **Módulo 1 (Ciudadanía / Emancipación):**
+  * **Acumulación Capitalista y Territorio:** Transformaciones territoriales y económicas de los siglos XX y XXI.
+  * **Modelos de Estado:** Estado Liberal, Estado de Bienestar, Estado Burocrático-Autoritario y Neoliberalismo.
+  * **Democracia vs. Autoritarismo:** Dictaduras latinoamericanas, corporativismos y construcción colectiva de valores democráticos.
+  * **Derechos Laborales:** Artículo 14 bis de la Constitución Nacional y redes solidarias comunitarias.
+
+- **Módulo 2 (Identidad / Diversidad y Género):**
+  * **Organización Sociocultural:** Procesos históricos y orden sociopolítico hegemónico.
+  * **Género y Sociedad:** Rol histórico de la mujer en movimientos sociales y populares; nuevas organizaciones del trabajo.
+  * **Discursos Alternativos:** Reconocimiento de la diversidad, la otredad y derechos sociales.`
   },
   {
     id: 'doc-ingles',
-    title: 'Inglés: Saludos, Verbo To Be y Vocabulario Cotidiano',
+    title: 'Lenguas Extranjera Inglés (Módulos 1 y 2)',
     category: 'Inglés',
-    source: 'Equipo Docente Inglés',
-    keywords: ['ingles', 'english', 'to be', 'saludos', 'vocabulario'],
-    content: `**Inglés (Formación Básica):**
+    source: 'Diseño Curricular Modular EPJA Chubut (Anexo I)',
+    keywords: ['ingles', 'english', 'modulo 1', 'modulo 2', 'to be', 'saludos', 'presente simple', 'pasado simple'],
+    content: `**Lenguas Extranjera Inglés — Ciclo de Formación Básica (Equipo Docente):**
 
-- **Saludos:** *Hello*, *Good evening*, *How are you?*
-- **Verbo To Be (Ser/Estar):** *I am*, *You are*, *He/She is*, *We/They are*.
-- **Vocabulario tecnológico y laboral:** *Password* (contraseña), *Save* (guardar), *Send* (enviar), *Schedule* (horario).`
+- **Módulo 1 (Ciudadanía):**
+  * **Identidad Global:** Países, nacionalidades, idiomas y ubicación geográfica.
+  * **Comunicación Cotidiana:** Saludos, presentaciones y diferenciación entre registro formal e informal.
+  * **Gramática Inicial:** Verbo To Be en presente simple (*I am, you are, he/she is*).
+  * **Comprensión:** Lectura e interpretación de señalética, avisos públicos y mensajes breves.
+
+- **Módulo 2 (Identidad y Diversidad):**
+  * **Estructura de Oraciones:** Sustantivos (singular y plural, género y número) y adjetivos.
+  * **Tiempos Verbales:** Presente Simple y Pasado Simple en expresiones escritas y orales.
+  * **Producción y Comunicación:** Mensajes en cartelería y folletos de campañas temáticas; comprensión de canciones y publicidades.`
   },
   {
     id: 'doc-ed-fisica',
-    title: 'Ed. Física y Salud: Ergonomía y Pausas Activas',
+    title: 'Actividad Física y Salud (Módulos 1 y 2)',
     category: 'Ed. Física y Salud',
-    source: 'Equipo Docente Ed. Física',
-    keywords: ['ed fisica', 'educacion fisica', 'salud', 'ergonomia', 'postura', 'pausas activas'],
-    content: `**Ed. Física y Salud:**
+    source: 'Diseño Curricular Modular EPJA Chubut (Anexo I)',
+    keywords: ['ed fisica', 'educacion fisica', 'salud', 'modulo 1', 'modulo 2', 'ergonomia', 'sedentarismo', 'entrenamiento'],
+    content: `**Actividad Física y Salud — Ciclo de Formación Básica (Equipo Docente):**
 
-- **Ergonomía Postural:** Al sentarse, apoyar ambos pies en el piso y mantener la espalda recta. Al levantar peso del suelo, flexionar las rodillas sin doblar la cintura.
-- **Pausas Activas:** Movilidad de cuello, hombros y muñecas cada 60-90 minutos de trabajo o estudio.`
+- **Módulo 1 (Ciudadanía / Naturaleza):**
+  * **Salud Integral:** Conceptualización médica y social de la salud; combate del sedentarismo como enfermedad contemporánea.
+  * **Hábitos Saludables:** Alimentación adecuada, higiene personal y prevención de adicciones en entornos escolares y laborales.
+  * **Ergonomía:** Posturas correctas de trabajo y estudio; pausas activas para evitar fatiga corporal.
+
+- **Módulo 2 (Identidad / Salud):**
+  * **Prácticas Corporales Inclusivas:** Desarrollo motriz, coordinativo y condicional adaptado a cada persona.
+  * **Principios de Entrenamiento:** Individualidad, progresión y calentamiento corporal autónomo.
+  * **Cuidado Corporal:** Adaptación al esfuerzo físico, hidratación adecuada y equilibrio entre actividad física y descanso.`
   },
   {
     id: 'doc-edi-plataformas',
-    title: 'EDI: Plataformas Digitales y Proyecto EMALBOT',
+    title: 'EDI: Plataformas Digitales (Módulos 1 y 2)',
     category: 'EDI',
-    source: 'Equipo Docente EDI',
-    keywords: ['edi', 'plataformas digitales', 'modulo 2', 'algoritmo', 'datos', 'rag', 'ia', 'emalbot'],
-    content: `**EDI Plataformas Digitales (Módulos 1 y 2):**
+    source: 'Escuela N° 2702 EMAL',
+    keywords: ['edi', 'plataformas digitales', 'modulo 1', 'modulo 2', 'algoritmo', 'datos', 'rag', 'ia', 'emalbot'],
+    content: `**EDI Plataformas Digitales — Módulos 1 y 2 (Equipo Docente):**
 
-- **Proyecto EMALBOT:** Asistente conversacional con Inteligencia Artificial que consulta carpetas de Google Drive de la escuela con arquitectura RAG para responder consultas.
-- **Algoritmo:** Secuencia ordenada y finita de pasos para resolver un problema.
-- **Dato vs. Información:** Un dato es un elemento aislado; la información es el dato contextualizado con significado.`
+- **Módulo 1:**
+  * **Proyecto EMALBOT:** Asistente virtual institucional con Inteligencia Artificial y arquitectura RAG.
+  * **Fundamentos Computacionales:** Algoritmos (secuencias ordenadas de pasos para resolución de problemas); diferencia entre Dato e Información contextualizada.
+
+- **Módulo 2:**
+  * **Integración Cloud:** Procesamiento y consulta automatizada de documentos en Google Drive institucional.
+  * **Herramientas de Comunicación:** Plataformas digitales interactivas para el aprendizaje autónomo.`
   }
 ];
 
@@ -195,7 +249,14 @@ export default async function handler(req: any, res: any) {
   }
 
   const startTime = Date.now();
-  const body = req.body || {};
+  let body = req.body || {};
+  if (typeof body === 'string') {
+    try {
+      body = JSON.parse(body);
+    } catch {
+      body = {};
+    }
+  }
   const {
     message = '',
     area = 'institucional',
@@ -350,13 +411,13 @@ ${selectedDoc.content}
     } else {
       // Direct, focused response — strictly the requested document without any complementary sections
       if (/quien es el profesor de nuevas tecnologias|quien ensena nuevas tecnologias|profesor de nuevas tecnologias/i.test(normQuery)) {
-        finalReply = `El profesor de **Nuevas Tecnologías** (Módulos 1 y 2) es el **Prof. Roa Nicolás**.\n\nContenidos de la materia:\n- Hardware y Software (periféricos de entrada y salida).\n- Uso de Google Drive para almacenamiento en la nube.\n- Seguridad digital, contraseñas seguras y prevención de Phishing.`;
+        finalReply = `El profesor de **Nuevas Tecnologías** (Módulos 1 y 2) es el **Prof. Roa Nicolás**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Alfabetización digital (Hardware/Software), ofimática (procesador de textos, planilla de cálculos, presentaciones), Google Drive y seguridad digital (Phishing).\n- **Módulo 2:** Comunicación en Internet, técnicas de búsqueda y validación web, trabajo colaborativo en redes y seguridad informática.`;
       } else if (/quien es el profesor de matematicas|quien ensena matematicas|profesor de matematicas/i.test(normQuery)) {
-        finalReply = `El profesor de **Matemáticas** (Módulos 1 a 4) es el **Prof. Zaneta Sebastián**.\n\nContenidos de la materia:\n- Números enteros y jerarquía de operaciones combinadas.\n- Ecuaciones de primer grado (\`2x + 10 = 50\`).\n- Fracciones, regla de tres simple y cálculo de porcentajes con descuentos cotidianos.\n- Geometría básica (perímetro y área).`;
+        finalReply = `El profesor de **Matemáticas** (Módulos 1 a 4) es el **Prof. Zaneta Sebastián**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Números enteros, operaciones combinadas, números racionales (porcentajes cotidianos) y ecuaciones de 1er grado.\n- **Módulo 2:** Geometría en el plano y cuerpos del espacio, sistema sexagesimal, ejes cartesianos y estadística descriptiva.`;
       } else if (/quien es la profesora de lengua|profesora de lengua|quien ensena lengua/i.test(normQuery)) {
-        finalReply = `La profesora de **Lengua** (Módulos 1 a 4) es la **Prof. Evans Erika**.\n\nContenidos de la materia:\n- Comprensión lectora, paratexto y resúmenes.\n- Tipos de texto (expositivo, argumentativo y redacción de nota formal).\n- Reglas de acentuación (agudas, graves y esdrújulas).`;
+        finalReply = `La profesora de **Lengua y Literatura** (Módulos 1 a 4) es la **Prof. Evans Erika**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Comprensión lectora, redacción de nota formal, reglas de acentuación (agudas, graves, esdrújulas) y literatura latinoamericana.\n- **Módulo 2:** Análisis crítico de medios, discurso no discriminatorio, identidad cultural (cultura mapuche) y debate sobre diversidad.`;
       } else if (/quien es la profesora de ciencias naturales|profesora de cs naturales|quien ensena ciencias naturales/i.test(normQuery)) {
-        finalReply = `La profesora de **Ciencias Naturales** (Módulos 1 a 4) es la **Prof. Mundaca Yamila**.\n\nContenidos de la materia:\n- La célula (procariota y eucariota animal y vegetal).\n- Niveles de organización biológica y ecosistemas.\n- Estados de la materia y mezclas homogéneas/heterogéneas.`;
+        finalReply = `La profesora de **Ciencias Naturales** (Módulos 1 a 4) es la **Prof. Mundaca Yamila**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Características de los seres vivos, cadenas y redes tróficas, subsistemas terrestres y estados de la materia.\n- **Módulo 2:** Desarrollo humano, salud sexual y reproductiva (ESI), prevención de adicciones y nutrición regional.`;
       } else {
         finalReply = selectedDoc.content;
       }
