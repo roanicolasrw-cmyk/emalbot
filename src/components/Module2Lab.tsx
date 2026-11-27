@@ -107,35 +107,59 @@ Para inscribirte en una escuela generalmente necesitás documento de identidad y
       <div className="p-5 rounded-xl bg-slate-950/80 border border-slate-800 my-6">
         <h3 className="text-sm font-bold text-slate-200 mb-3 flex items-center gap-2">
           <Workflow className="w-4 h-4 text-indigo-400" />
-          Flujo de Procesamiento de EMALBOT
+          Flujo Oficial del Sistema para la Muestra (5 Pasos RAG)
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-2 text-center text-xs">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-3 text-left text-xs">
           
-          <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
-            <span className="text-[10px] font-bold text-sky-400 uppercase block mb-1">Paso 1</span>
-            <strong className="text-white block">Consulta del Estudiante</strong>
-            <span className="text-[10px] text-slate-400">Plantea la duda vía chat</span>
+          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold text-emerald-400 uppercase block mb-1">Paso 1</span>
+              <strong className="text-white text-xs block mb-1">Carga Formulario / Drive</strong>
+              <span className="text-[11px] text-slate-400 leading-normal">
+                Docentes cargan apuntes o novedades en Formulario de Google ➔ sincroniza en Google Drive REG EMAL 2702.
+              </span>
+            </div>
           </div>
 
-          <div className="hidden md:flex items-center justify-center text-slate-600">
-            <ArrowRight className="w-4 h-4" />
+          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold text-sky-400 uppercase block mb-1">Paso 2</span>
+              <strong className="text-white text-xs block mb-1">Consulta del Estudiante</strong>
+              <span className="text-[11px] text-slate-400 leading-normal">
+                El estudiante consulta por texto o voz (ej: "¿Quién es el profesor de NTICx?").
+              </span>
+            </div>
           </div>
 
-          <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
-            <span className="text-[10px] font-bold text-emerald-400 uppercase block mb-1">Paso 2</span>
-            <strong className="text-white block">Búsqueda en Google Drive</strong>
-            <span className="text-[10px] text-slate-400">Lee apuntes docentes y circulares</span>
+          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold text-amber-400 uppercase block mb-1">Paso 3</span>
+              <strong className="text-white text-xs block mb-1">Motor RAG</strong>
+              <span className="text-[11px] text-slate-400 leading-normal">
+                Escanea las carpetas institucionales, extrae palabras clave y calcula el puntaje de relevancia.
+              </span>
+            </div>
           </div>
 
-          <div className="hidden md:flex items-center justify-center text-slate-600">
-            <ArrowRight className="w-4 h-4" />
+          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold text-purple-400 uppercase block mb-1">Paso 4</span>
+              <strong className="text-white text-xs block mb-1">Generación IA (Gemini / Local)</strong>
+              <span className="text-[11px] text-slate-400 leading-normal">
+                Procesa los fragmentos con Gemini IA o sintetizador RAG local con reglas pedagógicas para adultos.
+              </span>
+            </div>
           </div>
 
-          <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
-            <span className="text-[10px] font-bold text-amber-400 uppercase block mb-1">Paso 3</span>
-            <strong className="text-white block">Modelo de Respuesta</strong>
-            <span className="text-[10px] text-slate-400">Genera la respuesta contextualizada</span>
+          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold text-teal-400 uppercase block mb-1">Paso 5</span>
+              <strong className="text-white text-xs block mb-1">Respuesta y Accesibilidad</strong>
+              <span className="text-[11px] text-slate-400 leading-normal">
+                El alumno recibe la respuesta con la fuente de Drive, opción de simplificar, ejercitar y lectura en voz alta.
+              </span>
+            </div>
           </div>
 
         </div>

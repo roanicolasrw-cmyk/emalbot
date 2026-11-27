@@ -3,7 +3,7 @@ import { KnowledgeDocument } from '../types';
 export const INSTITUTIONAL_INFO = {
   schoolName: "Escuela N° 2702 EMAL",
   fullTitle: "Escuela Municipal de Alfabetización y Educación de Jóvenes y Adultos N° 2702",
-  shift: "Turno Vespertino / Noche (18:30 hs a 22:15 hs)",
+  shift: "Turno Vespertino / Noche (19:15 hs a 22:15 hs)",
   secretariaHours: "Lunes a Viernes de 18:30 hs a 21:30 hs",
   motto: "Acompañamiento educativo y formación autónoma para adultos",
   disclaimer: "EMALBOT brinda información de orientación y acompañamiento. No toma decisiones administrativas finales (como adjudicación de vacantes) ni reemplaza las evaluaciones o explicaciones docentes."
