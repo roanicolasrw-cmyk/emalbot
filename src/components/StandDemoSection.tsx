@@ -586,6 +586,5 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
           </div>
         </div>
       </div>
-    </div>
   );
 };
