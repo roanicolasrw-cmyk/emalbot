@@ -401,7 +401,7 @@ export default function App() {
         {activeTab === 'lab' && <Module2Lab />}
       </main>
 
-      {/* Footer (Hidden when printing A4 sheets) */}
+      {/* Footer */}
       <footer className="no-print bg-slate-900/80 border-t border-slate-800 py-6 text-center text-xs text-slate-400">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center space-x-2">

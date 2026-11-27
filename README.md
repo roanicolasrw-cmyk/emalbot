@@ -41,14 +41,6 @@ En lugar de responder de memoria o inventar datos, el sistema activa el motor RA
 
 ---
 
-## 📱 Demostración en Android Studio (Kotlin + Jetpack Compose)
-
-En la carpeta [`public/`](file:///C:/Users/Admin/AndroidStudioProjects/emalbot/public) se incluye el archivo [`EMALBOT_Android_Studio_Demo.kt`](file:///C:/Users/Admin/AndroidStudioProjects/emalbot/public/EMALBOT_Android_Studio_Demo.kt), preparado para crear una app móvil nativa para el stand con:
-1. **Modo RAG Nativo Offline:** Motor de búsqueda local, trazas de recuperación y síntesis de voz (Text-to-Speech).
-2. **Modo App Web En Vivo:** Integración en WebView para navegar la plataforma completa.
-
----
-
 ## 💻 Desarrollo Local
 
 **Requisitos:** Node.js (v18+)

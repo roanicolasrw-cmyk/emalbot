@@ -195,8 +195,8 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
-      {/* Top Banner (Hidden on Print) */}
-      <div className="no-print bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      {/* Top Banner */}
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 rounded-2xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shrink-0">
             <img
@@ -225,7 +225,7 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
       </div>
 
       {/* REAL LIVE STAND DEMONSTRATION */}
-      <div className="no-print space-y-6">
+      <div className="space-y-6">
           {/* Real Teacher Presets Bar */}
           <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col gap-3">
             <div className="text-xs text-slate-300">
