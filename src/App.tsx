@@ -120,13 +120,70 @@ export default function App() {
   }, []);
 
   const handleSendMessage = async (text: string, simplify = false, exercise = false) => {
+    const isSimplifyReq = simplify || /simpl|sencill|facil|no entendi|con peras|mas simple|ejemplo cotidiano|explicar este concepto/i.test(text);
+    const isExerciseReq = exercise || /ejercicio|practica/i.test(text);
+
+    let targetSubject: SubjectType = activeSubject;
+    let targetArea: AreaType = activeArea;
+
+    const norm = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    if (/inteligencia artificial|\bia\b|nticx|tecnolog|hardware|software|computad|drive|phishing|roa|ciudades inteligentes|smart cities|big data/i.test(norm)) {
+      targetSubject = 'nuevas_tecnologias';
+      targetArea = 'educativa';
+    } else if (/matematica|ecuacion|porcentaje|fraccion|regla de tres|zaneta|geometria|signos|entero/i.test(norm)) {
+      targetSubject = 'matematicas';
+      targetArea = 'educativa';
+    } else if (/lengua|literatura|acentuaci|aguda|grave|esdrujula|tilde|nota formal|evans/i.test(norm)) {
+      targetSubject = 'lengua';
+      targetArea = 'educativa';
+    } else if (/natural|biolog|celula|procariota|eucariota|ecosistema|mundaca|salud sexual|esi|nutricion/i.test(norm)) {
+      targetSubject = 'ciencias_naturales';
+      targetArea = 'educativa';
+    } else if (/social|constitucion|art 14|derecho laboral|democracia/i.test(norm)) {
+      targetSubject = 'ciencias_sociales';
+      targetArea = 'educativa';
+    } else if (/ingles|english|to be/i.test(norm)) {
+      targetSubject = 'ingles';
+      targetArea = 'educativa';
+    } else if (/ed fisica|educacion fisica|ergonomia/i.test(norm)) {
+      targetSubject = 'educacion_fisica';
+      targetArea = 'educativa';
+    } else if (/edi|plataforma|algoritmo/i.test(norm)) {
+      targetSubject = 'edi_plataformas';
+      targetArea = 'educativa';
+    } else if (/profesor|docente|nomina/i.test(norm)) {
+      targetSubject = 'docentes';
+      targetArea = 'educativa';
+    } else if (/matricula|inscripcion|inscribir|anotar|requisito|vacante|guemes/i.test(norm)) {
+      targetSubject = 'inscripciones';
+      targetArea = 'institucional';
+    } else if (/horario|atencion|cuando atiende|turno/i.test(norm)) {
+      targetSubject = 'horarios';
+      targetArea = 'institucional';
+    } else if (/constancia|certificado|alumno regular|pase|tramite/i.test(norm)) {
+      targetSubject = 'tramites';
+      targetArea = 'institucional';
+    } else if (isSimplifyReq || isExerciseReq) {
+      if (messages.length > 0) {
+        const lastWithSubject = [...messages].reverse().find(m => m.subject && m.subject !== 'inscripciones');
+        if (lastWithSubject?.subject) {
+          targetSubject = lastWithSubject.subject;
+          targetArea = lastWithSubject.area;
+        }
+      }
+    }
+
+    setActiveSubject(targetSubject);
+    setActiveArea(targetArea);
+
     const userMsg: ChatMessage = {
       id: `msg-user-${Date.now()}`,
       role: 'user',
       content: text,
       timestamp: new Date(),
-      area: activeArea,
-      subject: activeSubject
+      area: targetArea,
+      subject: targetSubject
     };
 
     setMessages(prev => [...prev, userMsg]);
@@ -138,11 +195,11 @@ export default function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: text,
-          area: activeArea,
-          subject: activeSubject,
+          area: targetArea,
+          subject: targetSubject,
           chatHistory: messages.map(m => ({ role: m.role, content: m.content })),
-          simplifyMode: simplify,
-          generateExercise: exercise
+          simplifyMode: isSimplifyReq,
+          generateExercise: isExerciseReq
         })
       });
 
@@ -153,11 +210,11 @@ export default function App() {
           role: 'model',
           content: data.text,
           timestamp: new Date(),
-          area: activeArea,
-          subject: activeSubject,
+          area: targetArea,
+          subject: targetSubject,
           sources: data.sources || [],
           ragTrace: data.ragTrace,
-          isSimplerExplanation: simplify
+          isSimplerExplanation: isSimplifyReq
         };
 
         setMessages(prev => [...prev, aiMsg]);
@@ -174,11 +231,12 @@ export default function App() {
     // Client-side RAG synthesis fallback (runs if API is offline or returns error)
     const localResult = generateLocalRagResponse(
       text,
-      activeArea,
-      activeSubject,
+      targetArea,
+      targetSubject,
       driveStatus.files,
-      simplify,
-      exercise
+      isSimplifyReq,
+      isExerciseReq,
+      messages.map(m => ({ role: m.role, content: m.content }))
     );
 
     const localAiMsg: ChatMessage = {
@@ -186,11 +244,11 @@ export default function App() {
       role: 'model',
       content: localResult.text,
       timestamp: new Date(),
-      area: activeArea,
-      subject: activeSubject,
+      area: targetArea,
+      subject: targetSubject,
       sources: localResult.sources,
       ragTrace: localResult.ragTrace,
-      isSimplerExplanation: simplify
+      isSimplerExplanation: isSimplifyReq
     };
 
     setMessages(prev => [...prev, localAiMsg]);

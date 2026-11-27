@@ -468,7 +468,11 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
             <button
               key={idx}
               type="button"
-              onClick={() => onSendMessage(sug)}
+              onClick={() => {
+                const isSimplify = /sencill|simpl|facil/i.test(sug);
+                const isEx = /ejercicio|practica/i.test(sug);
+                onSendMessage(sug, isSimplify, isEx);
+              }}
               className="px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-sky-300 hover:text-white whitespace-nowrap transition-colors text-[11px]"
             >
               {sug}

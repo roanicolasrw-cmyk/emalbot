@@ -19,7 +19,7 @@ const KNOWLEDGE_DOCUMENTS: SyncedDoc[] = [
     content: `**MATRÍCULA 2027 — INSCRIPCIONES ABIERTAS (Escuela N° 2702 EMAL)**
 
 **1. Preinscripción Online:**
-Completar el formulario digital: [Formulario de Preinscripción](https://docs.google.com/forms/d/e/1FAIpQLScIxCNeBE2veAN4dWndcrJONM8sUaOh7UMfgRuNc7j6NOUsgw/viewform?usp=sf_link)
+Completar el formulario digital: [Formulario de Preinscripción Matrícula 2027](https://docs.google.com/forms/d/e/1FAIpQLScIxCNeBE2veAN4dWndcrJONM8sUaOh7UMfgRuNc7j6NOUsgw/viewform?usp=sf_link)
 
 **2. Documentación a presentar (mayores de 18 años):**
 - Fotocopia de DNI (frente y dorso).
@@ -28,7 +28,7 @@ Completar el formulario digital: [Formulario de Preinscripción](https://docs.go
 - 2 fotos carnet 4x4.
 
 **3. Lugar y Horario de entrega:**
-En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
+En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs** (Atención general de Secretaría hasta las 22:15 hs).`
   },
   {
     id: 'doc-horarios-sec',
@@ -81,15 +81,15 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
 
 - **Módulo 1 (Ciudadanía / Naturaleza y Desarrollo):**
   * **Números Enteros:** Operaciones y propiedades, regla de signos (\`+ · + = +\`, \`- · - = +\`, \`+ · - = -\`) y jerarquía de operaciones combinadas.
-  * **Números Racionales:** Fracciones, expresiones decimales, notación científica y porcentajes aplicados a situaciones cotidianas.
-  * **Álgebra y Ecuaciones:** Expresiones algebraicas sencillas y ecuaciones de 1er grado con una incógnita (\`2x + 10 = 50\`).
-  * **Geometría y Proporcionalidad:** Perímetro y área de figuras planas; razones, proporciones y ejes cartesianos.
+  * **Números Racionales:** Fracciones, expresiones decimales y porcentajes aplicados a compras y descuentos cotidianos.
+  * **Álgebra y Ecuaciones:** Ecuaciones de 1er grado con una incógnita (\`2x + 10 = 50\`).
+  * **Geometría y Proporcionalidad:** Perímetro y área de figuras planas; ejes cartesianos.
 
 - **Módulo 2 (Identidad / Diversidad y Salud):**
-  * **Geometría y Cuerpos:** Figuras planas (triángulos, cuadriláteros, círculos) y cuerpos (prismas, pirámides, cilindros, conos, esferas).
-  * **Sistema Sexagesimal:** Unidades de medida angular y temporal en resolución de problemas.
-  * **Ejes Cartesianos y Funciones:** Ubicación de puntos en el plano y análisis de relaciones aplicadas a salud y condiciones de vida.
-  * **Estadística Descriptiva:** Recolección y organización de datos; lectura y elaboración de tablas y gráficos (barras, circulares, líneas, pictogramas).`
+  * **Geometría y Cuerpos:** Figuras planas y cuerpos en el espacio.
+  * **Sistema Sexagesimal:** Unidades angulares y temporales.
+  * **Ejes Cartesianos y Funciones:** Ubicación de puntos y análisis de datos de salud y trabajo.
+  * **Estadística Descriptiva:** Tablas y gráficos estadísticos (barras, circulares, líneas).`
   },
   {
     id: 'doc-nticx',
@@ -101,15 +101,15 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
 
 - **Módulo 1 (Ciudadanía / Naturaleza y Desarrollo):**
   * **Alfabetización Digital:** Hardware (CPU, memoria RAM, periféricos de entrada y salida) y Software (sistemas operativos y aplicaciones).
-  * **Software Utilitario de Oficina:** Procesadores de texto (cartas, notas, informes, tablas), Planillas de cálculo (fórmulas, funciones y gráficos) y Presentadores multimedia.
-  * **Almacenamiento en la Nube:** Uso de Google Drive institucional para gestionar apuntes y trabajos desde el celular sin saturar memoria.
-  * **Seguridad Digital:** Contraseñas seguras y prevención activa de fraudes por Phishing.
+  * **Software de Oficina:** Procesadores de texto (notas, cartas, tablas), Planillas de cálculo (fórmulas y gráficos) y Presentaciones.
+  * **Almacenamiento en la Nube:** Google Drive institucional para apuntes sin saturar el celular.
+  * **Seguridad Digital:** Contraseñas seguras y prevención de estafas por Phishing.
 
 - **Módulo 2 (Identidad / Diversidad y Salud):**
-  * **Inteligencia Artificial (IA):** Fundamentos y modelos conversacionales; **participación y desarrollo activo por parte de los estudiantes de la escuela** (creación, ajuste y validación de asistentes como EMALBOT con arquitectura RAG).
-  * **Ciudades Inteligentes (Smart Cities):** Conectividad, sensores urbanos y soluciones tecnológicas aplicadas a la movilidad, la sustentabilidad ambiental y la gestión comunitaria.
-  * **Big Data:** Recolección, almacenamiento y procesamiento de grandes volúmenes de datos para identificar patrones y tomar decisiones fundamentadas.
-  * **Comunicación y Redes:** Correo electrónico, foros, blogs, técnicas de búsqueda y validación de fuentes, y seguridad informática.`
+  * **Inteligencia Artificial (IA):** Modelos conversacionales y **desarrollo activo de los estudiantes de EMAL** (participación en la creación, ajuste y validación de **EMALBOT** con arquitectura RAG).
+  * **Ciudades Inteligentes (Smart Cities):** Conectividad, sensores urbanos, movilidad sustentable y energía.
+  * **Big Data:** Procesamiento de grandes volúmenes de datos para tomar decisiones comunitarias.
+  * **Comunicación y Redes:** Búsqueda crítica en Internet y seguridad en redes sociales.`
   },
   {
     id: 'doc-lengua',
@@ -120,16 +120,16 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
     content: `**Lengua y Literatura — Ciclo de Formación Básica (Prof. Evans Erika):**
 
 - **Módulo 1 (Ciudadanía / Emancipación):**
-  * **La Palabra y la Ciudadanía:** La lengua como instrumento de participación ciudadana y ejercicio de derechos; diversidad lingüística y cultural.
+  * **La Palabra y la Ciudadanía:** La lengua como instrumento de derechos y expresión social.
   * **Tipos de Texto:** Narrativo, explicativo, argumentativo e informativo.
-  * **Redacción Formal:** Estructura de la **Nota Formal** (lugar, fecha, destinatario, motivo claro, saludo y firma con DNI).
-  * **Normativa y Acentuación:** Reglas ortográficas (agudas con tilde en N/S/vocal; graves sin N/S/vocal; esdrújulas siempre con tilde).
-  * **Literatura Latinoamericana:** Lectura crítica de textos y autores vinculados a problemáticas sociales.
+  * **Redacción Formal:** Estructura oficial de la **Nota Formal** (lugar, fecha, destinatario, cuerpo claro, saludo y firma con DNI).
+  * **Normativa y Acentuación:** Reglas de tilde (agudas con N/S/vocal; graves sin N/S/vocal; esdrújulas siempre).
+  * **Literatura Latinoamericana:** Autores vinculados a problemáticas sociales.
 
 - **Módulo 2 (Identidad / Diversidad y Género):**
-  * **Lengua y Relaciones de Poder:** Análisis crítico del discurso; detección de lenguaje discriminatorio en medios y publicidad.
-  * **Identidad Cultural:** La lengua como factor de identidad; aproximación a los saberes de la cultura mapuche y sus rasgos regionales.
-  * **Comprensión y Debate:** Textos orales y espacios de debate con foco en diversidad, perspectiva de género y derechos.`
+  * **Análisis Crítico:** Detección de lenguaje discriminatorio en medios y publicidad.
+  * **Identidad Cultural:** La lengua como factor de pertenencia y aproximación a la cultura mapuche.
+  * **Debate:** Espacios de diálogo sobre diversidad, género y derechos humanos.`
   },
   {
     id: 'doc-cs-naturales',
@@ -140,16 +140,15 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
     content: `**Ciencias Naturales — Ciclo de Formación Básica (Prof. Mundaca Yamila):**
 
 - **Módulo 1 (Ciudadanía / Naturaleza y Desarrollo):**
-  * **Seres Vivos:** Características distintivas y niveles de organización biológica.
-  * **Materia y Energía en Ecosistemas:** Cadenas y redes tróficas; organismos autótrofos y heterótrofos; ciclos de la materia y flujos de energía.
-  * **Subsistemas Terrestres:** Hidrósfera, atmósfera, geósfera y biósfera; impacto humano en los ecosistemas de la región patagónica.
+  * **Seres Vivos:** Niveles de organización y características biológicas.
+  * **Materia y Energía en Ecosistemas:** Cadenas tróficas, organismos autótrofos/heterótrofos y ecosistemas patagónicos.
   * **Materia y Mezclas:** Estados de la materia (sólido, líquido, gaseoso) y mezclas homogéneas y heterogéneas.
 
 - **Módulo 2 (Identidad / Salud e Inequidad):**
-  * **Desarrollo Humano:** Procesos de crecimiento, desarrollo y maduración biológica.
-  * **Salud Sexual y Reproductiva (ESI):** Prevención de infecciones de transmisión sexual (ITS), métodos anticonceptivos y marcos legales de salud.
-  * **Prevención de Adicciones:** Identificación de situaciones de riesgo y consumos problemáticos.
-  * **Nutrición y Salud:** Nutrientes esenciales, equilibrio alimentario y recursos alimentarios regionales.`
+  * **Desarrollo Humano:** Crecimiento y maduración biológica.
+  * **Salud Sexual y Reproductiva (ESI):** Prevención de ITS, métodos anticonceptivos y derechos de salud.
+  * **Prevención de Adicciones:** Identificación de riesgos y cuidados comunitarios.
+  * **Nutrición y Salud:** Nutrientes esenciales y hábitos saludables.`
   },
   {
     id: 'doc-cs-sociales',
@@ -160,15 +159,13 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
     content: `**Ciencias Sociales — Ciclo de Formación Básica (Equipo Docente):**
 
 - **Módulo 1 (Ciudadanía / Emancipación):**
-  * **Acumulación Capitalista y Territorio:** Transformaciones territoriales y económicas de los siglos XX y XXI.
-  * **Modelos de Estado:** Estado Liberal, Estado de Bienestar, Estado Burocrático-Autoritario y Neoliberalismo.
-  * **Democracia vs. Autoritarismo:** Dictaduras latinoamericanas, corporativismos y construcción colectiva de valores democráticos.
-  * **Derechos Laborales:** Artículo 14 bis de la Constitución Nacional y redes solidarias comunitarias.
+  * **Estado y Sociedad:** Modelos de Estado (Bienestar, Liberal, Neoliberal).
+  * **Democracia vs. Autoritarismo:** Dictaduras latinoamericanas y construcción democrática.
+  * **Derechos Laborales:** Artículo 14 bis de la Constitución Nacional y redes de trabajo solidario.
 
 - **Módulo 2 (Identidad / Diversidad y Género):**
-  * **Organización Sociocultural:** Procesos históricos y orden sociopolítico hegemónico.
-  * **Género y Sociedad:** Rol histórico de la mujer en movimientos sociales y populares; nuevas organizaciones del trabajo.
-  * **Discursos Alternativos:** Reconocimiento de la diversidad, la otredad y derechos sociales.`
+  * **Historia y Territorio:** Rol de la mujer en los movimientos sociales y nuevas organizaciones laborales.
+  * **Diversidad:** Reconocimiento de derechos colectivos y comunidades originarias.`
   },
   {
     id: 'doc-ingles',
@@ -179,15 +176,12 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
     content: `**Lenguas Extranjera Inglés — Ciclo de Formación Básica (Equipo Docente):**
 
 - **Módulo 1 (Ciudadanía):**
-  * **Identidad Global:** Países, nacionalidades, idiomas y ubicación geográfica.
-  * **Comunicación Cotidiana:** Saludos, presentaciones y diferenciación entre registro formal e informal.
-  * **Gramática Inicial:** Verbo To Be en presente simple (*I am, you are, he/she is*).
-  * **Comprensión:** Lectura e interpretación de señalética, avisos públicos y mensajes breves.
+  * **Identidad Global:** Países, nacionalidades y saludos cotidianos formales e informales.
+  * **Gramática:** Verbo To Be en presente simple.
+  * **Comprensión:** Señalética, avisos públicos y mensajes breves.
 
 - **Módulo 2 (Identidad y Diversidad):**
-  * **Estructura de Oraciones:** Sustantivos (singular y plural, género y número) y adjetivos.
-  * **Tiempos Verbales:** Presente Simple y Pasado Simple en expresiones escritas y orales.
-  * **Producción y Comunicación:** Mensajes en cartelería y folletos de campañas temáticas; comprensión de canciones y publicidades.`
+  * **Estructura:** Sustantivos, adjetivos, Presente Simple y Pasado Simple en situaciones reales.`
   },
   {
     id: 'doc-ed-fisica',
@@ -197,15 +191,8 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
     keywords: ['ed fisica', 'educacion fisica', 'salud', 'modulo 1', 'modulo 2', 'ergonomia', 'sedentarismo', 'entrenamiento'],
     content: `**Actividad Física y Salud — Ciclo de Formación Básica (Equipo Docente):**
 
-- **Módulo 1 (Ciudadanía / Naturaleza):**
-  * **Salud Integral:** Conceptualización médica y social de la salud; combate del sedentarismo como enfermedad contemporánea.
-  * **Hábitos Saludables:** Alimentación adecuada, higiene personal y prevención de adicciones en entornos escolares y laborales.
-  * **Ergonomía:** Posturas correctas de trabajo y estudio; pausas activas para evitar fatiga corporal.
-
-- **Módulo 2 (Identidad / Salud):**
-  * **Prácticas Corporales Inclusivas:** Desarrollo motriz, coordinativo y condicional adaptado a cada persona.
-  * **Principios de Entrenamiento:** Individualidad, progresión y calentamiento corporal autónomo.
-  * **Cuidado Corporal:** Adaptación al esfuerzo físico, hidratación adecuada y equilibrio entre actividad física y descanso.`
+- **Módulo 1:** Hábitos saludables, combate del sedentarismo y ergonomía laboral (posturas de estudio y trabajo).
+- **Módulo 2:** Prácticas corporales inclusivas, hidratación, adaptación al esfuerzo y pausas activas.`
   },
   {
     id: 'doc-edi-plataformas',
@@ -215,13 +202,8 @@ En **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs**.`
     keywords: ['edi', 'plataformas digitales', 'modulo 1', 'modulo 2', 'algoritmo', 'datos', 'rag', 'ia', 'emalbot'],
     content: `**EDI Plataformas Digitales — Módulos 1 y 2 (Equipo Docente):**
 
-- **Módulo 1:**
-  * **Proyecto EMALBOT:** Asistente virtual institucional con Inteligencia Artificial y arquitectura RAG.
-  * **Fundamentos Computacionales:** Algoritmos (secuencias ordenadas de pasos para resolución de problemas); diferencia entre Dato e Información contextualizada.
-
-- **Módulo 2:**
-  * **Integración Cloud:** Procesamiento y consulta automatizada de documentos en Google Drive institucional.
-  * **Herramientas de Comunicación:** Plataformas digitales interactivas para el aprendizaje autónomo.`
+- **Módulo 1:** Proyecto EMALBOT, asistentes conversacionales, lógica algorítmica y diferencia entre dato e información.
+- **Módulo 2:** Procesamiento de documentos de Google Drive institucional con arquitectura RAG.`
   }
 ];
 
@@ -269,22 +251,97 @@ export default async function handler(req: any, res: any) {
   const rawQuery = (message || `${subject || ''} consulta`).trim();
   const normQuery = normalize(rawQuery);
 
-  // Strict thematic classification to avoid any cross-contamination
-  const isMath = subject === 'matematicas' || /matematica|ecuacion|porcentaje|regla de tres|fraccion|perimetro|area|geometria|signos|entero|zaneta/i.test(normQuery);
-  const isNticx = subject === 'nuevas_tecnologias' || /tecnolog|nticx|hardware|software|periferico|computadora|drive|nube|phishing|contraseñ|roa|inteligencia artificial|\bia\b|ciudades inteligentes|smart cities|big data/i.test(normQuery);
-  const isLengua = subject === 'lengua' || /lengua|literatura|lectura|comprension|acentuaci|aguda|grave|esdrujula|tilde|nota formal|conector|paratexto|evans/i.test(normQuery);
-  const isCsNat = subject === 'ciencias_naturales' || /natural|biolog|celula|procariota|eucariota|ecosistema|biotico|abiotico|materia|estado|mezcla|mundaca/i.test(normQuery);
-  const isCsSoc = subject === 'ciencias_sociales' || /social|constitucion|art 14|derecho laboral|democracia/i.test(normQuery);
-  const isIngles = subject === 'ingles' || /ingles|english|to be|saludo/i.test(normQuery);
-  const isEdFis = subject === 'educacion_fisica' || /ed fisica|educacion fisica|salud|ergonomia|postura|pausa activa/i.test(normQuery);
-  const isEdi = subject === 'edi_plataformas' || /edi|plataforma|algoritmo/i.test(normQuery);
+  const isSimplifyReq = simplifyMode || /simpl|sencill|facil|no entendi|con peras|mas simple|ejemplo cotidiano|no me quedo claro|podes repetir|explicar este concepto/i.test(normQuery);
+  const isExerciseReq = generateExercise || /ejercicio|practica/i.test(normQuery);
 
-  const isGeneralTeacherQuery = /quienes son los profesores|quienes son los docentes|nomina de profesores|nomina docente|profesores de la escuela|equipo docente/i.test(normQuery);
+  // Infer previous topic from chatHistory if query is a follow-up or simplification
+  let inferredSubject: string | undefined = subject;
+  if (chatHistory && chatHistory.length > 0) {
+    let isHistIa = false;
+    let isHistHwSw = false;
+    let isHistPhishing = false;
+    const reversed = [...chatHistory].reverse();
+    for (const h of reversed) {
+      const hNorm = normalize(h.content || '');
+      if (/inteligencia artificial|\bia\b/i.test(hNorm)) {
+        isHistIa = true;
+      }
+      if (/hardware|software/i.test(hNorm)) {
+        isHistHwSw = true;
+      }
+      if (/phishing|estafa/i.test(hNorm)) {
+        isHistPhishing = true;
+      }
+      if (/inteligencia artificial|\bia\b|nticx|tecnolog|hardware|software|drive|phishing|roa|smart cities|big data/i.test(hNorm)) {
+        if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'nuevas_tecnologias';
+        break;
+      }
+      if (/matematica|ecuacion|porcentaje|fraccion|regla de tres|zaneta|geometria|signos|entero/i.test(hNorm)) {
+        if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'matematicas';
+        break;
+      }
+      if (/lengua|literatura|acentuaci|aguda|grave|esdrujula|tilde|nota formal|evans/i.test(hNorm)) {
+        if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'lengua';
+        break;
+      }
+      if (/natural|biolog|celula|procariota|eucariota|ecosistema|mundaca|salud sexual|esi|nutricion/i.test(hNorm)) {
+        if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'ciencias_naturales';
+        break;
+      }
+      if (/social|constitucion|art 14|derecho laboral|democracia/i.test(hNorm)) {
+        if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'ciencias_sociales';
+        break;
+      }
+      if (/ingles|english|to be/i.test(hNorm)) {
+        if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'ingles';
+        break;
+      }
+      if (/ed fisica|educacion fisica|salud|ergonomia/i.test(hNorm)) {
+        if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'educacion_fisica';
+        break;
+      }
+      if (/edi|plataforma|algoritmo/i.test(hNorm)) {
+        if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'edi_plataformas';
+        break;
+      }
+      if (/matricula|inscripcion|requisito|inscribir|anotar/i.test(hNorm)) {
+        if (!inferredSubject) inferredSubject = 'inscripciones';
+        break;
+      }
+    }
+  }
 
-  // Select the single exact matching document
+  // Thematic detection
+  const directNticx = /tecnolog|nticx|hardware|software|periferico|computadora|drive|nube|phishing|contraseñ|roa|inteligencia artificial|\bia\b|ciudades inteligentes|smart cities|big data/i.test(normQuery);
+  const directMath = /matematica|ecuacion|porcentaje|regla de tres|fraccion|perimetro|area|geometria|signos|entero|zaneta/i.test(normQuery);
+  const directLengua = /lengua|literatura|lectura|comprension|acentuaci|aguda|grave|esdrujula|tilde|nota formal|conector|paratexto|evans/i.test(normQuery);
+  const directCsNat = /natural|biolog|celula|procariota|eucariota|ecosistema|biotico|abiotico|materia|estado|mezcla|mundaca/i.test(normQuery);
+  const directCsSoc = /social|constitucion|art 14|derecho laboral|democracia/i.test(normQuery);
+  const directIngles = /ingles|english|to be|saludo/i.test(normQuery);
+  const directEdFis = /ed fisica|educacion fisica|salud|ergonomia|postura|pausa activa/i.test(normQuery);
+  const directEdi = /edi|plataforma|algoritmo/i.test(normQuery);
+  const directTeachers = /quienes son los profesores|quienes son los docentes|nomina de profesores|nomina docente|profesores de la escuela|equipo docente/i.test(normQuery);
+  const directHorarios = /horario|atencion|cuando atiende|abierto|turno/i.test(normQuery);
+  const directTramites = /constancia|alumno regular|certificado|pase|equivalencia|tramite|justificativo/i.test(normQuery);
+  const directMatricula = /matricula|inscripcion|inscribir|requisito|anotar|vacante|guemes/i.test(normQuery);
+  const isGreeting = /^(hola|buenas|buen dia|buenas tardes|buenas noches|que tal|saludos|quien sos)/i.test(normQuery);
+
+  const isNticx = directNticx || ((isSimplifyReq || isExerciseReq) && inferredSubject === 'nuevas_tecnologias');
+  const isMath = directMath || ((isSimplifyReq || isExerciseReq) && inferredSubject === 'matematicas');
+  const isLengua = directLengua || ((isSimplifyReq || isExerciseReq) && inferredSubject === 'lengua');
+  const isCsNat = directCsNat || ((isSimplifyReq || isExerciseReq) && inferredSubject === 'ciencias_naturales');
+  const isCsSoc = directCsSoc || ((isSimplifyReq || isExerciseReq) && inferredSubject === 'ciencias_sociales');
+  const isIngles = directIngles || ((isSimplifyReq || isExerciseReq) && inferredSubject === 'ingles');
+  const isEdFis = directEdFis || ((isSimplifyReq || isExerciseReq) && inferredSubject === 'educacion_fisica');
+  const isEdi = directEdi || ((isSimplifyReq || isExerciseReq) && inferredSubject === 'edi_plataformas');
+
+  const isIaQuery = /inteligencia artificial|\bia\b/i.test(normQuery) || ((isSimplifyReq || isExerciseReq) && isHistIa);
+  const isHwSwQuery = /hardware|software/i.test(normQuery) || ((isSimplifyReq || isExerciseReq) && isHistHwSw);
+  const isPhishingQuery = /phishing|contraseñ|estafa|seguridad digital/i.test(normQuery) || ((isSimplifyReq || isExerciseReq) && isHistPhishing);
+
+  // Document selection
   let selectedDoc: SyncedDoc;
-
-  if (isGeneralTeacherQuery) {
+  if (directTeachers) {
     selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-docentes-nomina')!;
   } else if (isMath) {
     selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-matematicas')!;
@@ -302,12 +359,11 @@ export default async function handler(req: any, res: any) {
     selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-ed-fisica')!;
   } else if (isEdi) {
     selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-edi-plataformas')!;
-  } else if (/horario|atencion|cuando atiende|abierto|turno/i.test(normQuery)) {
+  } else if (directHorarios) {
     selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-horarios-sec')!;
-  } else if (/constancia|alumno regular|certificado|pase|equivalencia|tramite|justificativo/i.test(normQuery)) {
+  } else if (directTramites) {
     selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-tramites-cert')!;
   } else {
-    // Default institutional document: Matrícula 2027 e inscripciones
     selectedDoc = KNOWLEDGE_DOCUMENTS.find(d => d.id === 'doc-mat-2027')!;
   }
 
@@ -335,28 +391,29 @@ export default async function handler(req: any, res: any) {
   if (ai) {
     try {
       const systemInstruction = `
-Eres EMALBOT, asistente oficial de la Escuela N° 2702 EMAL (Educación de Jóvenes y Adultos).
+Eres EMALBOT, el asistente pedagógico y virtual oficial de la Escuela Municipal de Aprendizaje Laboral N° 2702 (EMAL), Güemes 710.
+EMAL es una escuela nocturna de Educación de Jóvenes y Adultos (EPJA) con turno de 19:15 a 22:15 hs.
 
-REGLAS DE ORO (ESTRICTAS Y OBLIGATORIAS):
-1. Responde ÚNICAMENTE sobre la información que el usuario está consultando de forma concisa y directa.
-2. Si la consulta es de una MATERIA ESCOLAR (ej: Matemáticas, Lengua, Nuevas Tecnologías, etc.), responde SOLAMENTE de esa materia. NO menciones trámites de secretaría ni otras materias.
-3. Si la consulta es de SECRETARÍA (inscripciones, horarios, certificados, vacantes), responde SOLAMENTE de secretaría. NO menciones materias escolares.
-4. Si consultan por un PROFESOR específico, indica únicamente el nombre de ese docente y su materia.
-5. NO agregues "información complementaria", "también te puede interesar" ni despedidas largas. Sé breve y claro.
+PERSONALIDAD Y TONO DE EMALBOT (PARTE FUNDAMENTAL):
+- Muy amigable, cálido, cercano, empático y paciente. Hablas con voseo argentino natural y afectuoso ("Hola", "Te cuento", "Fijate", "Podés", "Preguntame con confianza").
+- Rol pedagógico de acompañamiento: Explicas con mucha claridad y ejemplos de la vida real o laboral, valorando el gran esfuerzo de las personas adultas que estudian trabajando o criando a su familia.
+- Si consultan sobre qué es la Inteligencia Artificial (IA): explícala de forma simple y accesible, y cuenta con entusiasmo que en la escuela (en Nuevas Tecnologías con el Prof. Roa Nicolás, Módulo 2) los propios estudiantes formaron parte del desarrollo de EMALBOT con arquitectura RAG para consultar el Drive escolar.
+- Si el usuario pide "una explicación más simple", "más fácil" o dice que no entendió: mantente ESTRICTAMENTE en el tema anterior que venían hablando (NO cambies de tema, NO hables de inscripciones ni secretaría a menos que ese fuera el tema). Usa una analogía visual cotidiana bien amigable ("Pensalo de esta forma...").
+- No recites el programa completo en listas frías: responde de manera conversacional, amena y pedagógica.
 
-DOCUMENTO OFICIAL SELECCIONADO PARA ESTA CONSULTA:
+DOCUMENTO OFICIAL RELEVANTE PARA ESTA CONSULTA:
 [${selectedDoc.title} | ${selectedDoc.source}]
 ${selectedDoc.content}
 `;
 
       let promptMsg = rawQuery;
-      if (generateExercise) {
-        promptMsg = `Proponé un ejercicio práctico breve y puntual de ${selectedDoc.category} con enunciado, pista y solución paso a paso.`;
-      } else if (simplifyMode) {
-        promptMsg = `Explicá de forma breve y sencilla con un ejemplo cotidiano: ${rawQuery}`;
+      if (isExerciseReq) {
+        promptMsg = `Proponé un ejercicio práctico breve, amigable y puntual de ${selectedDoc.category} con enunciado de la vida diaria, pista útil y solución paso a paso comentada.`;
+      } else if (isSimplifyReq) {
+        promptMsg = `Explicá de forma súper simple, amigable y con una analogía visual de la vida cotidiana el concepto sobre el que venimos hablando (${selectedDoc.category}): ${rawQuery}`;
       }
 
-      const formattedHistory = (chatHistory || []).slice(-4).map((h: any) => ({
+      const formattedHistory = (chatHistory || []).slice(-6).map((h: any) => ({
         role: h.role === 'user' ? 'user' : 'model',
         parts: [{ text: h.content || '' }]
       }));
@@ -371,8 +428,8 @@ ${selectedDoc.content}
         contents,
         config: {
           systemInstruction,
-          temperature: 0.3,
-          maxOutputTokens: 500
+          temperature: 0.4,
+          maxOutputTokens: 750
         }
       });
 
@@ -381,45 +438,285 @@ ${selectedDoc.content}
         generationMode = 'gemini-api';
       }
     } catch (aiErr) {
-      console.warn('Gemini API call failed, using local RAG:', aiErr);
+      console.warn('Gemini API call failed, using high-precision local RAG:', aiErr);
     }
   }
 
-  // High-precision Synthesized Local RAG (Used if Gemini not configured or fails)
+  // Friendly Pedagogical Synthesizer (runs when Gemini API is unavailable or fails)
   if (!finalReply) {
     generationMode = 'rag-local-synthesizer';
 
-    if (generateExercise) {
+    if (isGreeting && !isNticx && !isMath && !isLengua && !isCsNat && !directMatricula) {
+      finalReply = `¡Hola! 👋 ¡Qué alegría saludarte! Soy **EMALBOT**, el asistente virtual y pedagógico de la **Escuela Municipal de Aprendizaje Laboral N° 2702 (EMAL)**.
+
+Estoy acá para acompañarte en tu trayectoria escolar y ayudarte con:
+- 💡 **Explicaciones pedagógicas** claras y amigables sobre tus materias (**Nuevas Tecnologías, Matemáticas, Lengua, Cs. Naturales, etc.**).
+- ✏️ **Ejercicios prácticos** y conceptos con ejemplos cotidianos.
+- 📋 **Trámites de Secretaría e Inscripciones para Matrícula 2027**.
+- 🕒 **Horarios de atención** (Lunes a Viernes de 19:15 a 22:15 hs en Güemes 710).
+
+¿Sobre qué tema te gustaría consultar hoy? ¡Preguntame con confianza!`;
+    } else if (isExerciseReq) {
       if (isMath) {
-        finalReply = `### ✏️ Ejercicio de Práctica: Matemáticas (Ciclo Básico)\n\n` +
-          `**Enunciado:**\nUn producto cuesta $12.000 y se paga en efectivo con un 15% de descuento. ¿Cuánto se abona en total?\n\n` +
-          `**Pista:** Multiplicá \`12.000 × 15\` y dividí por \`100\`.\n\n` +
-          `**Solución:**\n- Descuento: \`(12.000 × 15) / 100 = $1.800\`.\n- Total final: \`$12.000 - $1.800 = $10.200\`.`;
+        finalReply = `### ✏️ ¡Vamos a practicar Matemáticas juntos! (Prof. Zaneta Sebastián)\n\n` +
+          `¡Hola! Practicar con situaciones de todos los días es la mejor manera de aprender:\n\n` +
+          `**Enunciado:**\nFuiste a hacer una compra y un producto tiene un precio de **$12.000**, pero por abonar en efectivo te ofrecen un **15% de descuento**. ¿Cuánto terminás pagando en caja?\n\n` +
+          `💡 **Pista amigable:**\nPrimero calculá el valor del descuento multiplicando \`12.000 × 15\` y luego dividí por \`100\`. Después, a los \`$12.000\` iniciales, restale ese valor.\n\n` +
+          `---\n**Paso a paso para resolver:**\n1. Descuento obtenido: \`(12.000 × 15) / 100 = $1.800\`.\n2. Total a pagar: \`$12.000 - $1.800 = $10.200\`.\n\n` +
+          `¡Excelente! Si querés intentar otro o cambiar los números, avisame y lo resolvemos juntos.`;
       } else if (isLengua) {
-        finalReply = `### ✏️ Ejercicio de Práctica: Lengua y Comunicación\n\n` +
-          `**Enunciado:**\nClasificá las siguientes palabras según su acentuación (Aguda, Grave o Esdrújula):\n1. *canción*\n2. *árbol*\n3. *matemática*\n\n` +
-          `**Solución:**\n1. **Canción**: Aguda (lleva tilde porque termina en N).\n2. **Árbol**: Grave (lleva tilde porque no termina en N, S ni vocal).\n3. **Matemática**: Esdrújula (siempre lleva tilde).`;
+        finalReply = `### ✏️ ¡Actividad de práctica de Lengua! (Prof. Evans Erika)\n\n` +
+          `¡Hola! Te propongo un ejercicio bien puntual y útil sobre **reglas de acentuación**:\n\n` +
+          `**Enunciado:**\nClasificá las siguientes tres palabras según la sílaba donde se acentúan (**Aguda, Grave o Esdrújula**):\n1. *canción*\n2. *árbol*\n3. *matemática*\n\n` +
+          `---\n**Solución comentada:**\n1. **Canción:** Es **Aguda** porque se acentúa en la última sílaba (*can-ción*) y lleva tilde porque termina en **N**.\n2. **Árbol:** Es **Grave** porque se acentúa en la penúltima sílaba (*ár-bol*) y lleva tilde porque termina en **L** (no termina en N, S ni vocal).\n3. **Matemática:** Es **Esdrújula** (*ma-te-má-ti-ca*) y las esdrújulas **siempre** llevan tilde sin excepción.\n\n` +
+          `¿Cómo te fue con este ejercicio? Si querés, podés pedirme que redactemos una nota formal juntos.`;
       } else if (isNticx) {
-        finalReply = `### ✏️ Ejercicio de Práctica: Nuevas Tecnologías\n\n` +
-          `**Enunciado:**\nIndicá si cada elemento es Hardware o Software:\n1. Memoria RAM\n2. Google Chrome\n3. Teclado\n\n` +
-          `**Solución:**\n1. **Memoria RAM**: Hardware (componente físico interno).\n2. **Google Chrome**: Software (aplicación/navegador web).\n3. **Teclado**: Hardware (periférico de entrada).`;
+        finalReply = `### ✏️ ¡Desafío de Nuevas Tecnologías! (Prof. Roa Nicolás)\n\n` +
+          `¡Hola! Vamos con una pregunta práctica para poner en juego lo que aprendemos en clase:\n\n` +
+          `**Situación:**\nEn una **Ciudad Inteligente (Smart City)**, ¿cómo se complementan el **Big Data** y la **Inteligencia Artificial (IA)** para mejorar la vida de los vecinos?\n\n` +
+          `💡 **Pista:** Pensá en los semáforos, el tránsito o el consumo de energía eléctrica.\n\n` +
+          `---\n**Solución comentada:**\n- **Big Data:** Son los millones de datos que registran las cámaras y sensores urbanos a cada minuto (flujo de autos, horarios pico, consumo de luz).\n- **Inteligencia Artificial (IA):** Es el sistema inteligente que analiza esos datos en tiempo real y toma decisiones automáticas: por ejemplo, alargar la luz verde en avenidas congestionadas para que no haya embotellamientos o regular la iluminación pública para ahorrar energía.\n\n` +
+          `¡En EMAL aprendemos esto en Módulo 2 para entender la tecnología que ya nos rodea!`;
       } else {
-        finalReply = `### ✏️ Ejercicio de Práctica: ${selectedDoc.category}\n\n` +
-          `**Enunciado:**\nA partir del material de *${selectedDoc.title}*, explicá brevemente con tus palabras el concepto principal consultado.\n\n` +
-          `**Guía:** Expresá la idea central con un ejemplo práctico de tu vida cotidiana o laboral.`;
+        finalReply = `### ✏️ Ejercicio de Práctica: Ciencias Naturales (Prof. Mundaca Yamila)\n\n` +
+          `¡Hola! Un repaso rápido sobre la unidad de los seres vivos:\n\n` +
+          `**Enunciado:**\nMencioná al menos una diferencia fundamental entre una **célula vegetal** y una **célula animal**.\n\n` +
+          `---\n**Solución comentada:**\nLa **célula vegetal** posee una **pared celular rígida** (que le da estructura firme a la planta) y **cloroplastos** (que contienen clorofila para realizar la fotosíntesis). La célula animal no tiene pared rígida ni cloroplastos.\n\n` +
+          `¡Muy bien! Recordá que podés pedirme que te lo explique de forma aún más sencilla si te queda alguna duda.`;
       }
-    } else {
-      // Direct, focused response — strictly the requested document without any complementary sections
-      if (/quien es el profesor de nuevas tecnologias|quien ensena nuevas tecnologias|profesor de nuevas tecnologias/i.test(normQuery)) {
-        finalReply = `El profesor de **Nuevas Tecnologías** (Módulos 1 y 2) es el **Prof. Roa Nicolás**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Alfabetización digital (Hardware/Software), ofimática (procesador de textos, planilla de cálculos, presentaciones), Google Drive institucional y seguridad digital (Phishing).\n- **Módulo 2:** **Inteligencia Artificial (IA)** (con desarrollo activo de los propios estudiantes en proyectos como EMALBOT), **Ciudades Inteligentes (Smart Cities)**, **Big Data**, comunicación en Internet y trabajo en redes.`;
-      } else if (/quien es el profesor de matematicas|quien ensena matematicas|profesor de matematicas/i.test(normQuery)) {
-        finalReply = `El profesor de **Matemáticas** (Módulos 1 a 4) es el **Prof. Zaneta Sebastián**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Números enteros, operaciones combinadas, números racionales (porcentajes cotidianos) y ecuaciones de 1er grado.\n- **Módulo 2:** Geometría en el plano y cuerpos del espacio, sistema sexagesimal, ejes cartesianos y estadística descriptiva.`;
-      } else if (/quien es la profesora de lengua|profesora de lengua|quien ensena lengua/i.test(normQuery)) {
-        finalReply = `La profesora de **Lengua y Literatura** (Módulos 1 a 4) es la **Prof. Evans Erika**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Comprensión lectora, redacción de nota formal, reglas de acentuación (agudas, graves, esdrújulas) y literatura latinoamericana.\n- **Módulo 2:** Análisis crítico de medios, discurso no discriminatorio, identidad cultural (cultura mapuche) y debate sobre diversidad.`;
-      } else if (/quien es la profesora de ciencias naturales|profesora de cs naturales|quien ensena ciencias naturales/i.test(normQuery)) {
-        finalReply = `La profesora de **Ciencias Naturales** (Módulos 1 a 4) es la **Prof. Mundaca Yamila**.\n\n**Contenidos (Ciclo Básico — Módulos 1 y 2):**\n- **Módulo 1:** Características de los seres vivos, cadenas y redes tróficas, subsistemas terrestres y estados de la materia.\n- **Módulo 2:** Desarrollo humano, salud sexual y reproductiva (ESI), prevención de adicciones y nutrición regional.`;
+    } else if (isIaQuery) {
+      if (isSimplifyReq) {
+        finalReply = `¡Hola! Claro que sí, te lo explico de forma súper simple y con un ejemplo de todos los días: 😊
+
+Pensá en la **Inteligencia Artificial (IA)** como un **compañero de estudio incansable**:
+
+Imaginate que tenés que buscar un dato en una biblioteca gigante con 500 libros de apuntes. Si tuvieras que buscarlo vos solo, tardarías días leyendo página por página.
+
+En cambio, un asistente con **Inteligencia Artificial** (como **EMALBOT**) puede leer todas esas páginas en un solo segundo, encontrar el párrafo exacto que necesitás y explicártelo con palabras claras, amables y en tu propio idioma.
+
+💡 **El orgullo de nuestra escuela:**
+En la **Escuela N° 2702 EMAL**, en la materia **Nuevas Tecnologías** (Módulo 2 con el **Prof. Roa Nicolás**), ¡los propios estudiantes no solo usamos la IA, sino que formamos parte de su desarrollo! Aprendemos cómo conectar la inteligencia artificial con las carpetas de Google Drive de la escuela para que este asistente responda a las dudas de toda la comunidad.
+
+¿Se entendió bien la idea o querés que lo veamos con otro ejemplo de la vida diaria?`;
       } else {
-        finalReply = selectedDoc.content;
+        finalReply = `¡Hola! Qué excelente pregunta. Te cuento con mucho gusto y de forma bien clara:
+
+La **Inteligencia Artificial (IA)** es una rama de la informática que permite a las computadoras procesar información, aprender de ejemplos y ayudarnos a realizar tareas que antes solo hacíamos las personas (como comprender textos, responder consultas, resumir apuntes o traducir idiomas).
+
+💡 **¿Cómo la vivimos en la Escuela N° 2702 EMAL?**
+En nuestra escuela, en la materia **Nuevas Tecnologías** (Módulo 2, a cargo del **Prof. Roa Nicolás**), la IA no es una teoría lejana de película, ¡es una práctica real de los estudiantes!
+- **Desarrollo de EMALBOT:** Los propios estudiantes participaron activamente en la creación, prueba y ajuste de este asistente virtual.
+- **Arquitectura RAG:** Aprendemos cómo la IA se conecta con las carpetas de Google Drive oficiales de la institución para consultar documentos reales y brindar respuestas seguras y precisas.
+- **Formación con futuro:** Buscamos que cada estudiante de EMAL adquiera habilidades digitales sólidas para el trabajo, el estudio y la vida cotidiana.
+
+¿Te gustaría que te cuente un ejemplo de cómo funciona en el día a día o que te proponga un ejercicio para practicar?`;
+      }
+    } else if (isHwSwQuery) {
+      if (isSimplifyReq) {
+        finalReply = `¡Hola! Te lo explico con la regla más fácil del mundo:
+
+- 🖥️ **Hardware:** Es todo lo que podés **tocar físicamente** con las manos (el celular, la pantalla, el teclado, el chip interno o el cargador).
+- 📱 **Software:** Es lo que **no se puede tocar**, pero hace que el equipo funcione (WhatsApp, Facebook, Google Drive, los juegos o el sistema operativo).
+
+**Analogía simple:** Pensá en un libro: las hojas de papel y la tinta son el *hardware*, y el cuento o la historia escrita en las hojas es el *software*. ¡Uno no sirve sin el otro!
+
+En Nuevas Tecnologías (Módulo 1 con el Prof. Roa Nicolás) aprendemos a cuidar ambos para trabajar tranquilos. 😊`;
+      } else {
+        finalReply = `¡Hola! Te cuento con mucho gusto la diferencia entre ambos conceptos:
+
+En la materia **Nuevas Tecnologías** (Módulo 1, Prof. Roa Nicolás), trabajamos los dos componentes fundamentales de cualquier computadora o celular:
+
+1. **Hardware (la parte física):**
+   Es todo lo tangible que podemos ver y tocar. Se divide en:
+   - *Unidad Central (CPU y memoria RAM)*: El cerebro del equipo.
+   - *Periféricos de Entrada*: Teclado, mouse, micrófono, cámara.
+   - *Periféricos de Salida*: Pantalla, parlantes, impresora.
+   - *Almacenamiento*: Disco rígido, memorias pendrive.
+
+2. **Software (la parte lógica):**
+   Son los programas e instrucciones que le dicen al hardware qué hacer:
+   - *Sistemas Operativos*: Android en celulares, Windows o Linux en PC.
+   - *Aplicaciones de Ofimática*: Procesadores de texto, planillas de cálculo y presentaciones.
+   - *Nube y Navegadores*: Google Drive institucional y navegadores web.
+
+¿Te gustaría que hagamos un breve ejercicio para identificar hardware y software de tu celular?`;
+      }
+    } else if (isPhishingQuery) {
+      finalReply = `¡Hola! Este es un tema súper importante para cuidar tu seguridad y la de tu familia:
+
+El **Phishing** es una técnica de engaño donde delincuentes digitales se hacen pasar por personas o entidades de confianza (como tu banco, Mercado Pago, Correo Argentino o la propia escuela) mediante mensajes de WhatsApp, correos o enlaces falsos, con el objetivo de robarte contraseñas o dinero.
+
+🛡️ **Consejos clave que enseñamos en EMAL (Prof. Roa Nicolás):**
+1. **Nunca compartas códigos por SMS ni contraseñas:** Ninguna institución te va a pedir tu clave por teléfono o mensaje.
+2. **Revisá los enlaces con atención:** Si te llega un link raro o sospechoso, no hagas clic.
+3. **Contraseñas seguras:** Usá combinaciones de letras, números y símbolos, y no uses la misma para todo.
+
+¡Cuidar nuestra identidad digital es un derecho y una herramienta fundamental que aprendemos en clase!`;
+    } else if (/quien es el profesor de nuevas tecnologias|quien ensena nuevas tecnologias|profesor de nuevas tecnologias/i.test(normQuery)) {
+      finalReply = `¡Hola! Te cuento: el profesor de **Nuevas Tecnologías** (Módulos 1 y 2) es el **Prof. Roa Nicolás**.
+
+📚 **Lo que aprendemos en su materia:**
+- **Módulo 1:** Alfabetización digital (Hardware y Software), programas de oficina (procesadores de texto, planillas de cálculo y presentaciones), uso de Google Drive institucional y seguridad digital para evitar fraudes como el Phishing.
+- **Módulo 2:** **Inteligencia Artificial (IA)** (con desarrollo activo de los propios estudiantes en el proyecto **EMALBOT**), **Ciudades Inteligentes (Smart Cities)**, **Big Data** y comunicación digital en red.
+
+Es una materia pensada para que adquieras herramientas tecnológicas prácticas para tu trabajo y tu día a día. ¿Querés que profundicemos en algún tema en particular?`;
+    } else if (/quien es el profesor de matematicas|quien ensena matematicas|profesor de matematicas/i.test(normQuery)) {
+      finalReply = `¡Hola! El profesor a cargo de **Matemáticas** (Módulos 1 a 4) es el **Prof. Zaneta Sebastián**.
+
+📐 **Contenidos principales de la materia:**
+- **Números Enteros:** Operaciones, propiedades y regla de los signos (\`+ · + = +\`, \`- · - = +\`, \`+ · - = -\`).
+- **Números Racionales:** Fracciones, decimales y porcentajes aplicados a compras, recibos de sueldo y descuentos diarios.
+- **Álgebra:** Ecuaciones de 1er grado con una incógnita (\`2x + 10 = 50\`).
+- **Geometría y Estadística:** Cálculo de perímetro y área, uso de regla y escuadra, e interpretación de tablas y gráficos.
+
+El profe siempre busca que la matemática se entienda a partir de situaciones reales de la vida cotidiana. ¿Te gustaría que practiquemos algún tema?`;
+    } else if (/quien es la profesora de lengua|profesora de lengua|quien ensena lengua/i.test(normQuery)) {
+      finalReply = `¡Hola! La profesora de **Lengua y Literatura** (Módulos 1 a 4) es la **Prof. Evans Erika**.
+
+📖 **Contenidos principales de su materia:**
+- **Comprensión y Producción de Textos:** Ideas principales, resúmenes y tipos de texto (narrativo, expositivo, argumentativo).
+- **Herramientas de Comunicación:** Redacción formal de notas para presentar en el trabajo o la escuela (con fecha, destinatario, cuerpo claro y firma).
+- **Normativa:** Reglas prácticas de acentuación (palabras agudas, graves y esdrújulas) y signos de puntuación.
+- **Identidad y Literatura:** Literatura latinoamericana y aproximación a los saberes de la cultura mapuche y la diversidad cultural de nuestra región.
+
+¿Te gustaría que repasemos algún concepto de acentuación o redacción?`;
+    } else if (/quien es la profesora de ciencias naturales|profesora de cs naturales|quien ensena ciencias naturales/i.test(normQuery)) {
+      finalReply = `¡Hola! La profesora de **Ciencias Naturales** (Módulos 1 a 4) es la **Prof. Mundaca Yamila**.
+
+🌱 **Contenidos principales de la materia:**
+- **Biología y Seres Vivos:** Estructura de la célula (vegetal y animal), niveles de organización biológica y cadenas tróficas.
+- **Medio Ambiente:** Ecosistemas de la Patagonia, factores bióticos y abióticos, y cuidado ambiental.
+- **Física y Química básica:** Estados de la materia (sólido, líquido, gaseoso) y mezclas homogéneas y heterogéneas.
+- **Salud Comunitaria:** Salud Sexual y Reproductiva (ESI), prevención de adicciones y pautas de nutrición saludable.
+
+La materia se enfoca en el cuidado de la salud personal y el respeto por nuestro entorno natural. ¿Tenés alguna duda puntual sobre estos temas?`;
+    } else if (directTeachers) {
+      finalReply = `¡Hola! Te comparto con orgullo el **Equipo Docente** de la **Escuela N° 2702 EMAL**:
+
+- 💻 **Nuevas Tecnologías (Módulos 1 y 2):** Prof. Roa Nicolás
+- 📐 **Matemáticas (Módulos 1 a 4):** Prof. Zaneta Sebastián
+- 📚 **Lengua y Literatura (Módulos 1 a 4):** Prof. Evans Erika
+- 🌱 **Ciencias Naturales (Módulos 1 a 4):** Prof. Mundaca Yamila
+- 🌍 **Inglés (Módulos 1 a 4):** Equipo Docente de Inglés
+- 🏛️ **Ciencias Sociales (Módulos 1 a 4):** Equipo Docente de Cs. Sociales
+- 🏃 **Educación Física y Salud (Módulos 1 a 4):** Equipo Docente de Ed. Física
+- 🌐 **EDI - Plataformas Digitales (Módulos 1 y 2):** Equipo Docente de EDI
+
+Podés consultarme sobre el programa de cualquiera de estas materias o pedirme explicaciones sencillas sobre sus contenidos.`;
+    } else if (isMath) {
+      if (isSimplifyReq) {
+        finalReply = `¡Hola! Te explico las matemáticas que vemos en EMAL con un ejemplo simple del día a día:
+
+Pensá en una **ecuación** (\`2x + 10 = 50\`) como una balanza en equilibrio o la cuenta del almacén:
+- Sabés que compraste 2 paquetes de galletitas iguales (\`2x\`) y un paquete de fideos que costó $10.
+- Si en total pagaste $50, para saber cuánto costó cada paquete de galletitas solo tenés que restarle los $10 al total ($40) y dividirlo por 2. ¡Cada paquete costó $20 (\`x = 20\`)!
+
+De la misma manera trabajamos con **porcentajes**: calcular un 10% de descuento es simplemente correr la coma un lugar o dividir por 10.
+
+El **Prof. Zaneta Sebastián** siempre enseña la matemática conectada con la vida real y el bolsillo de cada familia. ¿Querés que veamos otro ejemplo?`;
+      } else {
+        finalReply = `¡Hola! En la Escuela N° 2702 EMAL, el **Prof. Zaneta Sebastián** acompaña a los estudiantes en **Matemáticas** con un enfoque muy claro y práctico para la vida diaria:
+
+- **Módulo 1:** Números enteros (operaciones combinadas y regla de signos), números racionales (fracciones y porcentajes cotidianos), ecuaciones sencillas de primer grado (\`2x + 10 = 50\`) y geometría (perímetros y áreas).
+- **Módulo 2:** Figuras y cuerpos geométricos, sistema sexagesimal (ángulos y tiempo), ejes cartesianos y estadística básica (lectura de gráficos y tablas de datos).
+
+¿Te gustaría que resolvamos un ejercicio juntos o que te explique algún tema puntual de forma sencilla?`;
+      }
+    } else if (isNticx) {
+      if (isSimplifyReq) {
+        finalReply = `¡Hola! Te resumo **Nuevas Tecnologías** (Prof. Roa Nicolás) en tres ideas bien prácticas:
+
+1. **Tu celu o PC (Hardware y Software):** Aprendés a usar el teclado, la pantalla y los programas de oficina para armar una nota de trabajo, una planilla de gastos o un currículum prolijo.
+2. **Tu información segura en la nube:** Usamos Google Drive institucional para que tus fotos y apuntes queden guardados en Internet sin llenarte la memoria del celular, y aprendés a no caer en estafas por WhatsApp (Phishing).
+3. **Inteligencia Artificial real (EMALBOT):** ¡La creamos y probamos en la propia escuela! Es como tener un compañero que te ayuda a estudiar y buscar información al instante.
+
+¿Sobre cuál de estos tres puntos te gustaría que charlemos un ratito más?`;
+      } else {
+        finalReply = `¡Hola! En la materia **Nuevas Tecnologías** (Ciclo Básico, con el **Prof. Roa Nicolás**), trabajamos herramientas digitales esenciales para el trabajo y el estudio:
+
+- **Módulo 1:** Alfabetización digital (Hardware y Software), ofimática completa (procesador de textos, planillas de cálculo y presentaciones), almacenamiento seguro en Google Drive institucional y prevención de engaños digitales (Phishing).
+- **Módulo 2:** **Inteligencia Artificial** (con el proyecto EMALBOT desarrollado y validado en la escuela), **Ciudades Inteligentes (Smart Cities)**, **Big Data** y comunicación en redes.
+
+Es una de las materias más participativas del secundario de adultos. ¿Qué tema te interesa conocer más a fondo?`;
+      }
+    } else if (isLengua) {
+      if (isSimplifyReq) {
+        finalReply = `¡Hola! En **Lengua** (Prof. Evans Erika) vemos cosas súper útiles para el trabajo y la vida diaria:
+
+- **Para que nunca dudes de una tilde:**
+  * Si la palabra suena con fuerza al final y termina en N, S o Vocal, lleva tilde (como *canción* o *papá*).
+  * Si suena con fuerza en el medio y NO termina en N, S ni vocal, lleva tilde (como *árbol* o *fácil*).
+  * Si suena con fuerza antes, ¡siempre lleva tilde! (como *médico* o *música*).
+- **Para hacer trámites formales:**
+  Aprendemos a escribir una **Nota Formal** para pedir permisos en el trabajo o certificados en la escuela con encabezado claro, saludo respetuoso y firma.
+
+¿Querés que practiquemos con alguna palabra o que armemos el borrador de una nota?`;
+      } else {
+        finalReply = `¡Hola! En **Lengua y Literatura** (Ciclo Básico, con la **Prof. Evans Erika**), trabajamos la palabra como herramienta de expresión y ejercicio de derechos:
+
+- **Módulo 1:** Comprensión lectora de textos reales, redacción de notas formales con estructura oficial, reglas de acentuación (agudas, graves, esdrújulas) y lectura de literatura latinoamericana con mirada social.
+- **Módulo 2:** Análisis crítico de medios y publicidad, detección de discursos discriminatorios, diversidad de género y revalorización de la cultura mapuche y la identidad regional.
+
+¿Te gustaría que revisemos algún tema de acentuación o redacción formal?`;
+      }
+    } else if (isCsNat) {
+      if (isSimplifyReq) {
+        finalReply = `¡Hola! En **Ciencias Naturales** (Prof. Mundaca Yamila) aprendemos cómo funciona la vida y nuestro propio cuerpo:
+
+- Pensá en la **célula** como un pequeño ladrillo vivo: cada parte de nuestro cuerpo está formada por millones de estos ladrillos que respiran, se nutren y trabajan en equipo.
+- Vemos los **ecosistemas de nuestra Patagonia**, aprendiendo a cuidar el agua, la tierra y los seres vivos que comparten la región con nosotros.
+- Charlamos sobre **salud, prevención de adicciones y nutrición**, para que sepamos qué nutrientes necesita nuestro cuerpo para estar con energía.
+
+¿Te gustaría que profundicemos en la célula o en algún tema de salud comunitaria?`;
+      } else {
+        finalReply = `¡Hola! En **Ciencias Naturales** (Ciclo Básico, con la **Prof. Mundaca Yamila**), los contenidos abarcan la biología, la ecología y la salud integral:
+
+- **Módulo 1:** Características de los seres vivos, niveles de organización celular, cadenas tróficas y ecosistemas patagónicos, y estados de la materia.
+- **Módulo 2:** Procesos de desarrollo humano, Educación Sexual Integral (ESI), prevención de adicciones y pautas de nutrición saludable.
+
+Es una materia pensada para comprender nuestro entorno y cuidar nuestro bienestar. ¿Tenés alguna consulta puntual sobre el programa?`;
+      }
+    } else if (directHorarios) {
+      finalReply = `¡Hola! Te comparto con gusto los **Horarios Oficiales** de la **Escuela N° 2702 EMAL** (Güemes 710):
+
+- 🏫 **Atención de Secretaría y Preceptoría:** Lunes a Viernes de **19:15 a 22:15 hs**.
+- 🌙 **Horario de Cursada (Turno Noche):** Lunes a Viernes de **19:15 a 22:15 hs**.
+- 💼 **Tolerancia por razones laborales:** Sabemos que muchos estudiantes trabajan; presentando tu constancia laboral en Secretaría, se contempla el ingreso adecuado a tu horario de salida del trabajo.
+
+¡Las puertas de la escuela están siempre abiertas para acompañarte!`;
+    } else if (directTramites) {
+      finalReply = `¡Hola! Te cuento cómo realizar los trámites más frecuentes en Secretaría (Lunes a Viernes de 19:15 a 22:15 hs):
+
+- 📄 **Constancia de Alumno Regular:** Se solicita en Secretaría con **24 a 48 hs de anticipación**. Te sirve para presentar en tu trabajo, asignaciones familiares o boleto educativo.
+- 📝 **Certificado de Examen:** Se entrega en el momento en que rendís una evaluación para que puedas justificar la jornada laboral ante tu empleador.
+- 🔄 **Pases y Equivalencias:** Si venís de otra escuela secundaria de adultos, presentá tu analítico parcial legalizado en Secretaría para reconocer las materias aprobadas.
+
+¿Necesitás gestionar alguno de estos documentos en estos días?`;
+    } else {
+      if (isSimplifyReq) {
+        finalReply = `¡Hola! Anotarte en la **Escuela N° 2702 EMAL** es súper fácil y son solo dos pasos:
+
+1. **Desde tu celular:** Completás este formulario online con tus datos básicos: [Formulario de Preinscripción Matrícula 2027](https://docs.google.com/forms/d/e/1FAIpQLScIxCNeBE2veAN4dWndcrJONM8sUaOh7UMfgRuNc7j6NOUsgw/viewform?usp=sf_link).
+2. **De manera presencial:** Llevás fotocopia de tu DNI, partida de nacimiento, certificado de estudios primarios (o pase de secundaria) y 2 fotos a la escuela (**Güemes 710**) de **Lunes a Viernes de 19:15 a 22:00 hs**.
+
+¡Es gratuito y pensado para personas adultas que quieren terminar su secundario! Te esperamos con los brazos abiertos.`;
+      } else {
+        finalReply = `¡Hola! ¡Qué gran decisión dar este paso! Te doy la bienvenida a la información de **Matrícula 2027** para terminar tus estudios secundarios en la **Escuela Municipal de Aprendizaje Laboral N° 2702 (EMAL)**:
+
+📋 **Paso 1 · Preinscripción Online:**
+Completá el formulario digital desde tu celular o computadora:
+👉 [Formulario de Preinscripción Matrícula 2027](https://docs.google.com/forms/d/e/1FAIpQLScIxCNeBE2veAN4dWndcrJONM8sUaOh7UMfgRuNc7j6NOUsgw/viewform?usp=sf_link)
+
+📁 **Paso 2 · Documentación a presentar (mayores de 18 años):**
+- Fotocopia de DNI (frente y dorso).
+- Certificado de estudios primarios completos o analítico parcial / pase de secundaria anterior.
+- Fotocopia de Partida de Nacimiento.
+- 2 fotos carnet 4x4.
+
+📍 **Lugar y Horarios de entrega:**
+En la sede de la escuela: **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00 hs** (Atención general de Secretaría hasta las 22:15 hs).
+
+¡En EMAL te acompañamos en cada etapa de tu aprendizaje! ¿Tenés alguna duda sobre los requisitos?`;
       }
     }
   }

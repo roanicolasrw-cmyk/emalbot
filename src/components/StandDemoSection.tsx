@@ -136,6 +136,13 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
     const q = (customQ ?? demoQuery).trim();
     if (!q || isQuerying) return;
 
+    let catSubject: any = 'nuevas_tecnologias';
+    if (formCategory === 'Área Institucional') catSubject = 'inscripciones';
+    else if (formCategory === 'Matemáticas') catSubject = 'matematicas';
+    else if (formCategory === 'Lengua') catSubject = 'lengua';
+    else if (formCategory === 'Cs. Naturales') catSubject = 'ciencias_naturales';
+    else if (formCategory === 'Nuevas Tecnologías') catSubject = 'nuevas_tecnologias';
+
     setIsQuerying(true);
     try {
       const res = await fetch('/api/chat', {
@@ -144,6 +151,7 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
         body: JSON.stringify({
           message: q,
           area: formCategory === 'Área Institucional' ? 'institucional' : 'educativa',
+          subject: catSubject,
           chatHistory: []
         })
       });
@@ -164,7 +172,7 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
     const localResult = generateLocalRagResponse(
       q,
       formCategory === 'Área Institucional' ? 'institucional' : 'educativa',
-      undefined,
+      catSubject,
       driveStatus.files
     );
     setDemoResponse({
