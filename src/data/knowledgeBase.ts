@@ -100,17 +100,16 @@ A: Siempre avisá a tu preceptor/a y presentá la constancia laboral. Podés con
     subject: "docentes",
     category: "Equipo Docente",
     content: `Equipo Docente y Profesores por Materia - Escuela N° 2702 EMAL:
-- **Nuevas Tecnologías (NTICx)**: Profesores del Equipo de NTICx y Plataformas Digitales (@escuela2702emal.edu.ar). Espacio curricular dictado en Módulos 1 y 2.
-- **Matemáticas**: Profesores del Departamento de Matemáticas (Módulos 1, 2, 3 y 4).
-- **Lengua y Literatura**: Profesores del Departamento de Lengua (Módulos 1, 2, 3 y 4).
-- **Educación Física y Salud**: Profesores del Área de Ed. Física y Salud (Módulos 1, 2, 3 y 4).
-- **Ciencias Sociales**: Profesores del Departamento de Cs. Sociales (Módulos 1, 2, 3 y 4).
-- **Ciencias Naturales**: Profesores del Área de Cs. Naturales (Módulos 1, 2, 3 y 4).
-- **EDI Plataformas Digitales**: Profesores del Espacio EDI (Módulos 1 y 2).
+- **Nuevas Tecnologías (NTICx) y EDI Plataformas Digitales (Módulo 2)**: Prof. ROA NICOLAS. Docente a cargo del desarrollo e implementación del proyecto EMALBOT junto a los alumnos del Módulo 2.
+- **Matemáticas**: Prof. SEBASTIAN ZANETA (Módulos 1, 2, 3 y 4).
+- **Lengua y Literatura**: Prof. ERIKA EVANS (Módulos 1, 2, 3 y 4).
+- **Ciencias Naturales**: Prof. YAMILA MUNDACA (Módulos 1, 2, 3 y 4).
+- **Educación Física y Salud**: Equipo Docente del Área de Salud y Ed. Física.
+- **Ciencias Sociales**: Equipo Docente del Departamento de Cs. Sociales.
 
-Para consultar el profesor a cargo de tu comisión o comisión específica, podés consultar en Preceptoría y Secretaría durante el horario del turno noche (18:30 a 21:30 hs) o revisar la carátula de los trabajos prácticos subidos a la carpeta de Google Drive de la materia.`,
+Para consultas sobre los trabajos prácticos o materiales subidos a la carpeta compartida de Google Drive, podés consultar durante las clases presenciales o en Secretaría (18:30 a 21:30 hs).`,
     source: "Nómina Institucional de Docentes EMAL",
-    keywords: ["profesor", "profesores", "docente", "docentes", "quien es el profesor", "profesor de nuevas tecnologias", "quien era el profesor", "quien enseña", "equipo docente"]
+    keywords: ["profesor", "profesores", "docente", "docentes", "quien es el profesor", "profesor de nuevas tecnologias", "roa nicolas", "sebastian zaneta", "erika evans", "yamila mundaca", "quien enseña", "equipo docente"]
   },
 
   // --- ÁREA EDUCATIVA ---
@@ -120,7 +119,7 @@ Para consultar el profesor a cargo de tu comisión o comisión específica, pod�
     area: "educativa",
     subject: "matematicas",
     category: "Matemáticas",
-    content: `Contenidos de Matemáticas para Educación de Adultos:
+    content: `Contenidos de Matemáticas (Prof. SEBASTIAN ZANETA):
 1. **Ecuaciones de Primer Grado**: Una ecuación es una igualdad donde hay un valor desconocido (incógnita 'x').
    - Regla de pasaje: Lo que está sumando pasa restando; lo que multiplica pasa dividiendo.
    - Ejemplo práctico: 2x + 10 = 50 ➔ 2x = 50 - 10 ➔ 2x = 40 ➔ x = 40 / 2 ➔ x = 20.
@@ -129,8 +128,8 @@ Para consultar el profesor a cargo de tu comisión o comisión específica, pod�
 2. **Porcentajes y Regla de Tres Simple**:
    - Para calcular un descuento del 15% sobre $8000: (8000 * 15) / 100 = $1200 de descuento.
    - Total a pagar: $8000 - $1200 = $6800.`,
-    source: "Carpeta de Matemáticas - Módulo 2 EMAL",
-    keywords: ["matematicas", "ecuaciones", "porcentajes", "regla de tres", "ejercicios", "incognita"]
+    source: "Carpeta de Matemáticas - Prof. SEBASTIAN ZANETA (EMAL Módulo 2)",
+    keywords: ["matematicas", "profesor", "sebastian zaneta", "ecuaciones", "porcentajes", "regla de tres", "ejercicios", "incognita"]
   },
   {
     id: "edu-nt-01",
@@ -138,8 +137,8 @@ Para consultar el profesor a cargo de tu comisión o comisión específica, pod�
     area: "educativa",
     subject: "nuevas_tecnologias",
     category: "Nuevas Tecnologías",
-    content: `Nuevas Tecnologías de la Información y la Comunicación (NTICx) - Módulos 1 y 2:
-- **Equipo Docente / Profesores**: Profesores del Equipo de NTICx y Plataformas Digitales (@escuela2702emal.edu.ar). Acompañan las clases presenciales del turno noche y la carga de guías en la carpeta de Google Drive.
+    content: `Nuevas Tecnologías de la Información y la Comunicación (NTICx) - Módulo 2:
+- **Docente a Cargo**: Prof. ROA NICOLAS (@escuela2702emal.edu.ar). Coordina las actividades presenciales del turno noche y la integración de la IA EMALBOT desarrollada por los estudiantes del Módulo 2.
 - **Hardware vs Software**:
   - Hardware: La parte física que podés tocar (teclado, pantalla, procesador, memoria RAM, celular).
   - Software: Los programas, aplicaciones y sistemas operativos que no se pueden tocar físicamente (WhatsApp, Android, Windows, navegador Web).
@@ -147,25 +146,25 @@ Para consultar el profesor a cargo de tu comisión o comisión específica, pod�
   - Protección de datos personales y contraseñas seguras (usar letras, números y símbolos).
   - Identificación de Phishing (estafas virtuales por correo o SMS): Nunca compartir claves ni bancarias.
   - La nube (Cloud Computing): Almacenar archivos en Google Drive para acceder desde cualquier dispositivo.`,
-    source: "Módulo NTICx - Equipo Docente EMAL N° 2702",
-    keywords: ["nuevas tecnologias", "profesor", "docente", "profesores", "profesor de nuevas tecnologias", "quien es el profesor", "hardware", "software", "seguridad digital", "phishing", "nube", "drive"]
+    source: "Módulo NTICx - Prof. ROA NICOLAS (EMAL N° 2702)",
+    keywords: ["nuevas tecnologias", "profesor", "roa nicolas", "nicolas roa", "docente", "profesores", "profesor de nuevas tecnologias", "quien es el profesor", "hardware", "software", "seguridad digital", "phishing", "nube", "drive"]
   },
   {
     id: "edu-lengua-01",
-    title: "Lengua: Comprensión Lector, Redacción Formal y Cohesión",
+    title: "Lengua: Comprensión Lectora, Redacción Formal y Cohesión",
     area: "educativa",
     subject: "lengua",
     category: "Lengua y Literatura",
-    content: `Herramientas de Lengua y Comunicación para Adultos:
+    content: `Herramientas de Lengua y Comunicación (Prof. ERIKA EVANS):
 - **Redacción de Notas Formales**: Estructura de una nota dirigida a una autoridad o institución:
-  1. Lugar y Fecha (ej: Comodoro Rivadavia, 11 de Agosto de 2026).
+  1. Lugar y Fecha (ej: Comodoro Rivadavia, 2026).
   2. Destinatario y Cargo (ej: A la Sra. Directora de la Escuela N° 2702 EMAL).
   3. Encabezado de cortesía (De mi mayor consideración:).
   4. Cuerpo de la nota: Explicación clara y respetuosa del motivo o solicitud.
   5. Salida de cortesía y Firma / Aclaración / DNI / Teléfono.
 - **Conectores y Cohesión**: Usar conectores para unir ideas (sin embargo, por lo tanto, además, en consecuencia, debido a que).`,
-    source: "Guía de Lengua y Redacción EMAL",
-    keywords: ["lengua", "comprension", "nota formal", "carta", "conectores", "redaccion"]
+    source: "Guía de Lengua - Prof. ERIKA EVANS (EMAL N° 2702)",
+    keywords: ["lengua", "profesora", "erika evans", "comprension", "nota formal", "carta", "conectores", "redaccion"]
   },
   {
     id: "edu-ef-01",
@@ -205,7 +204,7 @@ Para consultar el profesor a cargo de tu comisión o comisión específica, pod�
     area: "educativa",
     subject: "ciencias_naturales",
     category: "Ciencias Naturales",
-    content: `Ciencias Naturales y Conciencia Ambiental:
+    content: `Ciencias Naturales y Conciencia Ambiental (Prof. YAMILA MUNDACA):
 - **El Ecosistema Local**: Interacción entre componentes bióticos (seres vivos: plantas, animales, microorganismos) y abióticos (agua, suelo, aire, temperatura).
 - **Cuidado del Agua y Residuos**:
   - Separación de residuos (reciclables vs orgánicos).
@@ -213,8 +212,8 @@ Para consultar el profesor a cargo de tu comisión o comisión específica, pod�
 - **Conceptos de Salud y Enfermedad**:
   - Prevención primaria: Vacunación, agua potable, higiene de alimentos.
   - Funcionamiento de los sistemas del cuerpo humano (respiratorio, circulatorio, digestivo).`,
-    source: "Módulo de Ciencias Naturales EMAL",
-    keywords: ["ciencias naturales", "ecosistema", "medio ambiente", "salud", "biologia", "reciclaje"]
+    source: "Módulo de Ciencias Naturales - Prof. YAMILA MUNDACA (EMAL N° 2702)",
+    keywords: ["ciencias naturales", "profesora", "yamila mundaca", "ecosistema", "medio ambiente", "salud", "biologia", "reciclaje"]
   },
   {
     id: "edu-edi-01",

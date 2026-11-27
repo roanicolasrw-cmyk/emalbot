@@ -20,16 +20,37 @@ let syncedDriveDocs: Array<{
 }> = [
   {
     id: "drive-demo-1",
-    title: "Guía Docente: Trabajo Práctico N° 1 - Matemáticas",
-    folderCategory: "Matemáticas",
-    content: "Material subido por el Prof. Martínez para Módulo 2. Consigna: Resolver la ecuación 2x + 10 = 50 y calcular el 15% de descuento sobre $12.000. Fecha límite de entrega: 25 de Mayo.",
+    title: "Guía NTICx Módulo 2: Proyecto EMALBOT e Inteligencia Artificial",
+    folderCategory: "Nuevas Tecnologías",
+    content: "Material cargado por el Prof. ROA NICOLAS. Trabajo práctico especial para los estudiantes del Módulo 2 a cargo del stand: Desarrollar la arquitectura RAG de EMALBOT, indexar las carpetas de Google Drive de la escuela y preparar la demostración en vivo.",
     modifiedTime: new Date().toISOString()
   },
   {
     id: "drive-demo-2",
-    title: "Circular de Secretaría: Exámenes y Fechas de Mesas",
+    title: "TP N° 1 Matemáticas: Ecuaciones y Porcentajes",
+    folderCategory: "Matemáticas",
+    content: "Material subido por el Prof. SEBASTIAN ZANETA para Módulo 2. Consigna 1: Resolver la ecuación 2x + 10 = 50. Consigna 2: Calcular el 15% de descuento sobre $12.000. Fecha límite de entrega: 25 de Mayo.",
+    modifiedTime: new Date().toISOString()
+  },
+  {
+    id: "drive-demo-3",
+    title: "Guía de Lengua: Redacción de Notas Formales y Conectores",
+    folderCategory: "Lengua",
+    content: "Material preparado por la Prof. ERIKA EVANS. Guía práctica sobre la estructura de notas formales para presentar en Secretaría o en el ámbito laboral, uso correcto de conectores y coherencia textual.",
+    modifiedTime: new Date().toISOString()
+  },
+  {
+    id: "drive-demo-4",
+    title: "Apunte Ciencias Naturales: Ecosistema Local y Cuidado del Agua",
+    folderCategory: "Ciencias Naturales",
+    content: "Material cargado por la Prof. YAMILA MUNDACA. Análisis de componentes bióticos y abióticos del ecosistema patagónico y pautas para el uso responsable del agua y prevención en salud.",
+    modifiedTime: new Date().toISOString()
+  },
+  {
+    id: "drive-demo-5",
+    title: "Circular de Secretaría: Requisitos de Inscripción y Mesas de Examen",
     folderCategory: "Área Institucional",
-    content: "Comunicado Oficial: Las inscripciones para exámenes libres y equivalencias se realizarán del 1 al 10 del próximo mes en Secretaría (18:30 a 21:30 hs). Requisito: Presentar DNI y Ficha escolar.",
+    content: "Comunicado Oficial de Secretaría (Horario 18:30 a 21:30 hs): Presentación de DNI, certificado primario completo y constancias laborales. Las inscripciones a exámenes se realizan con 48hs de anticipación.",
     modifiedTime: new Date().toISOString()
   }
 ];

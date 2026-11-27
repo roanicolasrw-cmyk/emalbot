@@ -17,8 +17,10 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
 
   const subjects = [
     {
+    {
       id: 'matematicas' as SubjectType,
       title: 'Matemáticas',
+      teacher: 'Prof. SEBASTIAN ZANETA',
       icon: Calculator,
       color: 'from-amber-500 to-orange-600',
       badge: 'Formación Básica',
@@ -33,20 +35,22 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
     {
       id: 'nuevas_tecnologias' as SubjectType,
       title: 'Nuevas Tecnologías (NTICx)',
+      teacher: 'Prof. ROA NICOLAS',
       icon: Cpu,
       color: 'from-blue-500 to-cyan-600',
-      badge: 'Formación Básica',
+      badge: 'Módulo 2 Project Lead',
       modules: ['Módulo 1', 'Módulo 2'],
-      description: 'Hardware, software, seguridad en redes sociales, almacenamiento en Google Drive y ciudadanía digital.',
+      description: 'Proyecto EMALBOT, hardware, software, seguridad en redes sociales, almacenamiento en Google Drive y ciudadanía digital.',
       quickPrompts: [
+        '¿Cómo funciona el proyecto EMALBOT desarrollado por los alumnos del Módulo 2?',
         '¿Cuál es la diferencia entre Hardware y Software con ejemplos cotidianos?',
-        '¿Cómo protegerme del Phishing y estafas virtuales en el celular?',
-        '¿Qué es la Nube y para qué sirve Google Drive?'
+        '¿Cómo protegerme del Phishing y estafas virtuales en el celular?'
       ]
     },
     {
       id: 'lengua' as SubjectType,
       title: 'Lengua y Literatura',
+      teacher: 'Prof. ERIKA EVANS',
       icon: BookOpen,
       color: 'from-emerald-500 to-teal-600',
       badge: 'Formación Básica',
@@ -61,6 +65,7 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
     {
       id: 'educacion_fisica' as SubjectType,
       title: 'Educación Física y Salud',
+      teacher: 'Equipo Docente Ed. Física',
       icon: HeartPulse,
       color: 'from-rose-500 to-red-600',
       badge: 'Formación Básica',
@@ -75,6 +80,7 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
     {
       id: 'ciencias_sociales' as SubjectType,
       title: 'Ciencias Sociales',
+      teacher: 'Equipo Docente Cs. Sociales',
       icon: Globe2,
       color: 'from-indigo-500 to-purple-600',
       badge: 'Formación Básica',
@@ -89,6 +95,7 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
     {
       id: 'ciencias_naturales' as SubjectType,
       title: 'Ciencias Naturales',
+      teacher: 'Prof. YAMILA MUNDACA',
       icon: Leaf,
       color: 'from-lime-500 to-green-600',
       badge: 'Formación Básica',
@@ -103,6 +110,7 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
     {
       id: 'edi_plataformas' as SubjectType,
       title: 'EDI: Plataformas Digitales',
+      teacher: 'Prof. ROA NICOLAS',
       icon: Laptop,
       color: 'from-violet-500 to-fuchsia-600',
       badge: 'Formación Básica',
@@ -183,9 +191,15 @@ export const EducationalSection: React.FC<EducationalSectionProps> = ({
                   </span>
                 </div>
 
-                <h3 className="text-sm font-semibold text-white mb-1">
+                <h3 className="text-sm font-semibold text-white mb-0.5">
                   {sub.title}
                 </h3>
+
+                {sub.teacher && (
+                  <span className="text-[10px] font-bold text-sky-400 block mb-1.5">
+                    Docente: {sub.teacher}
+                  </span>
+                )}
 
                 {/* Modules tags */}
                 <div className="flex flex-wrap gap-1 mb-2">

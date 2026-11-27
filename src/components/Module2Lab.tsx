@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Cpu, Database, Binary, Sparkles, Workflow, Play, Lightbulb, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export const Module2Lab: React.FC = () => {
-  const [testPrompt, setTestPrompt] = useState('¿Qué necesito para inscribirme en la escuela?');
+  const [testPrompt, setTestPrompt] = useState('¿Quién es el profesor de Nuevas Tecnologías y del proyecto EMALBOT?');
   const [includeDriveContext, setIncludeDriveContext] = useState(true);
   const [simulatedResult, setSimulatedResult] = useState<string | null>(null);
   const [isSimulating, setIsSimulating] = useState(false);
@@ -13,28 +13,28 @@ export const Module2Lab: React.FC = () => {
       icon: Binary,
       color: 'from-blue-500 to-cyan-500',
       definition: 'Conjunto ordenado de instrucciones finitas para resolver un problema o completar una tarea.',
-      example: 'Como las reglas de un trámite o los pasos ordenados para resolver una ecuación de primer grado.'
+      example: 'Como los pasos para resolver una ecuación del Prof. SEBASTIAN ZANETA o una guía de trabajo práctico.'
     },
     {
       title: '2. Dato vs Información',
       icon: Database,
       color: 'from-emerald-500 to-teal-500',
-      definition: 'El dato es un elemento crudo sin significado por sí solo (ej: "18:30"). La información es el dato procesado con significado dentro de un contexto.',
-      example: '"18:30" (dato) ➔ "18:30 hs es el horario de ingreso a clases del turno vespertino en la EMAL N° 2702" (información).'
+      definition: 'El dato es un elemento crudo sin significado por sí solo (ej: "19:15"). La información es el dato procesado con significado dentro de un contexto.',
+      example: '"19:15" (dato) ➔ "19:15 hs es el horario de inicio de clases del turno vespertino/noche en la EMAL N° 2702" (información).'
     },
     {
       title: '3. Modelo de Acompañamiento Digital',
       icon: Cpu,
       color: 'from-purple-500 to-indigo-500',
       definition: 'Sistema computacional entrenado para reconocer patrones en el lenguaje humano y generar respuestas coherentes.',
-      example: 'EMALBOT utiliza modelos avanzados de procesamiento de lenguaje para razonar y redactar explicaciones adaptadas a adultos.'
+      example: 'EMALBOT es desarrollado por estudiantes del Módulo 2 bajo la guía del Prof. ROA NICOLAS para acompañar a la comunidad.'
     },
     {
       title: '4. Base de Conocimiento (RAG)',
       icon: Workflow,
       color: 'from-amber-500 to-orange-500',
       definition: 'Retrieval-Augmented Generation: Técnica que busca información real en carpetas de Google Drive antes de responder.',
-      example: 'En lugar de adivinar, EMALBOT lee la circular oficial de Secretaría o la carpeta docente de Matemáticas.'
+      example: 'En lugar de adivinar, EMALBOT lee la guía cargada por el Prof. ROA NICOLAS, Prof. SEBASTIAN ZANETA, Prof. ERIKA EVANS o Prof. YAMILA MUNDACA.'
     }
   ];
 
@@ -47,16 +47,17 @@ export const Module2Lab: React.FC = () => {
       if (includeDriveContext) {
         setSimulatedResult(`[PROMPT CONTEXTUALIZADO CON DRIVE CONTEXT]
 Sistema: EMALBOT (Escuela N° 2702 EMAL)
-Documento leído: Drive/Institucional/Circular_Inscripciones_2026.docx
+Documento leído: Drive/NuevasTecnologias/Guia_NTICx_Modulo2.docx
 
 Respuesta simulada:
-Para inscribirte en la Escuela N° 2702 EMAL necesitás presentar:
-1. DNI (original y fotocopia)
-2. Certificado de Primaria completa (o Analítico Parcial de secundaria previa)
-3. 2 fotos carnet 4x4
-4. Folio transparente oficio.
-Horario de atención: Lunes a Viernes de 18:30 a 21:30 hs.
-(Nota: La vacante definitiva es confirmada por Secretaría).`);
+El profesor de Nuevas Tecnologías (NTICx) y del Espacio EDI del Módulo 2 es el Prof. ROA NICOLAS.
+Este proyecto fue desarrollado por los estudiantes del Módulo 2 para la muestra escolar.
+
+Equipo docente institucional de Formación Básica:
+- Nuevas Tecnologías (Módulo 2): Prof. ROA NICOLAS
+- Matemáticas: Prof. SEBASTIAN ZANETA
+- Lengua y Literatura: Prof. ERIKA EVANS
+- Ciencias Naturales: Prof. YAMILA MUNDACA`);
       } else {
         setSimulatedResult(`[PROMPT SIN CONTEXTO DE DRIVE]
 Respuesta simulada genérica:
