@@ -6,8 +6,77 @@ import { ChatArea } from './components/ChatArea';
 import { DriveManager } from './components/DriveManager';
 import { Module2Lab } from './components/Module2Lab';
 import { StandDemoSection } from './components/StandDemoSection';
-import { ChatMessage, AreaType, SubjectType, DriveStatus } from './types';
+import { ChatMessage, AreaType, SubjectType, DriveStatus, DriveFileItem } from './types';
+import { generateLocalRagResponse } from './utils/localRag';
 import { GraduationCap, Megaphone, ArrowRight } from 'lucide-react';
+
+const DEFAULT_DRIVE_FILES: DriveFileItem[] = [
+  {
+    id: 'drive-doc-01',
+    name: 'Circular_Matricula_2027_Inscripciones_EMAL.docx',
+    mimeType: 'application/vnd.google-apps.document',
+    folderCategory: 'Área Institucional',
+    authorName: 'Secretaría EMAL',
+    moduleLevel: 'General',
+    sourceType: 'drive_upload',
+    contentPreview:
+      'MATRÍCULA 2027 - INSCRIPCIONES ABIERTAS: 1) Completar la preinscripción online en el formulario digital. 2) Llevar la documentación presencial (DNI, certificado primario/analítico, partida de nacimiento y 2 fotos 4x4) a Güemes 710, de 19:15 a 22:00 hs. Atención general de Secretaría: Lunes a Viernes de 19:15 a 22:15 hs.',
+    modifiedTime: new Date().toISOString(),
+    synced: true
+  },
+  {
+    id: 'drive-doc-02',
+    name: 'Apunte_NTICx_Hardware_Software_Roa.gdoc',
+    mimeType: 'application/vnd.google-apps.document',
+    folderCategory: 'Nuevas Tecnologías',
+    authorName: 'Prof. Roa Nicolás',
+    moduleLevel: 'Módulo 1 y 2',
+    sourceType: 'drive_upload',
+    contentPreview:
+      'Nuevas Tecnologías (Prof. Roa Nicolás · Módulos 1 y 2): Hardware (CPU, memoria RAM, periféricos de entrada y salida) y Software (sistemas operativos, aplicaciones). Uso de Google Drive, contraseñas seguras y prevención de phishing.',
+    modifiedTime: new Date().toISOString(),
+    synced: true
+  },
+  {
+    id: 'drive-doc-03',
+    name: 'Guia_Matematicas_1y2_Zaneta.pdf',
+    mimeType: 'application/pdf',
+    folderCategory: 'Matemáticas',
+    authorName: 'Prof. Zaneta Sebastián',
+    moduleLevel: 'Módulo 1 y 2',
+    sourceType: 'drive_upload',
+    contentPreview:
+      'Matemáticas 1° y 2° año de secundaria (Prof. Zaneta Sebastián): Números enteros, operaciones combinadas, porcentajes con descuentos cotidianos, regla de tres simple, ecuaciones de primer grado (2x + 10 = 50) y cálculo de perímetro y área.',
+    modifiedTime: new Date().toISOString(),
+    synced: true
+  },
+  {
+    id: 'drive-doc-04',
+    name: 'Material_Lengua_1y2_Evans.gdoc',
+    mimeType: 'application/vnd.google-apps.document',
+    folderCategory: 'Lengua',
+    authorName: 'Prof. Evans Erika',
+    moduleLevel: 'Módulo 1 y 2',
+    sourceType: 'drive_upload',
+    contentPreview:
+      'Lengua 1° y 2° año de secundaria (Prof. Evans Erika): Comprensión lectora, tipos de texto (expositivo, argumentativo, nota formal), conectores de cohesión, clases de palabras y reglas de acentuación (agudas, graves y esdrújulas).',
+    modifiedTime: new Date().toISOString(),
+    synced: true
+  },
+  {
+    id: 'drive-doc-05',
+    name: 'Cartilla_CsNaturales_1y2_Mundaca.pdf',
+    mimeType: 'application/pdf',
+    folderCategory: 'Cs. Naturales',
+    authorName: 'Prof. Mundaca Yamila',
+    moduleLevel: 'Módulo 1 y 2',
+    sourceType: 'drive_upload',
+    contentPreview:
+      'Cs. Naturales 1° y 2° año de secundaria (Prof. Mundaca Yamila): La célula (procariota, eucariota animal y vegetal), niveles de organización biológica, ecosistemas (factores bióticos y abióticos), estados de la materia y prevención primaria de la salud.',
+    modifiedTime: new Date().toISOString(),
+    synced: true
+  }
+];
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'chat' | 'drive' | 'stand' | 'lab'>('chat');
@@ -25,9 +94,9 @@ export default function App() {
     connected: true,
     userEmail: 'roa@escuela2702emal.edu.ar',
     folderName: 'REG - Escuela N° 2702 EMAL',
-    fileCount: 5,
+    fileCount: DEFAULT_DRIVE_FILES.length,
     lastSync: new Date().toISOString(),
-    files: []
+    files: DEFAULT_DRIVE_FILES
   });
 
   const fetchDriveStatus = async () => {
@@ -37,11 +106,12 @@ export default function App() {
         const data = await res.json();
         setDriveStatus(prev => ({
           ...prev,
-          ...data
+          ...data,
+          files: data.files && data.files.length > 0 ? data.files : prev.files
         }));
       }
     } catch (e) {
-      console.error('Error al consultar estado de Drive:', e);
+      console.warn('API /api/drive/status no disponible, usando archivos locales de Drive:', e);
     }
   };
 
@@ -76,42 +146,56 @@ export default function App() {
         })
       });
 
-      if (!res.ok) {
-        throw new Error('Ocurrió un error al consultar a EMALBOT');
+      if (res.ok) {
+        const data = await res.json();
+        const aiMsg: ChatMessage = {
+          id: `msg-ai-${Date.now()}`,
+          role: 'model',
+          content: data.text,
+          timestamp: new Date(),
+          area: activeArea,
+          subject: activeSubject,
+          sources: data.sources || [],
+          ragTrace: data.ragTrace,
+          isSimplerExplanation: simplify
+        };
+
+        setMessages(prev => [...prev, aiMsg]);
+        if (data.suggestedFollowUps) {
+          setSuggestedFollowUps(data.suggestedFollowUps);
+        }
+        setIsLoading(false);
+        return;
       }
-
-      const data = await res.json();
-
-      const aiMsg: ChatMessage = {
-        id: `msg-ai-${Date.now()}`,
-        role: 'model',
-        content: data.text,
-        timestamp: new Date(),
-        area: activeArea,
-        subject: activeSubject,
-        sources: data.sources || [],
-        ragTrace: data.ragTrace,
-        isSimplerExplanation: simplify
-      };
-
-      setMessages(prev => [...prev, aiMsg]);
-      if (data.suggestedFollowUps) {
-        setSuggestedFollowUps(data.suggestedFollowUps);
-      }
-    } catch {
-      const errorMsg: ChatMessage = {
-        id: `msg-err-${Date.now()}`,
-        role: 'model',
-        content:
-          'Hubo un inconveniente al conectar con EMALBOT. Por favor verificá la conexión e intentalo nuevamente.',
-        timestamp: new Date(),
-        area: activeArea,
-        subject: activeSubject
-      };
-      setMessages(prev => [...prev, errorMsg]);
-    } finally {
-      setIsLoading(false);
+    } catch (apiErr) {
+      console.warn('Fallback a RAG Local:', apiErr);
     }
+
+    // Client-side RAG synthesis fallback (runs if API is offline or returns error)
+    const localResult = generateLocalRagResponse(
+      text,
+      activeArea,
+      activeSubject,
+      driveStatus.files,
+      simplify,
+      exercise
+    );
+
+    const localAiMsg: ChatMessage = {
+      id: `msg-ai-local-${Date.now()}`,
+      role: 'model',
+      content: localResult.text,
+      timestamp: new Date(),
+      area: activeArea,
+      subject: activeSubject,
+      sources: localResult.sources,
+      ragTrace: localResult.ragTrace,
+      isSimplerExplanation: simplify
+    };
+
+    setMessages(prev => [...prev, localAiMsg]);
+    setSuggestedFollowUps(localResult.suggestedFollowUps);
+    setIsLoading(false);
   };
 
   const handleSelectPromptFromCards = (promptText: string, subject: SubjectType) => {
@@ -128,6 +212,26 @@ export default function App() {
     moduleLevel?: string,
     sourceType: 'google_form' | 'drive_upload' = 'drive_upload'
   ) => {
+    const newDoc: DriveFileItem = {
+      id: `drive-doc-${Date.now()}`,
+      name: name.trim(),
+      mimeType: name.endsWith('.pdf') ? 'application/pdf' : 'application/vnd.google-apps.document',
+      folderCategory: category,
+      authorName: authorName?.trim() || 'Docente / Secretaría EMAL',
+      moduleLevel: moduleLevel?.trim() || 'General',
+      sourceType,
+      contentPreview: content.trim(),
+      modifiedTime: new Date().toISOString(),
+      synced: true
+    };
+
+    // Update local state immediately for instant feedback
+    setDriveStatus(prev => ({
+      ...prev,
+      fileCount: prev.fileCount + 1,
+      files: [newDoc, ...prev.files]
+    }));
+
     try {
       const res = await fetch('/api/drive/sync', {
         method: 'POST',
@@ -146,11 +250,17 @@ export default function App() {
         await fetchDriveStatus();
       }
     } catch (e) {
-      console.error('Error al agregar documento a Drive:', e);
+      console.warn('Documento guardado localmente en memoria:', e);
     }
   };
 
   const handleDeleteDriveDoc = async (id: string) => {
+    setDriveStatus(prev => ({
+      ...prev,
+      fileCount: Math.max(0, prev.fileCount - 1),
+      files: prev.files.filter(f => f.id !== id)
+    }));
+
     try {
       const res = await fetch(`/api/drive/docs/${encodeURIComponent(id)}`, {
         method: 'DELETE'
@@ -159,18 +269,24 @@ export default function App() {
         await fetchDriveStatus();
       }
     } catch (e) {
-      console.error('Error al eliminar documento:', e);
+      console.warn('Documento eliminado de memoria local:', e);
     }
   };
 
   const handleResetDemo = async () => {
+    setDriveStatus(prev => ({
+      ...prev,
+      fileCount: DEFAULT_DRIVE_FILES.length,
+      files: [...DEFAULT_DRIVE_FILES]
+    }));
+
     try {
       const res = await fetch('/api/drive/reset-demo', { method: 'POST' });
       if (res.ok) {
         await fetchDriveStatus();
       }
     } catch (e) {
-      console.error('Error al restaurar demo:', e);
+      console.warn('Demo restaurada a valores base:', e);
     }
   };
 

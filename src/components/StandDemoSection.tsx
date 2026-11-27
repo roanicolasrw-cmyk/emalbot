@@ -23,6 +23,7 @@ import {
   FileText
 } from 'lucide-react';
 import { DriveStatus, RagTraceInfo } from '../types';
+import { generateLocalRagResponse } from '../utils/localRag';
 
 interface StandDemoSectionProps {
   driveStatus: DriveStatus;
@@ -201,12 +202,25 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
           sources: data.sources || [],
           ragTrace: data.ragTrace
         });
+        setIsQuerying(false);
+        return;
       }
     } catch (err) {
-      console.error('Error en prueba RAG:', err);
-    } finally {
-      setIsQuerying(false);
+      console.warn('Fallback a RAG Local en StandDemoSection:', err);
     }
+
+    const localResult = generateLocalRagResponse(
+      q,
+      formCategory === 'Área Institucional' ? 'institucional' : 'educativa',
+      undefined,
+      driveStatus.files
+    );
+    setDemoResponse({
+      text: localResult.text,
+      sources: localResult.sources,
+      ragTrace: localResult.ragTrace
+    });
+    setIsQuerying(false);
   };
 
   const handleSpeakResponse = () => {
