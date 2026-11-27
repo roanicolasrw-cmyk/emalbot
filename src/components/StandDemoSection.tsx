@@ -183,7 +183,7 @@ export const StandDemoSection: React.FC<StandDemoSectionProps> = ({
       return;
     }
     window.speechSynthesis.cancel();
-    const clean = demoResponse.text.replace(/[*#_\-`]/g, '');
+    const clean = demoResponse.text.replace(new RegExp('[*#_\\\\-`]', 'g'), '');
     const u = new SpeechSynthesisUtterance(clean);
     u.lang = 'es-AR';
     u.rate = 0.95;

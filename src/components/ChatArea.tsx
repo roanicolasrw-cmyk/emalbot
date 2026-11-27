@@ -65,7 +65,7 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
       }
 
       window.speechSynthesis.cancel();
-      const cleanedText = text.replace(/[*#_\-`]/g, '');
+      const cleanedText = text.replace(new RegExp('[*#_\\\\-`]', 'g'), '');
       const utterance = new SpeechSynthesisUtterance(cleanedText);
       utterance.lang = 'es-AR';
       utterance.rate = 0.95;
