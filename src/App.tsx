@@ -137,7 +137,7 @@ export default function App() {
     } else if (/lengua|literatura|acentuaci|aguda|grave|esdrujula|tilde|nota formal|evans/i.test(norm)) {
       targetSubject = 'lengua';
       targetArea = 'educativa';
-    } else if (/natural|biolog|celula|procariota|eucariota|ecosistema|mundaca|salud sexual|esi|nutricion/i.test(norm)) {
+    } else if (/natural|seres? vivos?|ser vivo|biolog|celula|procariota|eucariota|ecosistema|biotico|abiotico|materia|estado|mezcla|fotosintesis|cloroplast|organismo|planta|animal|nutricion|salud sexual|esi|cuerpo humano|mundaca/i.test(norm)) {
       targetSubject = 'ciencias_naturales';
       targetArea = 'educativa';
     } else if (/social|constitucion|art 14|derecho laboral|democracia/i.test(norm)) {

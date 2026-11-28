@@ -39,6 +39,7 @@ export function generateLocalRagResponse(
   let isHistIa = false;
   let isHistHwSw = false;
   let isHistPhishing = false;
+  let isHistSeresVivos = false;
 
   if (chatHistory && chatHistory.length > 0) {
     const recentMessages = [...chatHistory].reverse();
@@ -53,6 +54,9 @@ export function generateLocalRagResponse(
       if (/phishing|estafa/i.test(normHist)) {
         isHistPhishing = true;
       }
+      if (/seres? vivos?|ser vivo|organismo|celula/i.test(normHist)) {
+        isHistSeresVivos = true;
+      }
       if (/inteligencia artificial|\bia\b|nticx|tecnolog|hardware|software|drive|phishing|roa|ciudades inteligentes|smart cities|big data/i.test(normHist)) {
         if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'nuevas_tecnologias';
         break;
@@ -65,7 +69,7 @@ export function generateLocalRagResponse(
         if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'lengua';
         break;
       }
-      if (/natural|biolog|celula|procariota|eucariota|ecosistema|mundaca|salud sexual|esi|nutricion/i.test(normHist)) {
+      if (/natural|seres? vivos?|ser vivo|biolog|celula|procariota|eucariota|ecosistema|mundaca|salud sexual|esi|nutricion/i.test(normHist)) {
         if (!inferredSubject || inferredSubject === 'inscripciones') inferredSubject = 'ciencias_naturales';
         break;
       }
@@ -92,11 +96,11 @@ export function generateLocalRagResponse(
     }
   }
 
-  // Thematic classification (preferring direct matches, falling back to inferred subject for follow-ups)
+  // Thematic classification
   const directNticx = /tecnolog|nticx|hardware|software|periferico|computadora|drive|nube|phishing|contraseñ|roa|inteligencia artificial|\bia\b|ciudades inteligentes|smart cities|big data/i.test(normQuery);
   const directMath = /matematica|ecuacion|porcentaje|regla de tres|fraccion|perimetro|area|geometria|signos|entero|zaneta/i.test(normQuery);
   const directLengua = /lengua|literatura|lectura|comprension|acentuaci|aguda|grave|esdrujula|tilde|nota formal|conector|paratexto|evans/i.test(normQuery);
-  const directCsNat = /natural|biolog|celula|procariota|eucariota|ecosistema|biotico|abiotico|materia|estado|mezcla|mundaca/i.test(normQuery);
+  const directCsNat = /natural|seres? vivos?|ser vivo|biolog|celula|procariota|eucariota|ecosistema|biotico|abiotico|materia|estado|mezcla|fotosintesis|cloroplast|organismo|planta|animal|nutricion|salud sexual|esi|cuerpo humano|mundaca/i.test(normQuery);
   const directCsSoc = /social|constitucion|art 14|derecho laboral|democracia/i.test(normQuery);
   const directIngles = /ingles|english|to be|saludo/i.test(normQuery);
   const directEdFis = /ed fisica|educacion fisica|ergonomia|postura|pausa activa/i.test(normQuery);
@@ -104,7 +108,7 @@ export function generateLocalRagResponse(
   const directTeachers = /quienes son los profesores|quienes son los docentes|nomina de profesores|nomina docente|profesores de la escuela|equipo docente/i.test(normQuery);
   const directHorarios = /horario|atencion|cuando atiende|abierto|turno/i.test(normQuery);
   const directTramites = /constancia|alumno regular|certificado|pase|equivalencia|tramite|justificativo/i.test(normQuery);
-  const directMatricula = /matricula|inscripcion|inscribir|requisito|anotar|vacante|guemes/i.test(normQuery);
+  const directMatricula = /matricula|inscripcion|inscribir|requisito|anotar|vacante|guemes|preinscripcion/i.test(normQuery);
   const isGreeting = /^(hola|buenas|buen dia|buenas tardes|buenas noches|que tal|saludos|quien sos)/i.test(normQuery);
 
   const isNticx = directNticx || ((isSimplifyReq || isExerciseReq) && inferredSubject === 'nuevas_tecnologias');
@@ -124,6 +128,7 @@ export function generateLocalRagResponse(
   const isIaQuery = /inteligencia artificial|\bia\b/i.test(normQuery) || ((isSimplifyReq || isExerciseReq) && isHistIa);
   const isHwSwQuery = /hardware|software/i.test(normQuery) || ((isSimplifyReq || isExerciseReq) && isHistHwSw);
   const isPhishingQuery = /phishing|contraseñ|estafa|seguridad digital/i.test(normQuery) || ((isSimplifyReq || isExerciseReq) && isHistPhishing);
+  const isSeresVivosQuery = /seres? vivos?|ser vivo|organismo/i.test(normQuery) || ((isSimplifyReq || isExerciseReq) && isHistSeresVivos);
 
   if (isGreeting && !isNticx && !isMath && !isLengua && !isCsNat && !directMatricula) {
     categoryLabel = 'Institucional';
@@ -286,6 +291,34 @@ El **Phishing** es una técnica de engaño donde delincuentes digitales se hacen
 3. **Contraseñas seguras:** Usá combinaciones de letras, números y símbolos, y no uses la misma para todo.
 
 ¡Cuidar nuestra identidad digital es un derecho y una herramienta fundamental que aprendemos en clase!`;
+  } else if (isSeresVivosQuery) {
+    categoryLabel = 'Cs. Naturales';
+    sourceTitle = 'Prof. Mundaca Yamila';
+    if (isSimplifyReq) {
+      responseText = `¡Hola! Claro que sí, te lo explico de la forma más sencilla: 😊
+
+Para saber si algo es un **ser vivo**, pensá en esta diferencia:
+- Una piedra, el agua o una mesa no comen, no crecen ni respiran: son materia inanimada (sin vida).
+- Un perro, un árbol, un pájaro o vos mismo **necesitan alimentarse (nutrición), respiran, crecen con el tiempo y sienten frío o calor**: ¡esos son los **seres vivos**!
+
+Todos los seres vivos estamos formados por pequeños "ladrillitos microscópicos con vida" llamados **células**.
+
+En **Ciencias Naturales** (con la **Prof. Mundaca Yamila**) aprendemos a cuidar la vida, nuestra salud y el medio ambiente que nos rodea.
+
+¿Se entendió bien la diferencia? ¿Querés que veamos algún otro ejemplo?`;
+    } else {
+      responseText = `¡Hola! Qué hermoso tema para estudiar en **Ciencias Naturales** con la **Prof. Mundaca Yamila** (Módulo 1):
+
+🌱 **¿Qué son los Seres Vivos?**
+Los **seres vivos** son todos los organismos que habitan nuestro planeta y que cumplen con las funciones vitales esenciales: **nacen, crecen, se nutren (alimentación), se relacionan con su entorno, se reproducen y mueren**.
+
+💡 **Características clave que aprendemos en EMAL:**
+1. **Organización Celular:** Todo ser vivo está formado por células. Pueden ser *unicelulares* (una sola célula, como las bacterias) o *pluricelulares* (millones de células organizadas en tejidos y órganos, como las plantas, los animales y las personas).
+2. **Materia y Energía (Nutrición):** Las plantas producen su propio alimento mediante la fotosíntesis (*autótrofas*), mientras que los animales y las personas nos alimentamos de otros organismos (*heterótrofos*).
+3. **Ecosistemas y Adaptación:** En nuestra región patagónica, los seres vivos desarrollan adaptaciones al clima y conviven en cadenas tróficas en equilibrio.
+
+¿Te gustaría que veamos la diferencia entre la célula animal y vegetal, o que hablemos sobre las cadenas tróficas?`;
+    }
   } else if (/quien es el profesor de nuevas tecnologias|quien ensena nuevas tecnologias|profesor de nuevas tecnologias/i.test(normQuery)) {
     categoryLabel = 'Nuevas Tecnologías';
     sourceTitle = 'Prof. Roa Nicolás';
@@ -448,7 +481,7 @@ Es una materia pensada para comprender nuestro entorno y cuidar nuestro bienesta
 - 🔄 **Pases y Equivalencias:** Si venís de otra escuela secundaria de adultos, presentá tu analítico parcial legalizado en Secretaría para reconocer las materias aprobadas.
 
 ¿Necesitás gestionar alguno de estos documentos en estos días?`;
-  } else {
+  } else if (directMatricula) {
     categoryLabel = 'Matrícula 2027';
     sourceTitle = 'Secretaría EMAL';
     if (isSimplifyReq) {
@@ -476,6 +509,16 @@ En la sede de la escuela: **Güemes 710**, de **Lunes a Viernes de 19:15 a 22:00
 
 ¡En EMAL te acompañamos en cada etapa de tu aprendizaje! ¿Tenés alguna duda sobre los requisitos?`;
     }
+  } else {
+    categoryLabel = 'Orientación';
+    sourceTitle = 'EMALBOT · Asistente Oficial';
+    responseText = `¡Hola! 👋 Soy **EMALBOT**, el asistente pedagógico y virtual de la **Escuela Municipal de Aprendizaje Laboral N° 2702 (EMAL)**.
+
+Para orientarte de la mejor manera:
+- 📚 **Área Educativa (Materias):** Si tenés dudas sobre una materia, podés consultarme sobre **Ciencias Naturales** (*los seres vivos, la célula, ecosistemas*), **Nuevas Tecnologías** (*qué es la IA, hardware y software*), **Matemáticas** (*ecuaciones, porcentajes*) o **Lengua** (*acentuación, nota formal*).
+- 📋 **Área Institucional (Secretaría):** Si necesitás información sobre **Matrícula 2027**, **Horarios de atención** (19:15 a 22:15 hs) o **Constancias de alumno regular**, avisame y te explico el procedimiento.
+
+¿Sobre cuál de estos temas te gustaría que charlemos? ¡Preguntame lo que necesites! 😊`;
   }
 
   const suggestedFollowUps = (isMath || isNticx || isLengua || isCsNat || isCsSoc || isIngles || isEdFis || isEdi)
